@@ -1,2 +1,2 @@
-<link href="https://fonts.googleapis.com/css?family=Inconsolata|Roboto+Condensed|Roboto:400,500,700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Arvo:700|Inconsolata|Roboto" rel="stylesheet">
 <link rel="stylesheet" href="{!! asset('css/main.css') !!}">

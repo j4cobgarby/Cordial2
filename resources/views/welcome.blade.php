@@ -7,9 +7,6 @@
 
         <title>Cordial</title>
 
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
-
         <!-- Styles -->
         @component('styles')
         @endcomponent
@@ -17,8 +14,8 @@
     </head>
     <body>
         <div class="middle" id="middle">
-            {!! file_get_contents(asset('assets/vectors/cordial-logo.svg')) !!}
-            <span class="links"><a href="#">GitHub</a><a href="#">Jacob</a></span>
+            <span class="title">cordial</span>
+            <span class="links"><a href="https://github.com/j4cobgarby/Cordial2">GitHub</a><a href="http://jacobgarby.co.uk">Jacob</a></span>
         </div>
     </body>
 
