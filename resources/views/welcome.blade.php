@@ -13,15 +13,19 @@
         <link rel="stylesheet" href="{!! asset('css/welcome.css') !!}">
     </head>
     <body>
+        @component('header')
+        @endcomponent
+
         <div class="middle" id="middle">
             <span class="title">cordial</span>
-            <span class="links"><a href="https://github.com/j4cobgarby/Cordial2">GitHub</a><a href="http://jacobgarby.co.uk">Jacob</a></span>
+            <span class="links">
+                <a href="https://github.com/j4cobgarby/Cordial2">github</a>
+                <a href="http://jacobgarby.co.uk">my homepage</a>
+            </span>
+            <br>
+            <button class="button-big">Register here</button>
+            <br>
+            <span>Or alternatively, sign in <a href="login">here</a></span>
         </div>
     </body>
-
-    <script>
-        setTimeout(function() {
-            document.getElementById('middle').classList.add('change');
-        }, 100);
-    </script>
 </html>

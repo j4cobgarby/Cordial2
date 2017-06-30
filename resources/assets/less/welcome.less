@@ -1,5 +1,7 @@
 // out: ../../../public/css/welcome.css
 
+@import "colours";
+
 @c1: #5f0f40;
 @c2: #9A031E;
 @c3: #E36414;
@@ -9,40 +11,41 @@
 @spacing: 30px;
 
 html, body {
-  background-color: black;
+  background-color: white;
   margin: 0;
   padding: 0;
 }
 
+* {
+  color: @main-bg;
+}
+
 div.middle {
   position: fixed;
-  background-color: white;
   width: 800px;
   height: 650px;
   left: 50%;
   top: 50%;
-  margin-left: -150%;
+  margin-left: -400px;
   margin-top: -325px;
-  transition-duration: 0.4s;
   text-align: center;
   padding: 30px 0;
   border-radius: 5px;
 
-  &.change {
-    margin-left: -400px;
-  }
-
   span.links {
+    margin-bottom: 40px;
+    display: inline-block;
+
     a {
       margin: auto 20px;
-      color: #3b3b3b;
+      color: @main-bg;
       text-decoration: none;
       font-size: 20px;
       border-bottom: 2px solid white;
       transition-duration: 0.2s;
 
       &:hover {
-        border-bottom: 2px solid #de8600;
+        border-bottom: 2px solid @accent;
       }
     }
   }
