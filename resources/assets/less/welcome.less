@@ -1,0 +1,50 @@
+// out: ../../../public/css/welcome.css
+
+@c1: #5f0f40;
+@c2: #9A031E;
+@c3: #E36414;
+@c4: #FB8B24;
+@c5: #fbbc43;
+@tr: rgba(0, 0, 0, 0);
+@spacing: 30px;
+
+html, body {
+  background-color: black;
+  margin: 0;
+  padding: 0;
+}
+
+div.middle {
+  position: fixed;
+  background-color: #ececec;
+  width: 800px;
+  height: 650px;
+  left: 50%;
+  top: 50%;
+  margin-left: -150%;
+  margin-top: -325px;
+  transition-duration: 0.4s;
+  text-align: center;
+  padding: 30px 0;
+  border-radius: 5px;
+
+  &.change {
+    margin-left: -400px;
+  }
+
+  span.links {
+    a {
+      margin: auto 20px;
+      color: #343434;
+      text-decoration: none;
+    }
+  }
+}
+
+svg {
+  display: block;
+  width: 500px;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
