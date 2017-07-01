@@ -18,17 +18,28 @@
             users.username AS sender,
             users.name AS name,
             posts.content AS content,
-            posts.date_posted AS date_posted
+            DATE_FORMAT(posts.date_posted, "%d/%m/%y") AS date_posted
           FROM posts
           INNER JOIN users AS users
             ON posts.author_id = users.id
         ');
         $Parsedown = new Parsedown();
       @endphp
-
       <div class="grid-item greeting">Hello there, <br>
         <span class="username">
           {{explode(' ', Auth::user()->name)[0]}}!
+        </span>
+        <br>
+        <span class="details">
+          <span class="sect">
+            <i class="fa fa-comment" aria-hidden="true"></i> 0
+          </span>
+          <span class="sect">
+            <i class="fa fa-exclamation" aria-hidden="true"></i> 0
+          </span>
+          <span class="sect">
+            <i class="fa fa-heart" aria-hidden="true"></i> 0
+          </span>
         </span>
       </div>
       @foreach ($posts as $post)
