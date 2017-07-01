@@ -13,16 +13,19 @@ div.posts {
 
   .grid-item {
     width: 450px;
-    min-height: 200px;
-    background-color: #f6f6f6;
+    background-color: white;
     margin: 15px;
     padding: 15px;
     box-sizing: border-box;
     overflow: hidden;
     border-radius: 5px;
 
+    &:not(.post) {
+      border-radius: 2px;
+    }
+
     &.post {
-      border: 1px solid @borderlight;
+      border: 1px solid @bordermain;
     }
 
     .content {
@@ -32,13 +35,13 @@ div.posts {
       text-align: justify;
       max-height: 500px;
       margin-bottom: 15px;
-      margin-top: -15px;
       overflow: hidden;
       text-overflow: ellipsis;
       padding: 2px;
 
       img {
         max-width: 100%;
+        max-height: 400px;
       }
     }
 
@@ -47,15 +50,20 @@ div.posts {
       display: inline-block;
       float: right;
       font-size: 15px;
+      font-weight: bold;
+    }
 
-      &:hover {
-        font-weight: bold;
-      }
+    .date {
+      display: inline-block;
+      float: right;
+      font-size: 15px;
+      margin: 0 15px;
+      color: #9a9a9a;
     }
 
     &.greeting {
       font-size: 50px;
-      background-color: @accent;
+      background-color: @greet-colour;
       color: white;
       height: 300px;
       padding: 30px;

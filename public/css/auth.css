@@ -9,13 +9,13 @@ span.help-block {
   top: 50%;
   width: 500px;
   margin-left: -250px;
-  margin-top: 220px;
+  margin-top: 210px;
 }
 span.help-block * {
   color: #e25d4a;
 }
 span.help-block.taller {
-  margin-top: 270px;
+  margin-top: 320px;
 }
 form {
   background-color: white;
