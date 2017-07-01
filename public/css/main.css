@@ -1,5 +1,22 @@
+html,
+body {
+  background-color: white;
+  margin: 0;
+  padding: 0;
+}
+i.fa {
+  margin-right: 5px;
+}
 * {
   font-family: 'Roboto', sans-serif;
+  color: #1d1d1d;
+}
+a {
+  color: #de8600;
+  outline: 0;
+}
+a:hover {
+  color: #ca7a00;
 }
 div.header-section {
   position: fixed;
@@ -24,16 +41,19 @@ div.header-section .header-logo {
   font-family: 'Arvo';
   font-size: 40px;
   cursor: pointer;
+  float: left;
 }
 div.header-section .username-disp,
 div.header-section .login {
   font-size: 18px;
   float: right;
   cursor: pointer;
-  width: 200px;
+  width: 250px;
   text-align: center;
 }
 div.header-section .arrow-down {
+  top: -2px;
+  position: relative;
   margin-left: 10px;
   display: inline-block;
   width: 0;
@@ -41,19 +61,25 @@ div.header-section .arrow-down {
   border-left: 6px solid transparent;
   border-right: 6px solid transparent;
   border-top: 8px solid white;
+  transition-duration: 0.2s;
+  transition-timing-function: cubic-bezier(0.11, 1.21, 0.56, 1.46);
+}
+div.header-section .arrow-down.default {
+  transform: rotate(-90deg);
 }
 div.dropdown-notauth,
 div.dropdown-auth {
   background-color: #1d1d1d;
   position: fixed;
-  width: 200px;
-  top: 70px;
+  width: 250px;
+  top: 50px;
   right: 300px;
-  transition-duration: 0.1s;
+  transition-duration: 0.2s;
+  transition-timing-function: cubic-bezier(0.96, 0.62, 0.48, 0.91);
   height: 0;
   text-align: center;
   font-size: 17px;
-  box-sizing: border-box;
+  padding-bottom: 20px;
 }
 div.dropdown-notauth a,
 div.dropdown-auth a {
@@ -61,17 +87,22 @@ div.dropdown-auth a {
   display: inline-block;
   text-decoration: none;
   width: 100%;
-  top: -300px;
-  transition-duration: 0.3s;
+  top: -400px;
+  transition-timing-function: cubic-bezier(0.96, 0.62, 0.48, 0.91);
+  transition-duration: 0.2s;
   opacity: 0;
   color: #e4e4e4;
+  height: 70px;
+  line-height: 70px;
 }
 div.dropdown-notauth a:hover,
 div.dropdown-auth a:hover {
   color: white;
+  font-size: 18px;
 }
 div.dropdown-notauth.visible,
 div.dropdown-auth.visible {
+  top: 70px;
   height: 140px;
   line-height: 70px;
 }
@@ -89,11 +120,13 @@ div.dropdown-auth.visible > a {
   border: 2px solid #1d1d1d;
   color: #1d1d1d;
   font-size: 20px;
-  transition-duration: 0.1s;
-  border-radius: 5px;
+  transition: box-shadow 0.3s, color 0.12s;
+  transition-timing-function: cubic-bezier(0.17, 0.67, 0.83, 0.67);
+  border-radius: 4.5px;
+  box-shadow: inset 0 0 0 0 #000000, inset 0 0 0 0 #000000;
 }
 .button-big:hover {
-  background-color: #1d1d1d;
+  box-shadow: inset 150px 0 0 0 #000000, inset -150px 0 0 0 #000000;
   color: white;
   cursor: pointer;
 }

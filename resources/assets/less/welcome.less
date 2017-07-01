@@ -10,16 +10,6 @@
 @tr: rgba(0, 0, 0, 0);
 @spacing: 30px;
 
-html, body {
-  background-color: white;
-  margin: 0;
-  padding: 0;
-}
-
-* {
-  color: @main-bg;
-}
-
 div.middle {
   position: fixed;
   width: 800px;
@@ -36,6 +26,11 @@ div.middle {
     margin-bottom: 40px;
     display: inline-block;
 
+    span.plead {
+      font-size: 20px;
+      color: #c3c3c3;
+    }
+
     a {
       margin: auto 20px;
       color: @main-bg;
@@ -43,6 +38,7 @@ div.middle {
       font-size: 20px;
       border-bottom: 2px solid white;
       transition-duration: 0.2s;
+      padding-bottom: 5px;
 
       &:hover {
         border-bottom: 2px solid @accent;

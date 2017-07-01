@@ -20,13 +20,14 @@
         <div class="middle" id="middle">
             <span class="title">cordial</span>
             <span class="links">
-                <a href="https://github.com/j4cobgarby/Cordial2">github</a>
+                <span class="plead">please visit: </span>
+                <a href="https://github.com/j4cobgarby">my github</a>
                 <a href="http://jacobgarby.co.uk">my homepage</a>
             </span>
             <br>
-            <button class="button-big">Register here</button>
+            <button class="button-big" onclick="window.location.href='/register'">Register here</button>
             <br>
-            <span>Or alternatively, sign in <a href="login">here</a></span>
+            <button class="button-big" onclick="window.location.href='/login'">Sign in</button>
         </div>
     </body>
 </html>
