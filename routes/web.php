@@ -34,6 +34,10 @@ $this->post('password/reset', 'Auth\ResetPasswordController@reset');
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+Route::get('/settings', function() {
+  return view('settings');
+});
+
 Route::get('/devlogout', function() {
     Auth::logout();
     return Redirect::to('/');

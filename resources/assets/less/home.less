@@ -2,12 +2,96 @@
 
 @import "colours";
 
+html, body {
+  background-color: #f4f4f4;
+}
+
 div.posts {
   width: 100%;
   min-height: 30px;
+  margin: auto;
   margin-top: 70px;
-}
+  padding: 15px;
+  max-width: 1440px;
+  // 450 * 3  +  15 * 6
 
-div.post {
+  .grid-item {
+    width: 450px;
+    background-color: white;
+    margin: 15px;
+    padding: 15px;
+    box-sizing: border-box;
+    overflow: hidden;
+    border: 1px solid @borderlight;
+    border-radius: 5px;
 
+    &.post { // Specific to grid-items which are posts
+    }
+
+    .content {
+      cursor: pointer;
+      font-size: 14px;
+      //line-height: 19px;
+      text-align: justify;
+      max-height: 500px;
+      margin-bottom: 15px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      padding: 2px;
+      word-wrap: break-word;
+
+      img {
+        max-width: 100%;
+        max-height: 400px;
+      }
+    }
+
+    .by {
+      cursor: pointer;
+      display: inline-block;
+      float: right;
+      font-size: 15px;
+      font-weight: bold;
+    }
+
+    .date {
+      display: inline-block;
+      float: right;
+      font-size: 15px;
+      margin: 0 15px;
+      color: #9a9a9a;
+    }
+
+    &.greeting {
+      font-size: 50px;
+      background-color: @greet-colour;
+      color: white;
+      height: 300px;
+      padding: 30px;
+      user-select: none;
+      cursor: default;
+
+      * { color: white; }
+
+      span.username {
+        font-weight: bold;
+      }
+
+      span.details {
+        text-align: center;
+        font-size: 20px;
+        position: relative;
+        bottom: -70px;
+        display: inline-block;
+        width: 400px;
+
+        span.sect {
+          display: inline-block;
+          margin: 0 20px;
+          width: 80px;
+          cursor: pointer;
+        }
+      }
+    }
+  }
 }

@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'failed' => 'Invalid username or password!',
+    'failed' => 'Incorrect username or password!',
     'throttle' => 'Slow down!',
 
 ];

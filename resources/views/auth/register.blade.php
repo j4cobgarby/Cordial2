@@ -15,7 +15,7 @@
 
       <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
         <div class="name-wrap">
-          <input id="name" type="text" placeholder="Name" class="form-control" name="name" value="{{ old('name') }}" required autofocus>
+          <input id="name" type="text" placeholder="Full name" pattern="^[a-zA-Z]+\s[a-zA-Z]+$" class="form-control" name="name" value="{{ old('name') }}" required autofocus>
 
           @if ($errors->has('name'))
             <span class="help-block taller">
@@ -37,9 +37,21 @@
         </div>
       </div>
 
+      <div class="form-group{{ $errors->has('username') ? ' has-error' : '' }}">
+        <div class="email-wrap">
+          <input id="username" type="text" placeholder="Username" class="form-control" name="username" value="{{ old('username') }}" required>
+
+          @if ($errors->has('username'))
+            <span class="help-block taller">
+              <strong>{{ $errors->first('username') }}</strong>
+            </span>
+          @endif
+        </div>
+      </div>
+
       <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
         <div class="password-wrap">
-          <input id="password" type="password" placeholder="Password" class="form-control" name="password" required>
+          <input id="password" type="password" pattern="^.{6,}$" placeholder="Password" class="form-control" name="password" required>
 
           @if ($errors->has('password'))
             <span class="help-block taller">
@@ -51,7 +63,7 @@
 
       <div class="form-group">
         <div class="confirm-wrap">
-          <input id="password-confirm" type="password" placeholder="Repeat password" class="form-control" name="password_confirmation" required>
+          <input id="password-confirm" type="password" pattern="^.{6,}$" placeholder="Repeat password" class="form-control" name="password_confirmation" required>
         </div>
       </div>
 
