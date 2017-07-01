@@ -9,38 +9,50 @@ div.posts {
 div.posts .grid-item {
   width: 450px;
   min-height: 200px;
-  max-height: 600px;
-  background-color: #f2f2f2;
+  background-color: #f6f6f6;
   margin: 15px;
-  padding: 25px;
+  padding: 15px;
   box-sizing: border-box;
   overflow: hidden;
   border-radius: 5px;
 }
-div.posts .grid-item .title {
-  font-size: 17px;
-  margin: -25px;
-  margin-bottom: 15px;
-  padding: 15px;
-  background-color: #1d1d1d;
-  color: white;
-  font-weight: bold;
+div.posts .grid-item.post {
+  border: 1px solid #e9e9e9;
 }
 div.posts .grid-item .content {
-  font-size: 14px;
+  cursor: pointer;
+  font-size: 15px;
   line-height: 19px;
   text-align: justify;
+  max-height: 500px;
+  margin-bottom: 15px;
+  margin-top: -15px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding: 2px;
+}
+div.posts .grid-item .content img {
+  max-width: 100%;
 }
 div.posts .grid-item .by {
+  cursor: pointer;
   display: inline-block;
   float: right;
   font-size: 15px;
+}
+div.posts .grid-item .by:hover {
   font-weight: bold;
 }
 div.posts .grid-item.greeting {
-  font-size: 45px;
-  font-weight: bold;
+  font-size: 50px;
   background-color: #de8600;
   color: white;
   height: 300px;
+  padding: 30px;
+}
+div.posts .grid-item.greeting * {
+  color: white;
+}
+div.posts .grid-item.greeting span.username {
+  font-weight: bold;
 }

@@ -20,14 +20,14 @@
         <div class="middle" id="middle">
             <span class="title">cordial</span>
             <span class="links">
-                <a href="https://github.com/j4cobgarby">my github</a>
-                <a href="http://jacobgarby.co.uk">my homepage</a>
-                <a href="https://paypal.me/j4cobgarby">donate</a>
+                <a href="https://github.com/j4cobgarby/Cordial2"><i class="fa fa-code-fork" aria-hidden="true"></i> fork on GitHub</a>
+                <a href="mailto:j.garby@icloud.com?Subject=From%20Cordial!"><i class="fa fa-envelope" aria-hidden="true"></i> email me</a>
+                {{--<a href="https://paypal.me/j4cobgarby">donate</a>--}}
             </span>
             <br>
-            <button class="button-big close-center" onclick="window.location.href='/register'">Register here</button>
+            <button class="button-big close-right" onclick="window.location.href='/register'">Register here</button>
             <br>
-            <button class="button-big close-center" onclick="window.location.href='/login'">Sign in</button>
+            <button class="button-big close-left" onclick="window.location.href='/login'">Sign in</button>
             <br><br>
         </div>
         <span class="legal">

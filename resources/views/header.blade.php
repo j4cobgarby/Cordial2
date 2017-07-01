@@ -9,7 +9,7 @@
       <div id="arrow" class="arrow-down"></div>
     </span>
     <div id="d-auth" class="dropdown-auth">
-      <a href="/devlogout">Sign out</a><br>
+      <a href="/devlogout"><i class="fa fa-sign-out" aria-hidden="true"></i> Sign out</a><br>
       <a href="/settings"><i class="fa fa-cog" aria-hidden="true"></i> Settings</a>
     </div>
   @else
@@ -18,8 +18,8 @@
       <div id="arrow" class="arrow-down"></div>
     </span>
     <div id="d-notauth" class="dropdown-notauth">
-      <a href="/login">Sign in</a><br>
-      <a href="/register">Register</a>
+      <a href="/login"><i class="fa fa-sign-in" aria-hidden="true"></i> Sign in</a><br>
+      <a href="/register"><i class="fa fa-user-plus" aria-hidden="true"></i> Register</a>
     </div>
   @endif
 

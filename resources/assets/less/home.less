@@ -14,43 +14,57 @@ div.posts {
   .grid-item {
     width: 450px;
     min-height: 200px;
-    max-height: 600px;
-    background-color: #f2f2f2;
+    background-color: #f6f6f6;
     margin: 15px;
-    padding: 25px;
+    padding: 15px;
     box-sizing: border-box;
     overflow: hidden;
     border-radius: 5px;
 
-    .title {
-      font-size: 17px;
-      margin: -25px;
-      margin-bottom: 15px;
-      padding: 15px;
-      background-color: @main-bg;
-      color: white;
-      font-weight: bold;
+    &.post {
+      border: 1px solid @borderlight;
     }
 
     .content {
-      font-size: 14px;
+      cursor: pointer;
+      font-size: 15px;
       line-height: 19px;
       text-align: justify;
+      max-height: 500px;
+      margin-bottom: 15px;
+      margin-top: -15px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      padding: 2px;
+
+      img {
+        max-width: 100%;
+      }
     }
 
     .by {
+      cursor: pointer;
       display: inline-block;
       float: right;
       font-size: 15px;
-      font-weight: bold;
+
+      &:hover {
+        font-weight: bold;
+      }
     }
 
     &.greeting {
-      font-size: 45px;
-      font-weight: bold;
+      font-size: 50px;
       background-color: @accent;
       color: white;
       height: 300px;
+      padding: 30px;
+
+      * { color: white; }
+
+      span.username {
+        font-weight: bold;
+      }
     }
   }
 }

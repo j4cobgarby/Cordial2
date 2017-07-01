@@ -15,7 +15,7 @@
 
       <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
         <div class="name-wrap">
-          <input id="name" type="text" placeholder="Name" pattern="^[a-zA-Z]+\s[a-zA-Z]+$" class="form-control" name="name" value="{{ old('name') }}" required autofocus>
+          <input id="name" type="text" placeholder="Full name" pattern="^[a-zA-Z]+\s[a-zA-Z]+$" class="form-control" name="name" value="{{ old('name') }}" required autofocus>
 
           @if ($errors->has('name'))
             <span class="help-block taller">
