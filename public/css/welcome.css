@@ -35,3 +35,29 @@ span.title {
   display: block;
   font-size: 120px;
 }
+span.legal {
+  display: inline-block;
+  position: fixed;
+  bottom: -45px;
+  text-align: center;
+  width: 100%;
+  background-color: #1d1d1d;
+  color: #e0e0e0;
+  font-size: 10px;
+  height: 80px;
+  line-height: 20px;
+  padding: 10px 0;
+  box-sizing: border-box;
+  transition-duration: 0.2s;
+  cursor: default;
+}
+span.legal b {
+  color: inherit;
+  transition-duration: 0.2s;
+}
+span.legal:hover {
+  bottom: 0;
+}
+span.legal:hover > .hover-say {
+  color: #5c5c5c;
+}

@@ -22,14 +22,20 @@
             <span class="links">
                 <a href="https://github.com/j4cobgarby">my github</a>
                 <a href="http://jacobgarby.co.uk">my homepage</a>
-                <br><br>
-                <a href="https://paypal.me/j4cobgarby"><b>donate</b></a>
+                <a href="https://paypal.me/j4cobgarby">donate</a>
             </span>
             <br>
-            <button class="button-big close-left" onclick="window.location.href='/register'">Register here</button>
+            <button class="button-big close-center" onclick="window.location.href='/register'">Register here</button>
             <br>
-            <button class="button-big close-right" onclick="window.location.href='/login'">Sign in</button>
+            <button class="button-big close-center" onclick="window.location.href='/login'">Sign in</button>
             <br><br>
         </div>
+        <span class="legal">
+            <b class="hover-say">Hover me for legal info</b>
+            <br>
+            This page and all other pages on this domain are protected under <b>GNU GPL v3.0</b>, excluding files which aren't included in Cordial's github repository.
+            <br>
+            Copyright &copy; 2017 Jacob Garby All Rights Reserved.
+        </span>
     </body>
 </html>

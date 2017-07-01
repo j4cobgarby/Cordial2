@@ -135,14 +135,17 @@ div.dropdown-notauth, div.dropdown-auth {
   border: 2px solid @main-bg;
   color: @main-bg;
   font-size: 20px;
-  transition: box-shadow 0.3s, color 0.3s;
-  transition-timing-function: cubic-bezier(.39,.53,.88,.74);
+  transition: box-shadow 0.2s, color 0.3s;
+  transition-timing-function: linear;
   border-radius: 4.5px;
 
   &.close-middle {
     box-shadow: inset 0 0 0 0 @main-bg, inset 0 0 0 0 @main-bg;
   }
   &.close-right, &.close-left {
+    box-shadow: inset 0 0 0 0 @main-bg;
+  }
+  &.close-center {
     box-shadow: inset 0 0 0 0 @main-bg;
   }
 
@@ -159,5 +162,8 @@ div.dropdown-notauth, div.dropdown-auth {
   }
   &.close-left:hover {
     box-shadow: inset -300px 0 0 0 @main-bg;
+  }
+  &.close-center:hover {
+    box-shadow: inset 0 0 0 30px @main-bg;
   }
 }
