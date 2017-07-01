@@ -13,14 +13,14 @@
 
       <span class="title">cordial</span>
 
-      <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
+      <div class="form-group{{ $errors->has('username') ? ' has-error' : '' }}">
 
-        <div class="email">
-          <input id="email" type="email" placeholder="Email address" class="form-control" name="email" value="{{ old('email') }}" required autofocus>
+        <div class="username">
+          <input id="username" type="text" placeholder="Username" class="form-control" name="username" value="{{ old('username') }}" required autofocus>
 
-          @if ($errors->has('email'))
+          @if ($errors->has('username'))
             <span class="help-block">
-              <strong>{{ $errors->first('email') }}</strong>
+              <strong>{{ $errors->first('username') }}</strong>
             </span>
           @endif
         </div>

@@ -1,5 +1,46 @@
 div.posts {
   width: 100%;
   min-height: 30px;
+  margin: auto;
   margin-top: 70px;
+  padding: 15px;
+  max-width: 1440px;
+}
+div.posts .grid-item {
+  width: 450px;
+  min-height: 200px;
+  max-height: 600px;
+  background-color: #f2f2f2;
+  margin: 15px;
+  padding: 25px;
+  box-sizing: border-box;
+  overflow: hidden;
+  border-radius: 5px;
+}
+div.posts .grid-item .title {
+  font-size: 17px;
+  margin: -25px;
+  margin-bottom: 15px;
+  padding: 15px;
+  background-color: #1d1d1d;
+  color: white;
+  font-weight: bold;
+}
+div.posts .grid-item .content {
+  font-size: 14px;
+  line-height: 19px;
+  text-align: justify;
+}
+div.posts .grid-item .by {
+  display: inline-block;
+  float: right;
+  font-size: 15px;
+  font-weight: bold;
+}
+div.posts .grid-item.greeting {
+  font-size: 45px;
+  font-weight: bold;
+  background-color: #de8600;
+  color: white;
+  height: 300px;
 }

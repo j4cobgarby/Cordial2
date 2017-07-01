@@ -5,9 +5,52 @@
 div.posts {
   width: 100%;
   min-height: 30px;
+  margin: auto;
   margin-top: 70px;
-}
+  padding: 15px;
+  max-width: 1440px;
+  // 450 * 3  +  15 * 6
 
-div.post {
+  .grid-item {
+    width: 450px;
+    min-height: 200px;
+    max-height: 600px;
+    background-color: #f2f2f2;
+    margin: 15px;
+    padding: 25px;
+    box-sizing: border-box;
+    overflow: hidden;
+    border-radius: 5px;
 
+    .title {
+      font-size: 17px;
+      margin: -25px;
+      margin-bottom: 15px;
+      padding: 15px;
+      background-color: @main-bg;
+      color: white;
+      font-weight: bold;
+    }
+
+    .content {
+      font-size: 14px;
+      line-height: 19px;
+      text-align: justify;
+    }
+
+    .by {
+      display: inline-block;
+      float: right;
+      font-size: 15px;
+      font-weight: bold;
+    }
+
+    &.greeting {
+      font-size: 45px;
+      font-weight: bold;
+      background-color: @accent;
+      color: white;
+      height: 300px;
+    }
+  }
 }
