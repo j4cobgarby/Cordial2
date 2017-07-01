@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="{!! asset('css/auth.css') !!}">
   </head>
   <body>
-    <form class="form-horizontal" method="POST" action="{{ route('login') }}">
+    <form method="POST" action="{{ route('login') }}">
       {{ csrf_field() }}
 
       <span class="title">cordial</span>
