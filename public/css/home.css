@@ -47,7 +47,31 @@ div.posts .grid-item .date {
   float: right;
   font-size: 15px;
   margin: 0 15px;
-  color: #9a9a9a;
+  color: #ababab;
+}
+div.posts .grid-item .status {
+  color: #ababab;
+}
+div.posts .grid-item .status * {
+  margin: 0 10px;
+}
+div.posts .grid-item .status .likes {
+  color: #ababab;
+}
+div.posts .grid-item .status .likes * {
+  color: #ababab;
+}
+div.posts .grid-item .status .likes.liked {
+  color: #e25871;
+}
+div.posts .grid-item .status .likes.liked * {
+  color: #e25871;
+}
+div.posts .grid-item .status .comments {
+  color: #ababab;
+}
+div.posts .grid-item .status .comments * {
+  color: #ababab;
 }
 div.posts .grid-item.greeting {
   font-size: 50px;

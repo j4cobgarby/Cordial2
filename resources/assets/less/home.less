@@ -59,7 +59,28 @@ div.posts {
       float: right;
       font-size: 15px;
       margin: 0 15px;
-      color: #9a9a9a;
+      color: @greyed;
+    }
+
+    .status {
+      color: @greyed;
+
+      * {
+        margin: 0 10px;
+      }
+
+      .likes {
+        color: @greyed;
+        * {color: @greyed;}
+        &.liked {
+          * {color: @like-colour;}
+          color: @like-colour;
+        }
+      }
+      .comments {
+        * {color: @greyed;}
+        color: @greyed;
+      }
     }
 
     &.greeting {

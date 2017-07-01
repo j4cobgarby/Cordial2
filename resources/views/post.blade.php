@@ -8,4 +8,14 @@
     {{$username}}
   </span>
   <span class="date">{{$date}}</span>
+  <span class="status">
+    <span class="likes">
+      <i class="fa fa-heart" aria-hidden="true"></i>
+      0
+    </span>
+    <span class="comments">
+      <i class="fa fa-comment" aria-hidden="true"></i>
+      0
+    </span>
+  </span>
 </div>
