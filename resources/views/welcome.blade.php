@@ -20,14 +20,16 @@
         <div class="middle" id="middle">
             <span class="title">cordial</span>
             <span class="links">
-                <span class="plead">please visit: </span>
                 <a href="https://github.com/j4cobgarby">my github</a>
                 <a href="http://jacobgarby.co.uk">my homepage</a>
+                <br><br>
+                <a href="https://paypal.me/j4cobgarby"><b>donate</b></a>
             </span>
             <br>
-            <button class="button-big" onclick="window.location.href='/register'">Register here</button>
+            <button class="button-big close-left" onclick="window.location.href='/register'">Register here</button>
             <br>
-            <button class="button-big" onclick="window.location.href='/login'">Sign in</button>
+            <button class="button-big close-right" onclick="window.location.href='/login'">Sign in</button>
+            <br><br>
         </div>
     </body>
 </html>

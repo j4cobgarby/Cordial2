@@ -102,7 +102,7 @@ div.dropdown-notauth, div.dropdown-auth {
     width: 100%;
     top: -400px;
     transition-timing-function: cubic-bezier(.96,.62,.48,.91);
-    transition-duration: 0.2s;
+    transition-duration: 0.3s;
     opacity: 0;
     color: #e4e4e4;
     height: 70px;
@@ -135,14 +135,29 @@ div.dropdown-notauth, div.dropdown-auth {
   border: 2px solid @main-bg;
   color: @main-bg;
   font-size: 20px;
-  transition: box-shadow 0.3s, color 0.12s;
-  transition-timing-function: cubic-bezier(.17,.67,.83,.67);
+  transition: box-shadow 0.3s, color 0.3s;
+  transition-timing-function: cubic-bezier(.39,.53,.88,.74);
   border-radius: 4.5px;
-  box-shadow: inset 0 0 0 0 rgba(0,0,0,1), inset 0 0 0 0 rgba(0,0,0,1);
+
+  &.close-middle {
+    box-shadow: inset 0 0 0 0 @main-bg, inset 0 0 0 0 @main-bg;
+  }
+  &.close-right, &.close-left {
+    box-shadow: inset 0 0 0 0 @main-bg;
+  }
 
   &:hover {
-    box-shadow: inset 150px 0 0 0 rgba(0,0,0,1), inset -150px 0 0 0 rgba(0,0,0,1);
     color: white;
     cursor: pointer;
+  }
+
+  &.close-middle:hover {
+    box-shadow: inset 150px 0 0 0 @main-bg, inset -150px 0 0 0 @main-bg;
+  }
+  &.close-right:hover {
+    box-shadow: inset 300px 0 0 0 @main-bg;
+  }
+  &.close-left:hover {
+    box-shadow: inset -300px 0 0 0 @main-bg;
   }
 }

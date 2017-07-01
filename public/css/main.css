@@ -89,7 +89,7 @@ div.dropdown-auth a {
   width: 100%;
   top: -400px;
   transition-timing-function: cubic-bezier(0.96, 0.62, 0.48, 0.91);
-  transition-duration: 0.2s;
+  transition-duration: 0.3s;
   opacity: 0;
   color: #e4e4e4;
   height: 70px;
@@ -120,13 +120,27 @@ div.dropdown-auth.visible > a {
   border: 2px solid #1d1d1d;
   color: #1d1d1d;
   font-size: 20px;
-  transition: box-shadow 0.3s, color 0.12s;
-  transition-timing-function: cubic-bezier(0.17, 0.67, 0.83, 0.67);
+  transition: box-shadow 0.3s, color 0.3s;
+  transition-timing-function: cubic-bezier(0.39, 0.53, 0.88, 0.74);
   border-radius: 4.5px;
-  box-shadow: inset 0 0 0 0 #000000, inset 0 0 0 0 #000000;
+}
+.button-big.close-middle {
+  box-shadow: inset 0 0 0 0 #1d1d1d, inset 0 0 0 0 #1d1d1d;
+}
+.button-big.close-right,
+.button-big.close-left {
+  box-shadow: inset 0 0 0 0 #1d1d1d;
 }
 .button-big:hover {
-  box-shadow: inset 150px 0 0 0 #000000, inset -150px 0 0 0 #000000;
   color: white;
   cursor: pointer;
+}
+.button-big.close-middle:hover {
+  box-shadow: inset 150px 0 0 0 #1d1d1d, inset -150px 0 0 0 #1d1d1d;
+}
+.button-big.close-right:hover {
+  box-shadow: inset 300px 0 0 0 #1d1d1d;
+}
+.button-big.close-left:hover {
+  box-shadow: inset -300px 0 0 0 #1d1d1d;
 }
