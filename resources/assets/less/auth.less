@@ -1,0 +1,83 @@
+// out: ../../../public/css/auth.css
+
+@import "colours";
+
+html, body {
+  background-color: @main-bg;
+}
+
+span.help-block {
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 500px;
+  margin-left: -250px;
+  margin-top: 220px;
+
+  * {
+    color: @danger-colour;
+  }
+}
+
+form {
+  background-color: white;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 500px;
+  margin-left: -250px;
+  height: 550px;
+  margin-top: -275px;
+  text-align: center;
+  border-radius: 4px;
+  padding: 80px 0;
+  box-sizing: border-box;
+
+  .title {
+    font-family: 'Arvo';
+    font-size: 70px;
+    margin: 20px 0;
+    margin-top: 0px;
+    display: inline-block;
+  }
+
+  .email-wrap, .password-wrap {
+    margin: 30px 0;
+  }
+
+  input[type="email"], input[type="text"], input[type="password"] {
+    padding: 15px 20px;
+    border: none;
+    font-size: 16px;
+    outline: none;
+    width: 300px;
+    box-sizing: border-box;
+    color: #dedede;
+    text-align: center;
+    box-shadow: inset -150px 0 0 0 @main-bg, inset 150px 0 0 0 @main-bg;
+    transition-duration: 0.3s;
+    border-radius: 5px;
+
+    &::placeholder {
+      text-align: center;
+      color: white;
+      opacity: 0.2;
+    }
+
+    &:focus {
+      box-shadow: inset 0 0 0 0 @main-bg, inset 0 0 0 0 @main-bg;
+      color: @accent;
+      font-size: 20px;
+      text-align: left;
+
+      &::placeholder {
+        color: @main-bg;
+      }
+    }
+
+    &:required:invalid {
+      outline: none;
+    }
+  }
+}
