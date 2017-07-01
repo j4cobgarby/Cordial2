@@ -10,10 +10,15 @@ div.header-section {
   padding: 0 300px;
   box-sizing: border-box;
   line-height: 70px;
-  z-index: 2;
 }
 div.header-section * {
   color: white;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 div.header-section .header-logo {
   font-family: 'Arvo';
@@ -25,6 +30,8 @@ div.header-section .login {
   font-size: 18px;
   float: right;
   cursor: pointer;
+  width: 200px;
+  text-align: center;
 }
 div.header-section .arrow-down {
   margin-left: 10px;
@@ -39,15 +46,39 @@ div.dropdown-notauth,
 div.dropdown-auth {
   background-color: #1d1d1d;
   position: fixed;
-  width: 250px;
+  width: 200px;
   top: 70px;
-  right: 260px;
+  right: 300px;
   transition-duration: 0.1s;
   height: 0;
+  text-align: center;
+  font-size: 17px;
+  box-sizing: border-box;
+}
+div.dropdown-notauth a,
+div.dropdown-auth a {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  width: 100%;
+  top: -300px;
+  transition-duration: 0.3s;
+  opacity: 0;
+  color: #e4e4e4;
+}
+div.dropdown-notauth a:hover,
+div.dropdown-auth a:hover {
+  color: white;
 }
 div.dropdown-notauth.visible,
 div.dropdown-auth.visible {
-  height: 200px;
+  height: 140px;
+  line-height: 70px;
+}
+div.dropdown-notauth.visible > a,
+div.dropdown-auth.visible > a {
+  top: 0px;
+  opacity: 1;
 }
 .button-big {
   border: none;

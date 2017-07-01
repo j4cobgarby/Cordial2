@@ -12,9 +12,17 @@
 */
 
 Route::get('/', function () {
+    if (Auth::check()) {
+      return view('/home');
+    }
     return view('welcome');
 });
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/devlogout', function() {
+    Auth::logout();
+    return Redirect::to('/');
+});

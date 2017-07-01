@@ -15,10 +15,15 @@ div.header-section {
   padding: 0 300px;
   box-sizing: border-box;
   line-height: 70px;
-  z-index: 2;
 
   * {
     color: white;
+    -webkit-touch-callout: none;
+      -webkit-user-select: none;
+       -khtml-user-select: none;
+         -moz-user-select: none;
+          -ms-user-select: none;
+              user-select: none;
   }
 
   .header-logo {
@@ -31,6 +36,8 @@ div.header-section {
     font-size: 18px;
     float: right;
     cursor: pointer;
+    width: 200px;
+    text-align: center;
   }
 
   .arrow-down {
@@ -48,14 +55,38 @@ div.header-section {
 div.dropdown-notauth, div.dropdown-auth {
   background-color: @main-bg;
   position: fixed;
-  width: 250px;
+  width: 200px;
   top: 70px;
-  right: 260px;
+  right: 300px;
   transition-duration: 0.1s;
   height: 0;
+  text-align: center;
+  font-size: 17px;
+  box-sizing: border-box;
+
+  a {
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    width: 100%;
+    top: -300px;
+    transition-duration: 0.3s;
+    opacity: 0;
+    color: #e4e4e4;
+
+    &:hover {
+      color: white;
+    }
+  }
 
   &.visible {
-    height: 200px;
+    height: 140px;
+    line-height: 70px;
+  }
+
+  &.visible > a {
+    top: 0px;
+    opacity: 1;
   }
 }
 
