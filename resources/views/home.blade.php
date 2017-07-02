@@ -7,11 +7,24 @@
     @endcomponent
     <link rel="stylesheet" href="{!! asset('css/home.css') !!}">
     <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+    <script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+    <script>
+      function reload() {
+        setTimeout(function() {
+          msnry.layout();
+        }, 100);
+
+        console.log("reloaded");
+      }
+    </script>
   </head>
   <body>
     @component('header')
     @endcomponent
-    <div class="posts grid" data-masonry='{ "itemSelector": ".grid-item", "columnWidth": 480 }'>
+    <div class="posts grid">
       @php
         $posts = DB::select(
           'SELECT
@@ -63,5 +76,12 @@
         @endcomponent
       @endforeach
     </div>
+    <script>
+    var msnry = new Masonry( '.grid', {
+      itemSelector: '.grid-item',
+      columnWidth: 480
+    });
+    msnry.layout();
+    </script>
   </body>
 </html>
