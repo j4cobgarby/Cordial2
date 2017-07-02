@@ -10,7 +10,8 @@ div.posts {
   margin: auto;
   margin-top: 70px;
   padding: 15px;
-  max-width: 450px * 3 + 15px * 6;
+  //max-width: 450px * 3 + 15px * 6;
+  max-width: 100%;
 
   .grid-item {
     width: 450px;
@@ -132,8 +133,8 @@ div.posts {
           0% {transform: scale(1);}
           6% {transform: scale(1.2);}
           18% {transform: scale(1);}
-          20% {transform: scale(0.8)}
-          33% {transform: scale(1.4);}
+          20% {transform: scale(0.9)}
+          33% {transform: scale(1.35);}
           47% {transform: scale(1);}
           100% {transform: scale(1);}
         }
@@ -152,6 +153,7 @@ div.posts {
         &.liked, &:hover {
           * {color: @like-colour;}
           color: @like-colour;
+          font-weight: bold;
         }
       }
       .comments {
@@ -171,13 +173,11 @@ div.posts {
       padding: 30px;
       user-select: none;
       cursor: pointer;
-      transition-duration: 0.2s;
+      transition: background-color 0.3s;
       box-shadow: 0 0 0 0 @colour;
       border: 1px solid darken(@colour, 10%);
 
       &:hover {
-        border: 1px solid darken(@colour, 3%);
-        box-shadow: 0 0 0 1px darken(@colour, 3%);
         background-color: darken(@colour, 3%);
       }
     }
@@ -191,7 +191,7 @@ div.posts {
     }
 
     &.greeting {
-      font-size: 70px;
+      font-size: 60px;
       background-color: @greet-colour;
       color: white;
       height: 450px;

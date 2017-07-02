@@ -81,7 +81,9 @@
     var msnry;
     msnry = new Masonry( '.grid', {
       itemSelector: '.grid-item',
-      columnWidth: 450 + 15*2
+      columnWidth: 450,
+      gutter: 30,
+      fitWidth: true
     });
     function reload() {
       setTimeout(function() {
