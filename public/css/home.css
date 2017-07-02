@@ -1,7 +1,3 @@
-html,
-body {
-  background-color: #f4f4f4;
-}
 div.posts {
   width: 100%;
   min-height: 30px;
@@ -12,15 +8,35 @@ div.posts {
 }
 div.posts .grid-item {
   width: 450px;
-  background-color: white;
   margin: 15px;
   padding: 15px;
   box-sizing: border-box;
   overflow: hidden;
-  border: 1px solid #e9e9e9;
+  border-top: 1px solid #ededed;
   border-radius: 5px;
 }
+div.posts .grid-item .expand-button {
+  position: absolute;
+  width: 15px;
+  font-size: 14px;
+  left: 50%;
+  text-align: center;
+  margin-left: -7.5px;
+  cursor: pointer;
+}
+div.posts .grid-item .expand-button i {
+  display: inline-block;
+  position: relative;
+  transition-duration: 0.1s;
+  bottom: 0;
+  color: #ababab;
+}
+div.posts .grid-item .expand-button:hover > i {
+  bottom: -5px;
+  color: #757575;
+}
 div.posts .grid-item .content {
+  transition-duration: 1s;
   cursor: pointer;
   font-size: 14px;
   text-align: justify;

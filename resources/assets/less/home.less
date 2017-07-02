@@ -3,7 +3,7 @@
 @import "colours";
 
 html, body {
-  background-color: #f4f4f4;
+  //background-color: #f4f4f4;
 }
 
 div.posts {
@@ -17,18 +17,47 @@ div.posts {
 
   .grid-item {
     width: 450px;
-    background-color: white;
+    //background-color: white;
     margin: 15px;
     padding: 15px;
     box-sizing: border-box;
     overflow: hidden;
-    border: 1px solid @borderlight;
+    border-top: 1px solid #ededed;
     border-radius: 5px;
 
     &.post { // Specific to grid-items which are posts
     }
 
+    .expand-button {
+      position: absolute;
+      width: 15px;
+      font-size: 14px;
+      left: 50%;
+      text-align: center;
+      margin-left: -7.5px;
+      cursor: pointer;
+
+      i {
+        display: inline-block;
+        position: relative;
+        transition-duration: 0.1s;
+        bottom: 0;
+        color: @greyed;
+      }
+
+      &:hover >i {
+        bottom: -5px;
+        color: #757575;
+      }
+    }
+
     .content {
+      &.expanded {
+        //max-height: 99999;
+      }
+
+      transition-duration: 1s;
+
       cursor: pointer;
       font-size: 14px;
       //line-height: 19px;

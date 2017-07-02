@@ -18,6 +18,7 @@
             users.username AS sender,
             users.name AS name,
             posts.content AS content,
+            posts.id AS post_id,
             DATE_FORMAT(posts.date_posted, "%d/%m/%y") AS date_posted
           FROM posts
           INNER JOIN users AS users
@@ -55,6 +56,9 @@
           @endslot
           @slot('date')
             {{$post->date_posted}}
+          @endslot
+          @slot('id')
+            {{$post->post_id}}
           @endslot
         @endcomponent
       @endforeach

@@ -38,6 +38,10 @@ Route::get('/settings', function() {
   return view('settings');
 });
 
+Route::get('/post/{post_id}', function($post_id) {
+  return view('post-page');
+});
+
 Route::get('/devlogout', function() {
     Auth::logout();
     return Redirect::to('/');
