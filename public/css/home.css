@@ -18,7 +18,7 @@ div.posts .grid-item {
 }
 div.posts .grid-item.expanded {
   width: 930px;
-  box-shadow: 0px 0px 115px -19px rgba(0, 0, 0, 0.17);
+  box-shadow: 0px 0px 115px -19px rgba(0, 0, 0, 0.23);
   border: none;
 }
 div.posts .grid-item .expand-button {
@@ -39,7 +39,7 @@ div.posts .grid-item .expand-button i {
   color: #ababab;
 }
 div.posts .grid-item .expand-button:hover > i {
-  bottom: -5px;
+  font-size: 16px;
   color: #757575;
 }
 div.posts .grid-item .content {
@@ -64,8 +64,6 @@ div.posts .grid-item .content p {
   text-align: left;
 }
 div.posts .grid-item .content pre {
-  white-space: pre-wrap;
-  word-break: break-all;
   background-color: #263238;
   padding: 15px 18px;
   border-radius: 4px;
@@ -115,7 +113,7 @@ div.posts .grid-item .status .comments * {
 }
 div.posts .grid-item.newpost {
   font-size: 40px;
-  background-color: #73a580;
+  background-color: #75c88b;
   color: white;
   padding: 30px;
   user-select: none;
@@ -126,7 +124,7 @@ div.posts .grid-item.newpost * {
   color: white;
 }
 div.posts .grid-item.newpost:hover {
-  background-color: #6a9f78;
+  background-color: #6ac482;
 }
 div.posts .grid-item.discover {
   font-size: 40px;
@@ -141,7 +139,7 @@ div.posts .grid-item.discover * {
   color: white;
 }
 div.posts .grid-item.discover:hover {
-  background-color: #6a9f78;
+  background-color: #e05f4d;
 }
 div.posts .grid-item.greeting {
   font-size: 50px;

@@ -4,12 +4,12 @@
     <script>
       var content = document.currentScript.parentElement;
       console.log(content.clientHeight);
-      if (content.clientHeight >= 504) {
+      if (/*content.clientHeight >= 504*/ true) {
         var expandbtn = document.createElement("div");
         expandbtn.setAttribute("class", "expand-button");
         expandbtn.setAttribute("title", "Show all");
-        expandbtn.innerHTML = '<i class="fa fa-arrow-down" aria-hidden="true"></i>';
-        expandbtn.setAttribute("onclick", 'this.parentElement.classList.add("expanded");this.parentElement.parentElement.classList.add("expanded");reload()');
+        expandbtn.innerHTML = '<i class="fa fa-expand" aria-hidden="true"></i>';
+        expandbtn.setAttribute("onclick", 'resetSelected();this.parentElement.classList.add("expanded");this.parentElement.parentElement.classList.add("expanded");reload()');
         content.appendChild(expandbtn);
       }
     </script>

@@ -22,7 +22,7 @@
             <span class="links">
                 <a href="https://github.com/j4cobgarby/Cordial2"><i class="fa fa-code-fork" aria-hidden="true"></i> fork on GitHub</a>
                 <a href="mailto:j.garby@icloud.com?Subject=From%20Cordial!"><i class="fa fa-envelope" aria-hidden="true"></i> email me</a>
-                {{--<a href="https://paypal.me/j4cobgarby">donate</a>--}}
+                <a href="https://paypal.me/j4cobgarby"><i class="fa fa-credit-card" aria-hidden="true"></i> donate</a>
             </span>
             <br>
             <button class="button-big close-right" onclick="window.location.href='/register'">Register here</button>

@@ -15,6 +15,8 @@
   <body>
     @component('header')
     @endcomponent
+    @component('obscurer')
+    @endcomponent
     <div class="posts grid">
       @php
         $posts = DB::select(
@@ -48,10 +50,10 @@
           </span>
         </span>
       </div>
-      <div class="grid-item newpost">
+      <div class="grid-item newpost" onclick='window.location.href="/write"'>
         Want to write something? <b>Click here!</b>
       </div>
-      <div class="grid-item discover">
+      <div class="grid-item discover" onclick='window.location.href="/discover"'>
         <b>Click here</b> to discover new people and interesting posts!
       </div>
       @foreach ($posts as $post)
@@ -88,5 +90,18 @@
 
       console.log("reloaded");
     }
+
+    function resetSelected() {
+      $('.expanded').each(function(index) {
+        this.classList.remove('expanded');
+      });
+      reload();
+    }
+
+    $(document).keyup(function(e) {
+      if (e.keyCode == 27) { // Escape
+        resetSelected();
+      }
+    });
   </script>
 </html>
