@@ -84,10 +84,7 @@
       columnWidth: 450 + 15*2
     });
     function reload() {
-      setTimeout(function() {
-        msnry.layout();
-      }, 100);
-
+      msnry.layout();
       console.log("reloaded");
     }
 
@@ -95,7 +92,7 @@
       $('.expanded').each(function(index) {
         this.classList.remove('expanded');
       });
-      reload();
+      //reload();
     }
 
     $(document).keyup(function(e) {
