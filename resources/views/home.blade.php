@@ -11,15 +11,6 @@
   src="https://code.jquery.com/jquery-3.2.1.min.js"
   integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
   crossorigin="anonymous"></script>
-    <script>
-      function reload() {
-        setTimeout(function() {
-          msnry.layout();
-        }, 100);
-
-        console.log("reloaded");
-      }
-    </script>
   </head>
   <body>
     @component('header')
@@ -39,7 +30,8 @@
         ');
         $Parsedown = new Parsedown();
       @endphp
-      <div class="grid-item greeting">Hello there, <br>
+      <div class="grid-item greeting">
+        Hello there, <br>
         <span class="username">
           {{explode(' ', Auth::user()->name)[0]}}!
         </span>
@@ -56,10 +48,13 @@
           </span>
         </span>
       </div>
+      <div class="grid-item newpost">
+        Want to write something? Click me!
+      </div>
       @foreach ($posts as $post)
         @component('post')
           @slot('content')
-            {!!$Parsedown->text(htmlspecialchars($post->content))!!}
+            {!!$Parsedown->text($post->content)!!}
           @endslot
           @slot('username')
             {{$post->sender}}
@@ -76,12 +71,19 @@
         @endcomponent
       @endforeach
     </div>
-    <script>
-    var msnry = new Masonry( '.grid', {
+  </body>
+  <script>
+    var msnry;
+    msnry = new Masonry( '.grid', {
       itemSelector: '.grid-item',
       columnWidth: 480
     });
-    msnry.layout();
-    </script>
-  </body>
+    function reload() {
+      setTimeout(function() {
+        msnry.layout();
+      }, 100);
+
+      console.log("reloaded");
+    }
+  </script>
 </html>

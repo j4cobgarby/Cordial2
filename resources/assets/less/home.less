@@ -2,10 +2,6 @@
 
 @import "colours";
 
-html, body {
-  //background-color: #f4f4f4;
-}
-
 div.posts {
   width: 100%;
   min-height: 30px;
@@ -62,7 +58,6 @@ div.posts {
       cursor: pointer;
       font-size: 14px;
       //line-height: 19px;
-      text-align: justify;
       max-height: 500px;
       margin-bottom: 15px;
       overflow: hidden;
@@ -78,6 +73,19 @@ div.posts {
 
       p {
         text-align: left;
+      }
+
+      pre {
+        white-space: pre-wrap;
+        word-break: break-all;
+        background-color: #263238;
+        padding: 15px 18px;
+        border-radius: 4px;
+      }
+
+      code {
+        color: #aad2d2;
+        font-family: 'Inconsolata', monospace;
       }
     }
 
@@ -118,11 +126,27 @@ div.posts {
       }
     }
 
+    &.newpost {
+      font-size: 40px;
+      background-color: @newpost-colour;
+      color: white;
+      //height: 310px;
+      padding: 30px;
+      user-select: none;
+      cursor: pointer;
+      font-weight: bold;
+      transition-duration: 0.2s;
+
+      &:hover {
+        background-color: darken(@newpost-colour, 3%);
+      }
+    }
+
     &.greeting {
       font-size: 50px;
       background-color: @greet-colour;
       color: white;
-      height: 300px;
+      height: 350px;
       padding: 30px;
       user-select: none;
       cursor: default;
@@ -137,7 +161,7 @@ div.posts {
         text-align: center;
         font-size: 20px;
         position: relative;
-        bottom: -70px;
+        bottom: -80px;
         display: inline-block;
         width: 400px;
 

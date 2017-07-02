@@ -7,7 +7,7 @@
       if (content.clientHeight >= 504) {
         var expandbtn = document.createElement("div");
         expandbtn.setAttribute("class", "expand-button");
-        expandbtn.setAttribute("title", "Expand");
+        expandbtn.setAttribute("title", "Show all");
         expandbtn.innerHTML = '<i class="fa fa-arrow-down" aria-hidden="true"></i>';
         expandbtn.setAttribute("onclick", 'this.parentElement.classList.add("expanded");reload()');
         content.appendChild(expandbtn);
