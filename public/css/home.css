@@ -17,14 +17,15 @@ div.posts .grid-item {
 }
 div.posts .grid-item.expanded {
   width: 930px;
-  box-shadow: 0px 0px 115px -19px rgba(0, 0, 0, 0.23);
-  border: none;
+  box-shadow: 0px 0px 115px -19px rgba(0, 0, 0, 0.16);
+  border: 1px solid #d0d0d0 !important;
 }
 div.posts .grid-item.expanded .expand-button {
   display: none;
 }
 div.posts .grid-item.post {
   border-top: 1px solid #ededed;
+  border-radius: 4px;
 }
 div.posts .grid-item .expand-button {
   position: absolute;

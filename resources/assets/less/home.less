@@ -23,8 +23,8 @@ div.posts {
 
     &.expanded {
       width: (450px * 2 + 30px);
-      box-shadow: 0px 0px 115px -19px rgba(0,0,0,0.23);
-      border: none;
+      box-shadow: 0px 0px 115px -19px rgba(0,0,0,0.16);
+      border: 1px solid @bordermain !important;
 
       .expand-button {
         display: none;
@@ -33,6 +33,7 @@ div.posts {
 
     &.post { // Specific to grid-items which are posts
       border-top: 1px solid #ededed;
+      border-radius: 4px;
     }
 
     .expand-button {
