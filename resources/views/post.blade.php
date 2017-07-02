@@ -9,7 +9,7 @@
         expandbtn.setAttribute("class", "expand-button");
         expandbtn.setAttribute("title", "Show all");
         expandbtn.innerHTML = '<i class="fa fa-arrow-down" aria-hidden="true"></i>';
-        expandbtn.setAttribute("onclick", 'this.parentElement.classList.add("expanded");reload()');
+        expandbtn.setAttribute("onclick", 'this.parentElement.classList.add("expanded");this.parentElement.parentElement.classList.add("expanded");reload()');
         content.appendChild(expandbtn);
       }
     </script>

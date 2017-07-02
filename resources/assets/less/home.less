@@ -8,7 +8,7 @@ div.posts {
   margin: auto;
   margin-top: 70px;
   padding: 15px;
-  max-width: 1440px;
+  max-width: 450px * 3 + 15px * 6;
   // 450 * 3  +  15 * 6
 
   .grid-item {
@@ -20,6 +20,12 @@ div.posts {
     overflow: hidden;
     border-top: 1px solid #ededed;
     border-radius: 5px;
+
+    &.expanded {
+      width: (450px * 2 + 30px);
+      box-shadow: 0px 0px 115px -19px rgba(0,0,0,0.17);
+      border: none;
+    }
 
     &.post { // Specific to grid-items which are posts
     }
@@ -50,10 +56,8 @@ div.posts {
 
     .content {
       &.expanded {
-        max-height: 99999px;
+        max-height: 6000px;
       }
-
-      transition-duration: 1s;
 
       cursor: pointer;
       font-size: 14px;
@@ -68,7 +72,7 @@ div.posts {
 
       img {
         max-width: 100%;
-        max-height: 400px;
+        max-height: 600px;
       }
 
       p {
@@ -85,6 +89,7 @@ div.posts {
 
       code {
         color: #aad2d2;
+        font-size: 12px;
         font-family: 'Inconsolata', monospace;
       }
     }
@@ -130,11 +135,29 @@ div.posts {
       font-size: 40px;
       background-color: @newpost-colour;
       color: white;
-      //height: 310px;
+      * {
+        color: white;
+      }
       padding: 30px;
       user-select: none;
       cursor: pointer;
-      font-weight: bold;
+      transition-duration: 0.2s;
+
+      &:hover {
+        background-color: darken(@newpost-colour, 3%);
+      }
+    }
+
+    &.discover {
+      font-size: 40px;
+      background-color: @discover-colour;
+      color: white;
+      * {
+        color: white;
+      }
+      padding: 30px;
+      user-select: none;
+      cursor: pointer;
       transition-duration: 0.2s;
 
       &:hover {
@@ -146,7 +169,8 @@ div.posts {
       font-size: 50px;
       background-color: @greet-colour;
       color: white;
-      height: 350px;
+      height: 280px;
+      width: (450px * 2 + 30px);
       padding: 30px;
       user-select: none;
       cursor: default;
@@ -163,12 +187,10 @@ div.posts {
         position: relative;
         bottom: -80px;
         display: inline-block;
-        width: 400px;
 
         span.sect {
           display: inline-block;
-          margin: 0 20px;
-          width: 80px;
+          width: 120px;
           cursor: pointer;
         }
       }

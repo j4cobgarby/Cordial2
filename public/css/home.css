@@ -16,6 +16,11 @@ div.posts .grid-item {
   border-top: 1px solid #ededed;
   border-radius: 5px;
 }
+div.posts .grid-item.expanded {
+  width: 930px;
+  box-shadow: 0px 0px 115px -19px rgba(0, 0, 0, 0.17);
+  border: none;
+}
 div.posts .grid-item .expand-button {
   position: absolute;
   width: 15px;
@@ -38,7 +43,6 @@ div.posts .grid-item .expand-button:hover > i {
   color: #757575;
 }
 div.posts .grid-item .content {
-  transition-duration: 1s;
   cursor: pointer;
   font-size: 14px;
   max-height: 500px;
@@ -50,11 +54,11 @@ div.posts .grid-item .content {
   background-color: white;
 }
 div.posts .grid-item .content.expanded {
-  max-height: 99999px;
+  max-height: 6000px;
 }
 div.posts .grid-item .content img {
   max-width: 100%;
-  max-height: 400px;
+  max-height: 600px;
 }
 div.posts .grid-item .content p {
   text-align: left;
@@ -68,6 +72,7 @@ div.posts .grid-item .content pre {
 }
 div.posts .grid-item .content code {
   color: #aad2d2;
+  font-size: 12px;
   font-family: 'Inconsolata', monospace;
 }
 div.posts .grid-item .by {
@@ -115,17 +120,35 @@ div.posts .grid-item.newpost {
   padding: 30px;
   user-select: none;
   cursor: pointer;
-  font-weight: bold;
   transition-duration: 0.2s;
 }
+div.posts .grid-item.newpost * {
+  color: white;
+}
 div.posts .grid-item.newpost:hover {
+  background-color: #6a9f78;
+}
+div.posts .grid-item.discover {
+  font-size: 40px;
+  background-color: #e26b5a;
+  color: white;
+  padding: 30px;
+  user-select: none;
+  cursor: pointer;
+  transition-duration: 0.2s;
+}
+div.posts .grid-item.discover * {
+  color: white;
+}
+div.posts .grid-item.discover:hover {
   background-color: #6a9f78;
 }
 div.posts .grid-item.greeting {
   font-size: 50px;
   background-color: #e6961d;
   color: white;
-  height: 350px;
+  height: 280px;
+  width: 930px;
   padding: 30px;
   user-select: none;
   cursor: default;
@@ -142,11 +165,9 @@ div.posts .grid-item.greeting span.details {
   position: relative;
   bottom: -80px;
   display: inline-block;
-  width: 400px;
 }
 div.posts .grid-item.greeting span.details span.sect {
   display: inline-block;
-  margin: 0 20px;
-  width: 80px;
+  width: 120px;
   cursor: pointer;
 }

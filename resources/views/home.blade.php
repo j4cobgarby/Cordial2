@@ -31,7 +31,7 @@
         $Parsedown = new Parsedown();
       @endphp
       <div class="grid-item greeting">
-        Hello there, <br>
+        Hello there,
         <span class="username">
           {{explode(' ', Auth::user()->name)[0]}}!
         </span>
@@ -49,7 +49,10 @@
         </span>
       </div>
       <div class="grid-item newpost">
-        Want to write something? Click me!
+        Want to write something? <b>Click here!</b>
+      </div>
+      <div class="grid-item discover">
+        <b>Click here</b> to discover new people and interesting posts!
       </div>
       @foreach ($posts as $post)
         @component('post')
@@ -76,7 +79,7 @@
     var msnry;
     msnry = new Masonry( '.grid', {
       itemSelector: '.grid-item',
-      columnWidth: 480
+      columnWidth: 450 + 15*2
     });
     function reload() {
       setTimeout(function() {
