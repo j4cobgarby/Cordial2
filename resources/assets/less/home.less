@@ -49,14 +49,18 @@ div.posts {
       i {
         display: inline-block;
         position: relative;
-        transition-duration: 0.1s;
+        transition-duration: 0.3s;
         bottom: 0;
         color: @greyed;
       }
 
       &:hover >i {
-        font-size: 16px;
+        transform: scale(1.7) rotate(270deg);
         color: #757575;
+      }
+
+      &:active >i {
+        transform: scale(1.8) rotate(360deg);
       }
     }
 
@@ -124,9 +128,28 @@ div.posts {
       }
 
       .likes {
+        @keyframes heartbeat {
+          0% {transform: scale(1);}
+          6% {transform: scale(1.2);}
+          18% {transform: scale(1);}
+          20% {transform: scale(0.8)}
+          33% {transform: scale(1.4);}
+          47% {transform: scale(1);}
+          100% {transform: scale(1);}
+        }
+
         color: @greyed;
         * {color: @greyed;}
-        &.liked {
+        cursor: pointer;
+
+        &:hover>i, &.liked>i {
+          animation-name: heartbeat;
+          animation-duration: 1s;
+          animation-timing-function: linear;
+          animation-iteration-count: infinite;
+        }
+
+        &.liked, &:hover {
           * {color: @like-colour;}
           color: @like-colour;
         }
@@ -138,6 +161,7 @@ div.posts {
     }
 
     .gridlink(@colour) {
+      height: 210px;
       font-size: 40px;
       background-color: @colour;
       color: white;
@@ -153,7 +177,7 @@ div.posts {
 
       &:hover {
         border: 1px solid darken(@colour, 3%);
-        box-shadow: 0 0 0 5px darken(@colour, 3%);
+        box-shadow: 0 0 0 1px darken(@colour, 3%);
         background-color: darken(@colour, 3%);
       }
     }
@@ -167,10 +191,10 @@ div.posts {
     }
 
     &.greeting {
-      font-size: 50px;
+      font-size: 70px;
       background-color: @greet-colour;
       color: white;
-      height: 280px;
+      height: 450px;
       width: @double-width;
       padding: 30px;
       user-select: none;
@@ -185,8 +209,8 @@ div.posts {
       span.details {
         text-align: center;
         font-size: 20px;
-        position: relative;
-        bottom: -80px;
+        position: absolute;
+        bottom: 55px;
         display: inline-block;
 
         span.sect {

@@ -40,13 +40,13 @@
         <br>
         <span class="details">
           <span class="sect">
+            <i class="fa fa-heart" aria-hidden="true"></i> 0
+          </span>
+          <span class="sect">
             <i class="fa fa-comment" aria-hidden="true"></i> 0
           </span>
           <span class="sect">
             <i class="fa fa-exclamation" aria-hidden="true"></i> 0
-          </span>
-          <span class="sect">
-            <i class="fa fa-heart" aria-hidden="true"></i> 0
           </span>
         </span>
       </div>

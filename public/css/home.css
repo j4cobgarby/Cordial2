@@ -40,13 +40,16 @@ div.posts .grid-item .expand-button {
 div.posts .grid-item .expand-button i {
   display: inline-block;
   position: relative;
-  transition-duration: 0.1s;
+  transition-duration: 0.3s;
   bottom: 0;
   color: #ababab;
 }
 div.posts .grid-item .expand-button:hover > i {
-  font-size: 16px;
+  transform: scale(1.7) rotate(270deg);
   color: #757575;
+}
+div.posts .grid-item .expand-button:active > i {
+  transform: scale(1.8) rotate(360deg);
 }
 div.posts .grid-item .content {
   cursor: pointer;
@@ -101,14 +104,47 @@ div.posts .grid-item .status * {
 }
 div.posts .grid-item .status .likes {
   color: #ababab;
+  cursor: pointer;
+}
+@keyframes heartbeat {
+  0% {
+    transform: scale(1);
+  }
+  6% {
+    transform: scale(1.2);
+  }
+  18% {
+    transform: scale(1);
+  }
+  20% {
+    transform: scale(0.8);
+  }
+  33% {
+    transform: scale(1.4);
+  }
+  47% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 div.posts .grid-item .status .likes * {
   color: #ababab;
 }
-div.posts .grid-item .status .likes.liked {
+div.posts .grid-item .status .likes:hover > i,
+div.posts .grid-item .status .likes.liked > i {
+  animation-name: heartbeat;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+div.posts .grid-item .status .likes.liked,
+div.posts .grid-item .status .likes:hover {
   color: #e25871;
 }
-div.posts .grid-item .status .likes.liked * {
+div.posts .grid-item .status .likes.liked *,
+div.posts .grid-item .status .likes:hover * {
   color: #e25871;
 }
 div.posts .grid-item .status .comments {
@@ -118,6 +154,7 @@ div.posts .grid-item .status .comments * {
   color: #ababab;
 }
 div.posts .grid-item.newpost {
+  height: 210px;
   font-size: 40px;
   background-color: #75c88b;
   color: white;
@@ -133,10 +170,11 @@ div.posts .grid-item.newpost * {
 }
 div.posts .grid-item.newpost:hover {
   border: 1px solid #6ac482;
-  box-shadow: 0 0 0 5px #6ac482;
+  box-shadow: 0 0 0 1px #6ac482;
   background-color: #6ac482;
 }
 div.posts .grid-item.discover {
+  height: 210px;
   font-size: 40px;
   background-color: #e26b5a;
   color: white;
@@ -152,14 +190,14 @@ div.posts .grid-item.discover * {
 }
 div.posts .grid-item.discover:hover {
   border: 1px solid #e05f4d;
-  box-shadow: 0 0 0 5px #e05f4d;
+  box-shadow: 0 0 0 1px #e05f4d;
   background-color: #e05f4d;
 }
 div.posts .grid-item.greeting {
-  font-size: 50px;
+  font-size: 70px;
   background-color: #1d1d1d;
   color: white;
-  height: 280px;
+  height: 450px;
   width: 930px;
   padding: 30px;
   user-select: none;
@@ -174,8 +212,8 @@ div.posts .grid-item.greeting span.username {
 div.posts .grid-item.greeting span.details {
   text-align: center;
   font-size: 20px;
-  position: relative;
-  bottom: -80px;
+  position: absolute;
+  bottom: 55px;
   display: inline-block;
 }
 div.posts .grid-item.greeting span.details span.sect {
