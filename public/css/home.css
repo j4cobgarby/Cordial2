@@ -13,13 +13,18 @@ div.posts .grid-item {
   padding: 15px;
   box-sizing: border-box;
   overflow: hidden;
-  border-top: 1px solid #ededed;
-  border-radius: 5px;
+  border-radius: 2px;
 }
 div.posts .grid-item.expanded {
   width: 930px;
   box-shadow: 0px 0px 115px -19px rgba(0, 0, 0, 0.23);
   border: none;
+}
+div.posts .grid-item.expanded .expand-button {
+  display: none;
+}
+div.posts .grid-item.post {
+  border-top: 1px solid #ededed;
 }
 div.posts .grid-item .expand-button {
   position: absolute;
@@ -70,7 +75,7 @@ div.posts .grid-item .content pre {
 }
 div.posts .grid-item .content code {
   color: #aad2d2;
-  font-size: 12px;
+  font-size: 15px;
   font-family: 'Inconsolata', monospace;
 }
 div.posts .grid-item .by {
@@ -119,11 +124,15 @@ div.posts .grid-item.newpost {
   user-select: none;
   cursor: pointer;
   transition-duration: 0.2s;
+  box-shadow: 0 0 0 0 #75c88b;
+  border: 1px solid #51b96c;
 }
 div.posts .grid-item.newpost * {
   color: white;
 }
 div.posts .grid-item.newpost:hover {
+  border: 1px solid #6ac482;
+  box-shadow: 0 0 0 5px #6ac482;
   background-color: #6ac482;
 }
 div.posts .grid-item.discover {
@@ -134,11 +143,15 @@ div.posts .grid-item.discover {
   user-select: none;
   cursor: pointer;
   transition-duration: 0.2s;
+  box-shadow: 0 0 0 0 #e26b5a;
+  border: 1px solid #da442f;
 }
 div.posts .grid-item.discover * {
   color: white;
 }
 div.posts .grid-item.discover:hover {
+  border: 1px solid #e05f4d;
+  box-shadow: 0 0 0 5px #e05f4d;
   background-color: #e05f4d;
 }
 div.posts .grid-item.greeting {

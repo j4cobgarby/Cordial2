@@ -2,6 +2,8 @@
 
 @import "colours";
 
+@double-width: (450px * 2 + 30px);
+
 div.posts {
   width: 100%;
   min-height: 30px;
@@ -18,16 +20,20 @@ div.posts {
     padding: 15px;
     box-sizing: border-box;
     overflow: hidden;
-    border-top: 1px solid #ededed;
-    border-radius: 5px;
+    border-radius: 2px;
 
     &.expanded {
       width: (450px * 2 + 30px);
       box-shadow: 0px 0px 115px -19px rgba(0,0,0,0.23);
       border: none;
+
+      .expand-button {
+        display: none;
+      }
     }
 
     &.post { // Specific to grid-items which are posts
+      border-top: 1px solid #ededed;
     }
 
     .expand-button {
@@ -89,7 +95,7 @@ div.posts {
 
       code {
         color: #aad2d2;
-        font-size: 12px;
+        font-size: 15px;
         font-family: 'Inconsolata', monospace;
       }
     }
@@ -131,9 +137,9 @@ div.posts {
       }
     }
 
-    &.newpost {
+    .gridlink(@colour) {
       font-size: 40px;
-      background-color: @newpost-colour;
+      background-color: @colour;
       color: white;
       * {
         color: white;
@@ -142,27 +148,22 @@ div.posts {
       user-select: none;
       cursor: pointer;
       transition-duration: 0.2s;
+      box-shadow: 0 0 0 0 @colour;
+      border: 1px solid darken(@colour, 10%);
 
       &:hover {
-        background-color: darken(@newpost-colour, 3%);
+        border: 1px solid darken(@colour, 3%);
+        box-shadow: 0 0 0 5px darken(@colour, 3%);
+        background-color: darken(@colour, 3%);
       }
     }
 
-    &.discover {
-      font-size: 40px;
-      background-color: @discover-colour;
-      color: white;
-      * {
-        color: white;
-      }
-      padding: 30px;
-      user-select: none;
-      cursor: pointer;
-      transition-duration: 0.2s;
+    &.newpost {
+      .gridlink(@newpost-colour);
+    }
 
-      &:hover {
-        background-color: darken(@discover-colour, 3%);
-      }
+    &.discover {
+      .gridlink(@discover-colour);
     }
 
     &.greeting {
@@ -170,7 +171,7 @@ div.posts {
       background-color: @greet-colour;
       color: white;
       height: 280px;
-      width: (450px * 2 + 30px);
+      width: @double-width;
       padding: 30px;
       user-select: none;
       cursor: default;
