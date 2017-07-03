@@ -259,8 +259,8 @@ div.posts .grid-item.discover:hover {
 }
 div.posts .grid-item.greeting {
   font-size: 60px;
-  background-color: #1d1d1d;
-  color: white;
+  background-color: white;
+  color: #1d1d1d;
   height: 450px;
   width: 930px;
   padding: 30px;
@@ -268,7 +268,7 @@ div.posts .grid-item.greeting {
   cursor: default;
 }
 div.posts .grid-item.greeting * {
-  color: white;
+  color: #1d1d1d;
 }
 div.posts .grid-item.greeting span.username {
   font-weight: bold;
@@ -289,15 +289,6 @@ div.posts .grid-item.greeting span.details span.sect {
 div.posts .grid-item.greeting span.details span.sect > * {
   transition-duration: 0.3s;
 }
-div.posts .grid-item.greeting span.details span.sect.like:hover,
-div.posts .grid-item.greeting span.details span.sect.like:hover > * {
-  color: #f5c5cd;
-}
-div.posts .grid-item.greeting span.details span.sect.comment:hover,
-div.posts .grid-item.greeting span.details span.sect.comment:hover > * {
-  color: #c5f2d3;
-}
-div.posts .grid-item.greeting span.details span.sect.mention:hover,
-div.posts .grid-item.greeting span.details span.sect.mention:hover > * {
-  color: #ece582;
+div.posts .grid-item.greeting span.details span.sect:hover {
+  transform: scale(1.2);
 }

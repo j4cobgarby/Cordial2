@@ -251,14 +251,14 @@ div.posts {
     &.greeting {
       font-size: 60px;
       background-color: @greet-colour;
-      color: white;
+      color: @main-bg;
       height: 450px;
       width: @double-width;
       padding: 30px;
       user-select: none;
       cursor: default;
 
-      * { color: white; }
+      * { color: @main-bg; }
 
       span.username {
         font-weight: bold;
@@ -278,17 +278,8 @@ div.posts {
           transition-duration: 0.3s;
           >*{transition-duration: 0.3s;}
 
-          &.like:hover, &.like:hover>* {
-            color: lighten(@like-colour, 25%);
-          }
-
-          &.comment:hover, &.comment:hover>* {
-            color: lighten(@comment-colour, 25%);
-
-          }
-
-          &.mention:hover, &.mention:hover>* {
-            color: lighten(@mention-colour, 25%);
+          &:hover {
+            transform: scale(1.2);
           }
         }
       }
