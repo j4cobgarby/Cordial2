@@ -21,10 +21,17 @@
   </span>
   <span class="date">{{$date}}</span>
   <span class="status">
-    <span class="likes">
-      <i class="fa fa-heart" aria-hidden="true"></i>
-      0
-    </span>
+    @if (sizeof(DB::select('SELECT * FROM users_liked_posts WHERE post_id = ?', [$id])) != 0)
+      <span class="likes liked">
+        <i class="fa fa-heart" aria-hidden="true"></i>
+        0
+      </span>
+    @else
+      <span class="likes">
+        <i class="fa fa-heart" aria-hidden="true"></i>
+        0
+      </span>
+    @endif
     <span class="comments">
       <i class="fa fa-comment" aria-hidden="true"></i>
       0
