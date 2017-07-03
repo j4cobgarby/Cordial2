@@ -23,9 +23,12 @@ div.posts .grid-item.expanded {
 div.posts .grid-item.expanded .expand-button {
   display: none;
 }
+div.posts .grid-item.expanded.post {
+  border-radius: 6px;
+}
 div.posts .grid-item.post {
-  border-top: 1px solid #ededed;
-  border-radius: 4px;
+  border-top: 1px solid #d0d0d0;
+  border-radius: 0;
 }
 div.posts .grid-item .expand-button {
   position: absolute;
@@ -112,7 +115,7 @@ div.posts .grid-item .status .likes {
     transform: scale(1);
   }
   6% {
-    transform: scale(1.2);
+    transform: scale(1.25);
   }
   18% {
     transform: scale(1);
@@ -121,7 +124,7 @@ div.posts .grid-item .status .likes {
     transform: scale(0.9);
   }
   33% {
-    transform: scale(1.35);
+    transform: scale(1.5);
   }
   47% {
     transform: scale(1);
@@ -151,17 +154,19 @@ div.posts .grid-item .status .likes:hover * {
 }
 div.posts .grid-item .status .comments {
   color: #ababab;
+  cursor: pointer;
 }
 @keyframes comments {
   0% {
     transform: scale(0) translateX(-15px) translateY(15px);
     opacity: 0;
+    color: #c2c2c2;
   }
   12.5% {
     transform: scale(0.7) translateX(-1);
   }
   25% {
-    transform: scale(1.2) translateX(0) translateY(0);
+    transform: scale(1.5) translateX(0) translateY(0);
     opacity: 1;
   }
   37.5% {
@@ -170,16 +175,18 @@ div.posts .grid-item .status .comments {
   49% {
     transform: scale(0) translateX(15px) translateY(-15px);
     opacity: 0;
+    color: #c2c2c2;
   }
   50% {
     transform: scale(0) scaleX(-1) translateX(-15px) translateY(15px);
     opacity: 0;
+    color: #5dda84;
   }
   62.5% {
     transform: scale(0.7) scaleX(-1) translateX(-1);
   }
   75% {
-    transform: scale(1.2) scaleX(-1) translateX(0) translateY(0);
+    transform: scale(1.5) scaleX(-1) translateX(0) translateY(0);
     opacity: 1;
   }
   88% {
@@ -188,22 +195,29 @@ div.posts .grid-item .status .comments {
   100% {
     transform: scale(0) scaleX(-1) translateX(15px) translateY(-15px);
     opacity: 0;
+    color: #5dda84;
   }
 }
 div.posts .grid-item .status .comments * {
   color: #ababab;
 }
+div.posts .grid-item .status .comments:hover,
+div.posts .grid-item .status .comments.liked {
+  color: #5dda84;
+  font-weight: bold;
+}
 div.posts .grid-item .status .comments:hover > i,
 div.posts .grid-item .status .comments.liked > i {
+  color: #5dda84;
   animation-name: comments;
   animation-duration: 1.7s;
   animation-iteration-count: infinite;
 }
 div.posts .grid-item.newpost {
   height: 210px;
-  font-size: 40px;
+  font-size: 30px;
   background-color: #75c88b;
-  color: white;
+  color: #ffffff;
   padding: 30px;
   user-select: none;
   cursor: pointer;
@@ -212,16 +226,16 @@ div.posts .grid-item.newpost {
   border: 1px solid #51b96c;
 }
 div.posts .grid-item.newpost * {
-  color: white;
+  color: #ffffff;
 }
 div.posts .grid-item.newpost:hover {
   background-color: #6ac482;
 }
 div.posts .grid-item.discover {
   height: 210px;
-  font-size: 40px;
+  font-size: 30px;
   background-color: #e26b5a;
-  color: white;
+  color: #ffffff;
   padding: 30px;
   user-select: none;
   cursor: pointer;
@@ -230,7 +244,7 @@ div.posts .grid-item.discover {
   border: 1px solid #da442f;
 }
 div.posts .grid-item.discover * {
-  color: white;
+  color: #ffffff;
 }
 div.posts .grid-item.discover:hover {
   background-color: #e05f4d;

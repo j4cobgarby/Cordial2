@@ -30,11 +30,14 @@ div.posts {
       .expand-button {
         display: none;
       }
+      &.post {
+        border-radius: 6px;
+      }
     }
 
     &.post { // Specific to grid-items which are posts
-      border-top: 1px solid #ededed;
-      border-radius: 4px;
+      border-top: 1px solid @bordermain;
+      border-radius: 0;
     }
 
     .expand-button {
@@ -132,10 +135,10 @@ div.posts {
       .likes {
         @keyframes heartbeat {
           0% {transform: scale(1);}
-          6% {transform: scale(1.2);}
+          6% {transform: scale(1.25);}
           18% {transform: scale(1);}
           20% {transform: scale(0.9)}
-          33% {transform: scale(1.35);}
+          33% {transform: scale(1.5);}
           47% {transform: scale(1);}
           100% {transform: scale(1);}
         }
@@ -162,43 +165,45 @@ div.posts {
           0% {
             transform: scale(0) translateX(-15px) translateY(15px);
             opacity: 0;
+            color: @comment-sec-colour;
           }
-          12.5% {
-            transform: scale(0.7) translateX(-1);
-          }
+          12.5% {transform: scale(0.7) translateX(-1);}
           25% {
-            transform: scale(1.2) translateX(0) translateY(0);
+            transform: scale(1.5) translateX(0) translateY(0);
             opacity: 1;
           }
-          37.5% {
-            transform: scale(0.7) translateX(-1);
-          }
+          37.5% {transform: scale(0.7) translateX(-1);}
           49% {
             transform: scale(0) translateX(15px) translateY(-15px);
             opacity: 0;
+            color: @comment-sec-colour;
           }
           50% {
             transform: scale(0) scaleX(-1) translateX(-15px) translateY(15px);
             opacity: 0;
+            color: @comment-colour;
           }
-          62.5% {
-            transform: scale(0.7) scaleX(-1) translateX(-1);
-          }
+          62.5% {transform: scale(0.7) scaleX(-1) translateX(-1);}
           75% {
-            transform: scale(1.2) scaleX(-1) translateX(0) translateY(0);
+            transform: scale(1.5) scaleX(-1) translateX(0) translateY(0);
             opacity: 1;
           }
-          88% {
-            transform: scale(0.7) scaleX(-1) translateX(11);
-          }
+          88% {transform: scale(0.7) scaleX(-1) translateX(11);}
           100% {
             transform: scale(0) scaleX(-1) translateX(15px) translateY(-15px);
             opacity: 0;
+            color: @comment-colour;
           }
         }
         * {color: @greyed;}
         color: @greyed;
+        cursor: pointer;
+        &:hover, &.liked {
+          color: @comment-colour;
+          font-weight: bold;
+        }
         &:hover>i, &.liked>i {
+          color: @comment-colour;
           animation-name: comments;
           animation-duration: 1.7s;
           animation-iteration-count: infinite;
@@ -208,11 +213,11 @@ div.posts {
 
     .gridlink(@colour) {
       height: 210px;
-      font-size: 40px;
+      font-size: 30px;
       background-color: @colour;
-      color: white;
+      color: lighten(@colour, 40%);
       * {
-        color: white;
+        color: lighten(@colour, 50%);
       }
       padding: 30px;
       user-select: none;
