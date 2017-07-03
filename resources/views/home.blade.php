@@ -32,24 +32,9 @@
         ');
         $Parsedown = new Parsedown();
       @endphp
-      <div class="grid-item greeting">
-        Hello there,
-        <span class="username">
-          {{explode(' ', Auth::user()->name)[0]}}!
-        </span>
-        <br>
-        <span class="details">
-          <span class="sect">
-            <i class="fa fa-heart" aria-hidden="true"></i> 0
-          </span>
-          <span class="sect">
-            <i class="fa fa-comment" aria-hidden="true"></i> 0
-          </span>
-          <span class="sect">
-            <i class="fa fa-exclamation" aria-hidden="true"></i> 0
-          </span>
-        </span>
-      </div>
+      @component('greeting')
+
+      @endcomponent
       <div class="grid-item newpost" onclick='window.location.href="/write"'>
         Want to write something? <b>Click here!</b>
       </div>
