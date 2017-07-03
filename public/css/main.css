@@ -128,7 +128,7 @@ div.dropdown-auth a:hover > i.fa-cog {
 div.dropdown-notauth.visible,
 div.dropdown-auth.visible {
   top: 70px;
-  height: 140px;
+  height: 210px;
   line-height: 70px;
 }
 div.dropdown-notauth.visible > a,
