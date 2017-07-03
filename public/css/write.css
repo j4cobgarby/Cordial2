@@ -46,7 +46,8 @@ form.write button.switchview {
 form.write button.switchview i {
   font-size: 25px;
   margin: 0 15px;
+  transition-duration: 0.1s;
 }
-form.write button.switchview:hover {
-  transform: scale(1.1);
+form.write button.switchview:active {
+  transform: scale(0.9);
 }

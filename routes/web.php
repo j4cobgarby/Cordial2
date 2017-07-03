@@ -46,6 +46,16 @@ Route::get('/write', function() {
   return view('write');
 });
 
+Route::post('/write', function() {
+  $content =  Input::get('content');
+  if (strlen($content) <= 6000) {
+    $sql = "INSERT INTO posts (id, author_id, content, tags, date_posted, score)
+    VALUES (NULL, ?, ?, ?, ?, 0)";
+    DB::insert($sql, [Auth::user()->id, htmlspecialchars($content), "", date("Y-m-d H:i:s")]);
+  }
+  return Redirect::to('/');
+});
+
 Route::get('/devlogout', function() {
     Auth::logout();
     return Redirect::to('/');

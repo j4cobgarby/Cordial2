@@ -25,7 +25,8 @@
     @component('header')
     @endcomponent
     <form class="write" action="" method="post">
-      <textarea placeholder="Write something interesting!" name="content"></textarea>
+      {{ csrf_field() }}
+      <textarea maxlength="6000" placeholder="Write something interesting!" name="content" required></textarea>
       <input class="button-big close-center" type="submit" name="submit" value="Post!">
       <button type="button" onclick="toggleSwitchview()" class="switchview" id="switchview">
       </button>

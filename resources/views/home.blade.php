@@ -39,6 +39,7 @@
           FROM posts
           INNER JOIN users AS users
             ON posts.author_id = users.id
+          ORDER BY post_id DESC
         ');
         $Parsedown = new Parsedown();
       @endphp
