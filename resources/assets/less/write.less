@@ -1,0 +1,61 @@
+// out: ../../../public/css/write.css
+
+@import "colours";
+
+html, body {
+  background-color: @main-bg;
+}
+
+
+form.write {
+  background-color: white;
+  position: fixed;
+  width: 660px;
+  height: 700px;
+  left: 50%;
+  top: 50%;
+  margin-left: -330px;
+  margin-top: -350px;
+  border-radius: 4px;
+  overflow: hidden;
+  padding: 40px;
+  box-sizing: border-box;
+
+  textarea {
+    resize: none;
+    width: 100%;
+    height: 530px;
+    font-size: 20px;
+    font-family: 'Inconsolata', monospace;
+    font-weight: bold;
+    border: none;
+    outline: none;
+    padding: 15px 20px;
+    box-sizing: border-box;
+  }
+
+  input[type="submit"] {
+    position: absolute;
+    bottom: 20px;
+  }
+
+  button.switchview {
+    position: absolute;
+    bottom: 55px;
+    right: 70px;
+    border: none;
+    background-color: white;
+    font-size: 22px;
+    transition-duration: 0.3s;
+    cursor: pointer;
+    outline: none;
+    i {
+      font-size: 25px;
+      margin: 0 15px;
+    }
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}

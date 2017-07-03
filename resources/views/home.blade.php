@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Home</title>
+    <title>Cordial - Home</title>
     @component('styles')
     @endcomponent
     <link rel="stylesheet" href="{!! asset('css/home.css') !!}">
