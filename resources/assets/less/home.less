@@ -10,7 +10,6 @@ div.posts {
   margin: auto;
   margin-top: 70px;
   padding: 15px;
-  //max-width: 450px * 3 + 15px * 6;
   max-width: 100%;
 
   .grid-item {
@@ -23,7 +22,7 @@ div.posts {
     border-radius: 2px;
 
     &.expanded {
-      width: (450px * 2 + 30px);
+      width: (450px * 2 + 30px); // +30 to compensate for gutter which it goes over
       box-shadow: 0px 0px 115px -19px rgba(0,0,0,0.16);
       border: 1px solid @bordermain !important;
 
@@ -74,9 +73,7 @@ div.posts {
         max-height: 6000px;
       }
 
-      cursor: pointer;
       font-size: 14px;
-      //line-height: 19px;
       max-height: 500px;
       margin-bottom: 15px;
       overflow: hidden;
@@ -144,7 +141,9 @@ div.posts {
         }
 
         color: @greyed;
-        * {color: @greyed;}
+        * {
+          color: @greyed;
+        }
         cursor: pointer;
 
         &:hover>i, &.liked>i {
@@ -266,6 +265,21 @@ div.posts {
           display: inline-block;
           width: 120px;
           cursor: pointer;
+          transition-duration: 0.3s;
+          >*{transition-duration: 0.3s;}
+
+          &.like:hover, &.like:hover>* {
+            color: lighten(@like-colour, 25%);
+          }
+
+          &.comment:hover, &.comment:hover>* {
+            color: lighten(@comment-colour, 25%);
+
+          }
+
+          &.mention:hover, &.mention:hover>* {
+            color: lighten(@mention-colour, 25%);
+          }
         }
       }
     }
