@@ -218,7 +218,7 @@ div.posts .grid-item .status .comments:hover > i,
 div.posts .grid-item .status .comments.liked > i {
   color: #5dda84;
   animation-name: comments;
-  animation-duration: 1.7s;
+  animation-duration: 1.3s;
   animation-iteration-count: infinite;
 }
 div.posts .grid-item.newpost {

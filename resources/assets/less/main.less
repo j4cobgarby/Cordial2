@@ -135,9 +135,16 @@ div.dropdown-notauth, div.dropdown-auth {
     &:hover {
       color: white;
 
+      @keyframes spin {
+        0% {transform: rotate(0deg);}
+        100% {transform: rotate(360deg);}
+      }
+
       >i.fa-cog {
-        transform: rotate(180deg);
-        transition-duration: 1s;
+        animation-name: spin;
+        animation-duration: 3s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
       }
     }
   }

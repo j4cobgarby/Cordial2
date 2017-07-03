@@ -120,10 +120,20 @@ div.dropdown-notauth a:hover,
 div.dropdown-auth a:hover {
   color: white;
 }
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 div.dropdown-notauth a:hover > i.fa-cog,
 div.dropdown-auth a:hover > i.fa-cog {
-  transform: rotate(180deg);
-  transition-duration: 1s;
+  animation-name: spin;
+  animation-duration: 3s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
 }
 div.dropdown-notauth.visible,
 div.dropdown-auth.visible {
