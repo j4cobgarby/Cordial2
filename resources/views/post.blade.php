@@ -15,9 +15,9 @@
     </script>
   </div>
   <span class="by"
-  onmouseout="this.innerHTML='{{$username}}'"
-  onmouseover="this.innerHTML='{{$name}}'">
-    {{$username}}
+  onmouseout="this.innerHTML='{{$name}}'"
+  onmouseover="this.innerHTML='{{'@'.$username}}'">
+    {{$name}}
   </span>
   <span class="date">{{$date}}</span>
   <span class="status">
