@@ -23,7 +23,7 @@
                 <a href="https://github.com/j4cobgarby/Cordial2"><i class="fa fa-code-fork" aria-hidden="true"></i> fork on GitHub</a>
                 <a href="mailto:j.garby@icloud.com?Subject=From%20Cordial!"><i class="fa fa-envelope" aria-hidden="true"></i> email me</a>
                 <br><br>
-                I would suggest using a browser which supports Webkit, such as Chrome or Opera. However, all browsers should work fine.
+                I would suggest using a browser which uses webkit, such as Chrome or Opera. However, all browsers should work fine.
             </span>
             <br>
             <button class="button-big close-right" onclick="window.location.href='/register'">Register here</button>
