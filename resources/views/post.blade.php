@@ -1,6 +1,5 @@
 <div class="post grid-item" id="post-{{$id}}">
-  <div class="content">
-    {!!stripslashes($content)!!}
+  <div class="content">{!!stripslashes($content)!!}
     <script>
       var content = document.currentScript.parentElement;
       console.log(content.clientHeight);
