@@ -21,6 +21,7 @@
     <div id="d-notauth" class="dropdown-notauth">
       <a href="/login"><i class="fa fa-sign-in" aria-hidden="true"></i> Sign in</a><br>
       <a href="/register"><i class="fa fa-user-plus" aria-hidden="true"></i> Register</a>
+      <a href="https://github.com/j4cobgarby/Cordial2"><i class="fa fa-github" aria-hidden="true"></i>GitHub</a>
     </div>
   @endif
 
