@@ -3,7 +3,7 @@ body {
   background-color: #1d1d1d;
 }
 ::-webkit-scrollbar {
-  opacity: 0;
+  display: none;
 }
 div.posts {
   width: 100%;
@@ -147,8 +147,7 @@ div.posts .grid-item .status .likes {
 div.posts .grid-item .status .likes * {
   color: #ababab;
 }
-div.posts .grid-item .status .likes:hover > i,
-div.posts .grid-item .status .likes.liked > i {
+div.posts .grid-item .status .likes:hover > i {
   animation-name: heartbeat;
   animation-duration: 1s;
   animation-timing-function: linear;

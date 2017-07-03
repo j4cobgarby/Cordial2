@@ -1,6 +1,6 @@
 <div class="post grid-item" id="post-{{$id}}">
   <div class="content">
-    {!!html_entity_decode($content)!!}
+    {!!stripslashes($content)!!}
     <script>
       var content = document.currentScript.parentElement;
       console.log(content.clientHeight);
@@ -21,15 +21,15 @@
   </span>
   <span class="date">{{$date}}</span>
   <span class="status">
-    @if (sizeof(DB::select('SELECT * FROM users_liked_posts WHERE post_id = ?', [$id])) != 0)
+    @if (sizeof(DB::select('SELECT * FROM users_liked_posts WHERE post_id = ? AND user_id = ?', [$id, $user_id])) != 0)
       <span class="likes liked">
         <i class="fa fa-heart" aria-hidden="true"></i>
-        0
+        {{$score}}
       </span>
     @else
       <span class="likes">
         <i class="fa fa-heart" aria-hidden="true"></i>
-        0
+        {{$score}}
       </span>
     @endif
     <span class="comments">

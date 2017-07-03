@@ -33,7 +33,9 @@
           'SELECT
             users.username AS sender,
             users.name AS name,
+            users.id AS user_id,
             posts.content AS content,
+            posts.score AS score,
             posts.id AS post_id,
             DATE_FORMAT(posts.date_posted, "%d/%m/%y") AS date_posted
           FROM posts
@@ -65,6 +67,12 @@
           @endslot
           @slot('date')
             {{$post->date_posted}}
+          @endslot
+          @slot('user_id')
+            {{$post->user_id}}
+          @endslot
+          @slot('score')
+            {{$post->score}}
           @endslot
           @slot('id')
             {{$post->post_id}}

@@ -10,7 +10,7 @@
       if (strlen($content) <= 6000) {
         $sql = "INSERT INTO posts (id, author_id, content, tags, date_posted, score)
         VALUES (NULL, ?, ?, ?, ?, 0)";
-        DB::insert($sql, [Auth::user()->id, htmlspecialchars($content), "", date("Y-m-d H:i:s")]);
+        DB::insert($sql, [Auth::user()->id, addslashes($content), "", date("Y-m-d H:i:s")]);
       }
     @endphp
   </body>

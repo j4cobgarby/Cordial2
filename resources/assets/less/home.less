@@ -9,7 +9,7 @@ html, body {
 }
 
 ::-webkit-scrollbar {
-  opacity: 0;
+  display: none;
 }
 
 div.posts {
@@ -157,7 +157,7 @@ div.posts {
         }
         cursor: pointer;
 
-        &:hover>i, &.liked>i {
+        &:hover>i {
           animation-name: heartbeat;
           animation-duration: 1s;
           animation-timing-function: linear;
