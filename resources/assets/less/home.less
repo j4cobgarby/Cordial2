@@ -4,6 +4,10 @@
 
 @double-width: (450px * 2 + 30px);
 
+html, body {
+  background-color: @main-bg;
+}
+
 div.posts {
   width: 100%;
   min-height: 30px;
@@ -35,8 +39,8 @@ div.posts {
     }
 
     &.post { // Specific to grid-items which are posts
-      border-top: 1px solid @bordermain;
-      border-radius: 0;
+      //border-top: 1px solid @bordermain;
+      border-radius: 3px;
     }
 
     .expand-button {
@@ -93,16 +97,22 @@ div.posts {
 
       pre {
         //white-space: pre-wrap;
-        //word-break: break-all;
+        overflow: hidden;
         background-color: #263238;
-        padding: 15px 18px;
+        //padding: 15px 18px;
+        padding-right: 0;
         border-radius: 4px;
+        font-family: 'Inconsolata', monospace;
       }
 
       code {
+        padding: 15px;
         color: #c2e4e4;
         font-size: 15px;
         font-family: 'Inconsolata', monospace;
+        * {
+          font-family: 'Inconsolata', monospace;
+        }
       }
     }
 

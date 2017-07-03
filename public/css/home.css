@@ -1,3 +1,7 @@
+html,
+body {
+  background-color: #1d1d1d;
+}
 div.posts {
   width: 100%;
   min-height: 30px;
@@ -27,8 +31,7 @@ div.posts .grid-item.expanded.post {
   border-radius: 6px;
 }
 div.posts .grid-item.post {
-  border-top: 1px solid #d0d0d0;
-  border-radius: 0;
+  border-radius: 3px;
 }
 div.posts .grid-item .expand-button {
   position: absolute;
@@ -76,13 +79,19 @@ div.posts .grid-item .content p {
   text-align: left;
 }
 div.posts .grid-item .content pre {
+  overflow: hidden;
   background-color: #263238;
-  padding: 15px 18px;
+  padding-right: 0;
   border-radius: 4px;
+  font-family: 'Inconsolata', monospace;
 }
 div.posts .grid-item .content code {
+  padding: 15px;
   color: #c2e4e4;
   font-size: 15px;
+  font-family: 'Inconsolata', monospace;
+}
+div.posts .grid-item .content code * {
   font-family: 'Inconsolata', monospace;
 }
 div.posts .grid-item .by {
