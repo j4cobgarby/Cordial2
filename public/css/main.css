@@ -25,7 +25,7 @@ div.obscurer {
   background-color: white;
   z-index: 1;
   opacity: 1;
-  transition-duration: 0.3s;
+  transition-duration: 1s;
   pointer-events: none;
 }
 div.obscurer.gone {
@@ -52,10 +52,17 @@ div.header-section * {
   user-select: none;
 }
 div.header-section .header-logo {
+  text-align: center;
   font-family: 'Arvo';
   font-size: 40px;
   cursor: pointer;
   float: left;
+  letter-spacing: normal;
+  transition: letter-spacing 0.3s;
+  transition-timing-function: ease-in-out;
+}
+div.header-section .header-logo:hover {
+  letter-spacing: 6px;
 }
 div.header-section .username-disp,
 div.header-section .login {
@@ -112,7 +119,11 @@ div.dropdown-auth a {
 div.dropdown-notauth a:hover,
 div.dropdown-auth a:hover {
   color: white;
-  font-size: 18px;
+}
+div.dropdown-notauth a:hover > i.fa-cog,
+div.dropdown-auth a:hover > i.fa-cog {
+  transform: rotate(180deg);
+  transition-duration: 1s;
 }
 div.dropdown-notauth.visible,
 div.dropdown-auth.visible {

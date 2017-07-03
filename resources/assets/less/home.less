@@ -50,18 +50,19 @@ div.posts {
       i {
         display: inline-block;
         position: relative;
-        transition-duration: 0.3s;
+        transition-duration: 0.2s;
         bottom: 0;
         color: @greyed;
       }
 
       &:hover >i {
-        transform: scale(1.7) rotate(270deg);
+        transform: scale(1.7) rotate(225deg);
         color: #757575;
       }
 
       &:active >i {
-        transform: scale(1.8) rotate(360deg);
+        transform: scale(0) rotate(405deg);
+        transition-duration: 0.15s;
       }
     }
 
@@ -157,8 +158,51 @@ div.posts {
         }
       }
       .comments {
+        @keyframes comments {
+          0% {
+            transform: scale(0) translateX(-15px) translateY(15px);
+            opacity: 0;
+          }
+          12.5% {
+            transform: scale(0.7) translateX(-1);
+          }
+          25% {
+            transform: scale(1.2) translateX(0) translateY(0);
+            opacity: 1;
+          }
+          37.5% {
+            transform: scale(0.7) translateX(-1);
+          }
+          49% {
+            transform: scale(0) translateX(15px) translateY(-15px);
+            opacity: 0;
+          }
+          50% {
+            transform: scale(0) scaleX(-1) translateX(-15px) translateY(15px);
+            opacity: 0;
+          }
+          62.5% {
+            transform: scale(0.7) scaleX(-1) translateX(-1);
+          }
+          75% {
+            transform: scale(1.2) scaleX(-1) translateX(0) translateY(0);
+            opacity: 1;
+          }
+          88% {
+            transform: scale(0.7) scaleX(-1) translateX(11);
+          }
+          100% {
+            transform: scale(0) scaleX(-1) translateX(15px) translateY(-15px);
+            opacity: 0;
+          }
+        }
         * {color: @greyed;}
         color: @greyed;
+        &:hover>i, &.liked>i {
+          animation-name: comments;
+          animation-duration: 1.7s;
+          animation-iteration-count: infinite;
+        }
       }
     }
 

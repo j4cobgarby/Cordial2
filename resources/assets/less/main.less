@@ -33,7 +33,7 @@ div.obscurer {
   background-color: white;
   z-index: 1;
   opacity: 1;
-  transition-duration: 0.3s;
+  transition-duration: 1s;
   pointer-events: none;
 
   &.gone {
@@ -63,10 +63,18 @@ div.header-section {
   }
 
   .header-logo {
+    text-align: center;
     font-family: 'Arvo';
     font-size: 40px;
     cursor: pointer;
     float: left;
+    letter-spacing: normal;
+    transition: letter-spacing 0.3s;
+    transition-timing-function: ease-in-out;
+
+    &:hover {
+      letter-spacing: 6px;
+    }
   }
 
   .username-disp, .login {
@@ -126,7 +134,11 @@ div.dropdown-notauth, div.dropdown-auth {
 
     &:hover {
       color: white;
-      font-size: 18px;
+
+      >i.fa-cog {
+        transform: rotate(180deg);
+        transition-duration: 1s;
+      }
     }
   }
 
