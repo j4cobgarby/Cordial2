@@ -30,9 +30,6 @@ div.posts .grid-item.expanded {
 div.posts .grid-item.expanded .expand-button {
   display: none;
 }
-div.posts .grid-item.expanded.post {
-  border-radius: 6px;
-}
 div.posts .grid-item.post {
   border-radius: 3px;
 }
