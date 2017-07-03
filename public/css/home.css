@@ -56,7 +56,6 @@ div.posts .grid-item .expand-button:active > i {
   transition-duration: 0.15s;
 }
 div.posts .grid-item .content {
-  cursor: pointer;
   font-size: 14px;
   max-height: 500px;
   margin-bottom: 15px;
@@ -276,4 +275,20 @@ div.posts .grid-item.greeting span.details span.sect {
   display: inline-block;
   width: 120px;
   cursor: pointer;
+  transition-duration: 0.3s;
+}
+div.posts .grid-item.greeting span.details span.sect > * {
+  transition-duration: 0.3s;
+}
+div.posts .grid-item.greeting span.details span.sect.like:hover,
+div.posts .grid-item.greeting span.details span.sect.like:hover > * {
+  color: #f5c5cd;
+}
+div.posts .grid-item.greeting span.details span.sect.comment:hover,
+div.posts .grid-item.greeting span.details span.sect.comment:hover > * {
+  color: #c5f2d3;
+}
+div.posts .grid-item.greeting span.details span.sect.mention:hover,
+div.posts .grid-item.greeting span.details span.sect.mention:hover > * {
+  color: #ece582;
 }
