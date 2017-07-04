@@ -25,9 +25,7 @@
       $("[id^=likebtn]").each(
         function() {
           var thisId = this.id.split("-")[1];
-          console.log(thisId);
           this.setAttribute("onclick", '$.ajax({url: "/like-post-"+'+thisId+', success: function(result) {console.log(result + '+thisId+');}})')
-          console.log(this);
         }
       );
     });
