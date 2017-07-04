@@ -8,10 +8,6 @@ html, body {
   background-color: @main-bg;
 }
 
-::-webkit-scrollbar {
-  display: none;
-}
-
 div.posts {
   width: 100%;
   min-height: 30px;
@@ -289,5 +285,27 @@ div.posts {
         }
       }
     }
+  }
+}
+
+button.loadposts {
+  background-color: transparent;
+  border: none;
+  color: #4e4e4e;
+  display: block;
+  margin: 30px auto;
+  font-size: 18px;
+  cursor: pointer;
+  transition-duration: 0.2s;
+  outline: 0;
+  user-select: none;
+
+  &:hover {
+    color: #7c7c7c;
+    transform: scale(1.15);
+  }
+
+  &:active {
+    transform: scale(0.8);
   }
 }

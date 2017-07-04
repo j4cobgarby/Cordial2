@@ -6,6 +6,8 @@
     @component('styles')
     @endcomponent
     <link rel="stylesheet" href="{!! asset('css/write.css') !!}">
+    <script src="{!! js/showdown.min.js !!}" charset="utf-8"></script>
+    <script src="{!! js/showdown-table.min.js !!}" charset="utf-8"></script>
     <script>
       function toggleSwitchview() {
         var e = document.getElementById('switchview');
@@ -14,6 +16,7 @@
         } else {
           e.innerHTML = '<i class="fa fa-eye" aria-hidden="true"></i>Preview';
         }
+        document.getElementById('preview').classList.toggle("hidden");
       }
       function SwitchviewInit() {
         var e = document.getElementById('switchview');
@@ -31,5 +34,6 @@
       <button type="button" onclick="toggleSwitchview()" class="switchview" id="switchview">
       </button>
     </form>
+    <div id="preview" class="preview hidden"></div>
   </body>
 </html>

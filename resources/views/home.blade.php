@@ -51,7 +51,7 @@
     @endcomponent
     @component('obscurer')
     @endcomponent
-    <div id="posts" class="posts grid">
+    <div id="posts infinite-scroll" class="posts grid">
       @php
 
         $posts = DB::table('posts')
@@ -62,7 +62,7 @@
             'posts.content AS content',
             'posts.score AS score',
             'posts.id AS post_id',
-            DB::raw('DATE_FORMAT(posts.date_posted, "%d/%m/%y") AS date_posted'))->orderBy('post_id', 'desc')->paginate(60);
+            DB::raw('DATE_FORMAT(posts.date_posted, "%d/%m/%y") AS date_posted'))->orderBy('post_id', 'desc')->paginate(10);
 
         //print_r($posts);
 
@@ -103,10 +103,9 @@
           @endslot
         @endcomponent
       @endforeach
-
       {{$posts->links()}}
     </div>
-
+    <button class="loadposts">Load some more</button>
   </body>
   <script>
     var msnry;

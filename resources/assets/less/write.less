@@ -6,6 +6,21 @@ html, body {
   background-color: @main-bg;
 }
 
+div.preview {
+  position: fixed;
+  width: 580px;
+  height: 530px;
+  left: 50%;
+  top: 50%;
+  margin-left: -290px;
+  margin-top: -310px;
+  background-color: white;
+  border: 1px solid black;
+
+  &.hidden {
+    display: none;
+  }
+}
 
 form.write {
   background-color: white;
