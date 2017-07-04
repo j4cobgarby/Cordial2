@@ -2,7 +2,6 @@
   <div class="content">{!!stripslashes($content)!!}
     <script>
       var content = document.currentScript.parentElement;
-      console.log(content.clientHeight);
       if (true) {
         var expandbtn = document.createElement("div");
         expandbtn.setAttribute("class", "expand-button");
@@ -23,14 +22,14 @@
     @if (sizeof(DB::select('SELECT * FROM users_liked_posts WHERE post_id = ? AND user_id = ?', [$id, $user_id])) != 0)
       {{-- When the current post is liked --}}
       <span class="likes liked" id="likebtn-{{$id}}">
-        <i class="fa fa-heart" aria-hidden="true"></i>
-        {{$score}}
+        <i id="likeicon-{{$id}}" class="fa fa-heart" aria-hidden="true"></i>
+        <span id="likecount-{{$id}}" class="scorecount">{{$score}}</span>
       </span>
     @else
       {{-- Or, if it's not liked --}}
       <span class="likes" id="likebtn-{{$id}}">
         <i class="fa fa-heart" aria-hidden="true"></i>
-        {{$score}}
+        <span class="scorecount">{{$score}}</span>
       </span>
     @endif
     <span class="comments">

@@ -17,15 +17,30 @@
     $(document).ready(function() {
       $('pre code').each(function(i, block) {
         hljs.highlightBlock(block);
-        reload();
       });
+      reload();
     });
 
     $(document).ready(function() {
       $("[id^=likebtn]").each(
         function() {
           var thisId = this.id.split("-")[1];
-          this.setAttribute("onclick", '$.ajax({url: "/like-post-"+'+thisId+', success: function(result) {console.log(result + '+thisId+');}})')
+          this.setAttribute("onclick", `$.ajax({url: "/like-post-"+`+thisId+`,
+          success: function(result) {
+            var p = document.getElementById("likebtn-`+thisId+`");
+            p.classList.toggle("liked");
+            if (result == "liked") {
+              console.log("Liked");
+              var icon = document.getElementById('likeicon-`+thisId+`');
+              var count = document.getElementById('likecount-`+thisId+`');
+              count.innerHTML = parseInt(count.innerHTML) + 1;
+            } else {
+              console.log("Unliked");
+              var icon = document.getElementById('likeicon-`+thisId+`');
+              var count = document.getElementById('likecount-`+thisId+`');
+              count.innerHTML = parseInt(count.innerHTML) - 1;
+            }
+          }})`)
         }
       );
     });

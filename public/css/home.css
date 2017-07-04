@@ -111,6 +111,7 @@ div.posts .grid-item .date {
 }
 div.posts .grid-item .status {
   color: #ababab;
+  user-select: none;
 }
 div.posts .grid-item .status * {
   margin: 0 10px;
@@ -144,6 +145,10 @@ div.posts .grid-item .status .likes {
 }
 div.posts .grid-item .status .likes * {
   color: #ababab;
+}
+div.posts .grid-item .status .likes span.scorecount {
+  margin: 0;
+  padding: 0;
 }
 div.posts .grid-item .status .likes:hover > i {
   animation-name: heartbeat;
