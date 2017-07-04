@@ -53,20 +53,19 @@
     @endcomponent
     <div class="posts grid">
       @php
-        $posts = DB::select(
-          'SELECT
-            users.username AS sender,
-            users.name AS name,
-            users.id AS user_id,
-            posts.content AS content,
-            posts.score AS score,
-            posts.id AS post_id,
-            DATE_FORMAT(posts.date_posted, "%d/%m/%y") AS date_posted
-          FROM posts
-          INNER JOIN users AS users
-            ON posts.author_id = users.id
-          ORDER BY post_id DESC
-        ');
+
+        $posts = DB::table('posts')
+          ->join('users', 'posts.author_id', '=', 'users.id')
+          ->select('users.username AS sender',
+            'users.name AS name',
+            'users.id AS user_id',
+            'posts.content AS content',
+            'posts.score AS score',
+            'posts.id AS post_id',
+            DB::raw('DATE_FORMAT(posts.date_posted, "%d/%m/%y") AS date_posted'))->paginate(5);
+
+        //print_r($posts);
+
         $Parsedown = new Parsedown();
       @endphp
       @component('greeting')
@@ -78,6 +77,7 @@
       <div class="grid-item discover" onclick='window.location.href="/discover"'>
         <b>Click here</b> to discover new people and interesting posts!
       </div>
+
       @foreach ($posts as $post)
         @component('post')
           @slot('content')
@@ -103,6 +103,7 @@
           @endslot
         @endcomponent
       @endforeach
+
     </div>
   </body>
   <script>
@@ -111,7 +112,7 @@
       itemSelector: '.grid-item',
       columnWidth: 450,
       gutter: 30,
-      fitWidth: true
+      fitWidth: true,
     });
     function reload() {
       setTimeout(function() {

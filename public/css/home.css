@@ -150,7 +150,7 @@ div.posts .grid-item .status .likes span.scorecount {
   margin: 0;
   padding: 0;
 }
-div.posts .grid-item .status .likes:hover > i {
+div.posts .grid-item .status .likes.liked > i {
   animation-name: heartbeat;
   animation-duration: 1s;
   animation-timing-function: linear;
