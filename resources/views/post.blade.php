@@ -28,8 +28,8 @@
     @else
       {{-- Or, if it's not liked --}}
       <span class="likes" id="likebtn-{{$id}}">
-        <i class="fa fa-heart" aria-hidden="true"></i>
-        <span class="scorecount">{{$score}}</span>
+        <i id="likeicon-{{$id}}" class="fa fa-heart" aria-hidden="true"></i>
+        <span id="likecount-{{$id}}" class="scorecount">{{$score}}</span>
       </span>
     @endif
     <span class="comments">
