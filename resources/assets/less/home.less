@@ -8,6 +8,10 @@ html, body {
   background-color: @main-bg;
 }
 
+::-webkit-scrollbar {
+  display: none;
+}
+
 div.posts {
   width: 100%;
   min-height: 30px;
@@ -24,7 +28,7 @@ div.posts {
     padding: 15px;
     box-sizing: border-box;
     overflow: hidden;
-    border-radius: 2px;
+    border-radius: 5px;
 
     &.expanded {
       width: (450px * 2 + 30px); // +30 to compensate for gutter which it goes over
@@ -37,7 +41,7 @@ div.posts {
     }
 
     &.post { // Specific to grid-items which are posts
-      border-radius: 3px;
+      //border-radius: 3px;
     }
 
     .expand-button {

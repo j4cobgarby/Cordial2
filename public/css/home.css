@@ -2,6 +2,9 @@ html,
 body {
   background-color: #1d1d1d;
 }
+::-webkit-scrollbar {
+  display: none;
+}
 div.posts {
   width: 100%;
   min-height: 30px;
@@ -18,7 +21,7 @@ div.posts .grid-item {
   padding: 15px;
   box-sizing: border-box;
   overflow: hidden;
-  border-radius: 2px;
+  border-radius: 5px;
 }
 div.posts .grid-item.expanded {
   width: 930px;
@@ -27,9 +30,6 @@ div.posts .grid-item.expanded {
 }
 div.posts .grid-item.expanded .expand-button {
   display: none;
-}
-div.posts .grid-item.post {
-  border-radius: 3px;
 }
 div.posts .grid-item .expand-button {
   position: absolute;
