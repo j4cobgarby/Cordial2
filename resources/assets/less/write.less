@@ -15,7 +15,39 @@ div.preview {
   margin-left: -290px;
   margin-top: -310px;
   background-color: white;
-  border: 1px solid black;
+  overflow-y: auto;
+  overflow-x: hidden;
+  font-size: 19px;
+  * {
+    font-size: 19px;
+  }
+
+  ::-webkit-scrollbar {
+    display: none;
+  }
+
+  img {
+    max-width: 100%;
+    max-height: 600px;
+  }
+
+  pre {
+    overflow: hidden;
+    background-color: #263238;
+    padding-right: 0;
+    border-radius: 4px;
+    font-family: 'Inconsolata', monospace;
+    padding: 15px 20px;
+  }
+
+  code {
+    color: #caecf5;
+    font-size: 15px;
+    font-family: 'Inconsolata', monospace;
+    * {
+      font-family: 'Inconsolata', monospace;
+    }
+  }
 
   &.hidden {
     display: none;

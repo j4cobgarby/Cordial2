@@ -11,7 +11,35 @@ div.preview {
   margin-left: -290px;
   margin-top: -310px;
   background-color: white;
-  border: 1px solid black;
+  overflow-y: auto;
+  overflow-x: hidden;
+  font-size: 19px;
+}
+div.preview * {
+  font-size: 19px;
+}
+div.preview ::-webkit-scrollbar {
+  display: none;
+}
+div.preview img {
+  max-width: 100%;
+  max-height: 600px;
+}
+div.preview pre {
+  overflow: hidden;
+  background-color: #263238;
+  padding-right: 0;
+  border-radius: 4px;
+  font-family: 'Inconsolata', monospace;
+  padding: 15px 20px;
+}
+div.preview code {
+  color: #caecf5;
+  font-size: 15px;
+  font-family: 'Inconsolata', monospace;
+}
+div.preview code * {
+  font-family: 'Inconsolata', monospace;
 }
 div.preview.hidden {
   display: none;
