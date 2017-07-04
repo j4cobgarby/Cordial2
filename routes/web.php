@@ -60,3 +60,5 @@ Route::get('/devlogout', function() {
     Auth::logout();
     return Redirect::to('/');
 });
+
+Route::get('/like-post-{id}', 'LikePostController');
