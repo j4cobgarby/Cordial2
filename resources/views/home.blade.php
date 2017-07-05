@@ -63,9 +63,7 @@
             'posts.content AS content',
             'posts.score AS score',
             'posts.id AS post_id',
-            DB::raw('DATE_FORMAT(posts.date_posted, "%d/%m/%y") AS date_posted'))->orderBy('post_id', 'desc')->paginate(10);
-
-        //print_r($posts);
+            DB::raw('DATE_FORMAT(posts.date_posted, "%d/%m/%y") AS date_posted'))->orderBy('post_id', 'desc')->paginate(20);
 
         $Parsedown = new Parsedown();
       @endphp
@@ -75,9 +73,15 @@
       <div class="grid-item newpost" onclick='window.location.href="/write"'>
         Want to write something? <b>Click here!</b>
       </div>
+      <div class="grid-item writebio">
+        Writing a pinned post for your page is a great way to let people know a bit
+        about you! <b>Click here to set one up!</b>
+      </div>
+      {{--
       <div class="grid-item discover" onclick='window.location.href="/discover"'>
         <b>Click here</b> to discover new people and interesting posts!
       </div>
+      --}}
 
       @foreach ($posts as $post)
         @component('post')

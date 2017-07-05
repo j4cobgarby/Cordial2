@@ -286,6 +286,24 @@ div.posts .grid-item.discover * {
 div.posts .grid-item.discover:hover {
   background-color: #e05f4d;
 }
+div.posts .grid-item.writebio {
+  height: 210px;
+  font-size: 30px;
+  background-color: #d24dd5;
+  color: #fcf2fc;
+  padding: 30px;
+  user-select: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  box-shadow: 0 0 0 0 #d24dd5;
+  border: 1px solid #be2ec1;
+}
+div.posts .grid-item.writebio * {
+  color: #ffffff;
+}
+div.posts .grid-item.writebio:hover {
+  background-color: #cf41d2;
+}
 div.posts .grid-item.greeting {
   font-size: 60px;
   background-color: white;
