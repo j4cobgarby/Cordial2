@@ -13,6 +13,11 @@
       <a href="/settings"><i class="fa fa-cog" aria-hidden="true"></i> Settings</a>
       <a href="/user/{{ Auth::user()->username }}"><i class="fa fa-user-circle" aria-hidden="true"></i>You</a>
     </div>
+
+    <span class="bookmark-icon">
+      <i class="fa fa-bookmark" aria-hidden="true"></i>
+      {{amountBookmarked()}}
+    </span>
   @else
     <span class="login" onclick="toggle()">
       Not signed in

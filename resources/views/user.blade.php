@@ -64,7 +64,7 @@
             'posts.content AS content',
             'posts.score AS score',
             'posts.id AS post_id',
-            DB::raw('DATE_FORMAT(posts.date_posted, "%d/%m/%y") AS date_posted'))
+            'posts.date_posted AS date_posted')
           ->where('users.username', '=', Request::route('username'))
           ->orderBy('post_id', 'desc')->paginate(10);
 

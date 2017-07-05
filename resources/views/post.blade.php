@@ -20,7 +20,7 @@
       {{$name}}
     </span>
   @endif
-  <span class="date">{{$date}}</span>
+  <span class="date">{{time_elapsed_string($date)}}</span>
   <span class="status">
     @if (!canLikePost($id))
       {{-- When the current post is liked --}}
@@ -40,5 +40,6 @@
       <i class="fa fa-comment" aria-hidden="true"></i>
       0
     </span>
+    
   </span>
 </div>

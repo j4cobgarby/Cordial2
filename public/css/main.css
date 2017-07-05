@@ -63,6 +63,13 @@ div.header-section .header-logo {
 div.header-section .header-logo:hover {
   letter-spacing: 6px;
 }
+div.header-section .bookmark-icon {
+  text-align: center;
+  font-size: 20px;
+  cursor: pointer;
+  float: right;
+  margin-right: 20px;
+}
 div.header-section .username-disp,
 div.header-section .login {
   font-size: 18px;
