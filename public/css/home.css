@@ -116,6 +116,12 @@ div.posts .grid-item .by {
   float: right;
   font-size: 15px;
   font-weight: bold;
+  width: 90px;
+  height: 18px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-all;
+  text-align: right;
 }
 div.posts .grid-item .date {
   display: inline-block;
