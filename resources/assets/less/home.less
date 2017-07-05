@@ -113,6 +113,28 @@ div.posts {
           font-family: 'Inconsolata', monospace;
         }
       }
+
+      table {
+        border: 1px solid @bordermain;
+        border-spacing: 0px;
+      }
+
+      th {
+        background-color: #ececec;
+      }
+
+      th, td {
+        padding: 10px 15px;
+      }
+
+      tbody tr:nth-child(even) {
+        background-color: #f4f4f4;
+      }
+
+      hr {
+        border: none;
+        border-top: 2px solid @borderlight;
+      }
     }
 
     .by {
@@ -168,10 +190,22 @@ div.posts {
           animation-iteration-count: infinite;
         }
 
-        &.liked, &:hover {
+        &.liked {
           * {color: @like-colour;}
           color: @like-colour;
           font-weight: bold;
+        }
+
+        i {
+          transition-duration: 0.2s;
+        }
+
+        &:hover>i {
+          transform: scale(1.2);
+        }
+
+        &:active>i {
+          transform: scale(0.8);
         }
       }
       .comments {

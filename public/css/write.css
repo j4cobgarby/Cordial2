@@ -90,6 +90,9 @@ form.write button.switchview i {
   margin: 0 15px;
   transition-duration: 0.1s;
 }
+form.write button.switchview:hover {
+  transform: scale(1.1);
+}
 form.write button.switchview:active {
   transform: scale(0.9);
 }

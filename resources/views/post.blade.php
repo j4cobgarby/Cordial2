@@ -19,11 +19,12 @@
   </span>
   <span class="date">{{$date}}</span>
   <span class="status">
-    @if (sizeof(DB::select('SELECT * FROM users_liked_posts WHERE post_id = ? AND user_id = ?', [$id, $user_id])) != 0)
+    @if (!canLikePost($id))
       {{-- When the current post is liked --}}
       <span class="likes liked" id="likebtn-{{$id}}">
         <i id="likeicon-{{$id}}" class="fa fa-heart" aria-hidden="true"></i>
         <span id="likecount-{{$id}}" class="scorecount">{{$score}}</span>
+
       </span>
     @else
       {{-- Or, if it's not liked --}}
