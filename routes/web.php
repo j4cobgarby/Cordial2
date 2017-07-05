@@ -55,8 +55,13 @@ Route::get('/devlogout', function() {
     return Redirect::to('/');
 });
 
-Route::get('/user/{username}', function() {
-
+Route::get('/user/{username}', function($username) {
+  if (Auth::check() && userExists($username)) {
+    // If they're logged in AND the user exists
+    return view('user');
+  }
+  // If they're not logged in or the user doesn't exist
+  return Redirect::to('/');
 });
 
 Route::get('/like-post-{id}', 'LikePostController');

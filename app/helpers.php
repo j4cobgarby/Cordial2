@@ -27,3 +27,8 @@ function postScoreReact($id) {
     unlikePost($id);
   }
 }
+
+function userExists($username) {
+  $result = DB::select('SELECT * FROM users WHERE username = ?', [$username]);
+  return sizeof($result) >= 1;
+}
