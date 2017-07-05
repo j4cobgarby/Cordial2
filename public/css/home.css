@@ -165,27 +165,23 @@ div.posts .grid-item .status .likes span.scorecount {
   margin: 0;
   padding: 0;
 }
-div.posts .grid-item .status .likes.liked > i {
+div.posts .grid-item .status .likes:hover > i {
   animation-name: heartbeat;
   animation-duration: 1s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
 }
-div.posts .grid-item .status .likes.liked {
+div.posts .grid-item .status .likes.liked,
+div.posts .grid-item .status .likes:hover {
   color: #e25871;
   font-weight: bold;
 }
-div.posts .grid-item .status .likes.liked * {
+div.posts .grid-item .status .likes.liked *,
+div.posts .grid-item .status .likes:hover * {
   color: #e25871;
 }
 div.posts .grid-item .status .likes i {
   transition-duration: 0.2s;
-}
-div.posts .grid-item .status .likes:hover > i {
-  transform: scale(1.2);
-}
-div.posts .grid-item .status .likes:active > i {
-  transform: scale(0.8);
 }
 div.posts .grid-item .status .comments {
   color: #ababab;

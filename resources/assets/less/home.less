@@ -183,14 +183,14 @@ div.posts {
           padding: 0;
         }
 
-        &.liked>i {
+        &:hover>i {
           animation-name: heartbeat;
           animation-duration: 1s;
           animation-timing-function: linear;
           animation-iteration-count: infinite;
         }
 
-        &.liked {
+        &.liked, &:hover {
           * {color: @like-colour;}
           color: @like-colour;
           font-weight: bold;
@@ -198,14 +198,6 @@ div.posts {
 
         i {
           transition-duration: 0.2s;
-        }
-
-        &:hover>i {
-          transform: scale(1.2);
-        }
-
-        &:active>i {
-          transform: scale(0.8);
         }
       }
       .comments {

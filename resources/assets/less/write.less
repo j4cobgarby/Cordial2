@@ -18,8 +18,9 @@ div.preview {
   overflow-y: auto;
   overflow-x: hidden;
   font-size: 19px;
-  * {
-    font-size: 19px;
+
+  h1, h2, h3, h4, h5, h6 {
+    font-size: auto;
   }
 
   ::-webkit-scrollbar {
@@ -82,20 +83,19 @@ form.write {
   }
 
   input[type="submit"] {
-    position: absolute;
     bottom: 20px;
   }
 
   button.switchview {
-    position: absolute;
     bottom: 55px;
     right: 70px;
     border: none;
-    background-color: white;
+    background-color: transparent;
     font-size: 22px;
     transition-duration: 0.3s;
     cursor: pointer;
     outline: none;
+    margin-left: 60px;
     i {
       font-size: 25px;
       margin: 0 15px;
