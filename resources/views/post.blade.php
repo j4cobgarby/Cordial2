@@ -12,12 +12,14 @@
       }
     </script>
   </div>
-  <span class="by"
+  @if ($displayuser == 'yes')
+    <span class="by"
     onmouseout="this.innerHTML='{{$name}}'"
     onmouseover="this.innerHTML='{{'@'.$username}}'"
     onclick="window.location.href='user/{{$username}}'">
-    {{$name}}
-  </span>
+      {{$name}}
+    </span>
+  @endif
   <span class="date">{{$date}}</span>
   <span class="status">
     @if (!canLikePost($id))

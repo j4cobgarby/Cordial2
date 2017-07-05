@@ -102,6 +102,9 @@
           @slot('id')
             {{$post->post_id}}
           @endslot
+          @slot('displayuser')
+            {{'yes'}}
+          @endslot
         @endcomponent
       @endforeach
     </div>
