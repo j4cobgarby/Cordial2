@@ -80,6 +80,12 @@ function hasBookmarked($id) {
   return sizeof(DB::select('SELECT * FROM users_bookmarked_posts WHERE user_id = ? AND post_id = ?', [Auth::user()->id, $id])) >= 1;
 }
 
+function echoBookmarkClass($id) {
+  if (hasBookmarked($id)) {
+    echo "bookmarked";
+  }
+}
+
 function bookmark($id) {
   DB::table('users_bookmarked_posts')->insert(
     [

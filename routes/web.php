@@ -65,3 +65,18 @@ Route::get('/user/{username}', function($username) {
 });
 
 Route::get('/like-post-{id}', 'LikePostController');
+
+// The routes for bookmarks
+
+Route::get('/bookmark-{id}', function($id) {
+  if (Auth::check()) {
+    if (hasBookmarked($id)) {
+      unBookmark($id);
+      echo 'unbookmarked';
+    } else {
+      bookmark($id);
+      echo 'bookmarked';
+    }
+  }
+  return Redirect::to('/');
+});

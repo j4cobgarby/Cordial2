@@ -252,7 +252,7 @@ div.posts .grid-item .status .comments.liked > i {
 }
 div.posts .grid-item .status .bookmark > i {
   cursor: pointer;
-  transition-duration: 0.16s;
+  transition-duration: 0.15s;
 }
 div.posts .grid-item .status .bookmark > i:hover {
   color: #e96048;
