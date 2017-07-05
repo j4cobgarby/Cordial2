@@ -116,7 +116,7 @@ div.posts .grid-item .by {
   float: right;
   font-size: 15px;
   font-weight: bold;
-  width: 90px;
+  max-width: 90px;
   height: 18px;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -127,7 +127,7 @@ div.posts .grid-item .date {
   display: inline-block;
   float: right;
   font-size: 15px;
-  margin: 0 15px;
+  margin: 0 5px;
   color: #ababab;
 }
 div.posts .grid-item .status {
@@ -135,7 +135,7 @@ div.posts .grid-item .status {
   user-select: none;
 }
 div.posts .grid-item .status * {
-  margin: 0 10px;
+  margin: 0 5px;
 }
 div.posts .grid-item .status .likes {
   color: #ababab;
@@ -249,6 +249,20 @@ div.posts .grid-item .status .comments.liked > i {
   animation-name: comments;
   animation-duration: 1.3s;
   animation-iteration-count: infinite;
+}
+div.posts .grid-item .status .bookmark > i {
+  cursor: pointer;
+  transition-duration: 0.16s;
+}
+div.posts .grid-item .status .bookmark > i:hover {
+  color: #e96048;
+  transform: translateY(-2.5px);
+}
+div.posts .grid-item .status .bookmark > i:active {
+  transform: translateY(2.6px);
+}
+div.posts .grid-item .status .bookmark > i.bookmarked {
+  color: #e96048;
 }
 div.posts .grid-item.newpost {
   height: 210px;

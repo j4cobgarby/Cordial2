@@ -36,10 +36,14 @@
         <span id="likecount-{{$id}}" class="scorecount">{{$score}}</span>
       </span>
     @endif
+    {{--
     <span class="comments">
       <i class="fa fa-comment" aria-hidden="true"></i>
       0
     </span>
-    
+    --}}
+    <span class="bookmark">
+      <i class="fa fa-bookmark" aria-hidden="true"></i>
+    </span>
   </span>
 </div>

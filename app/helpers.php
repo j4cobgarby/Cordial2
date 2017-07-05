@@ -42,6 +42,7 @@ function firstName($name) {
   return explode(' ', $name)[0];
 }
 
+// Not mine:
 function time_elapsed_string($datetime, $full = false) {
     $now = new DateTime;
     $ago = new DateTime($datetime);
@@ -77,4 +78,16 @@ function amountBookmarked() {
 
 function hasBookmarked($id) {
   return sizeof(DB::select('SELECT * FROM users_bookmarked_posts WHERE user_id = ? AND post_id = ?', [Auth::user()->id, $id])) >= 1;
+}
+
+function bookmark($id) {
+  DB::table('users_bookmarked_posts')->insert(
+    [
+      ['user_id' => Auth::user()->id, 'post_id' => $id]
+    ]
+  );
+}
+
+function unBookmark($id) {
+  DB::table('users_bookmarked_posts')->where('post_id', '=', $id)->delete();
 }

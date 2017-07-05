@@ -143,7 +143,7 @@ div.posts {
       float: right;
       font-size: 15px;
       font-weight: bold;
-      width: 90px;
+      max-width: 90px;
       height: 18px;
       overflow: hidden;
       text-overflow: ellipsis;
@@ -155,7 +155,7 @@ div.posts {
       display: inline-block;
       float: right;
       font-size: 15px;
-      margin: 0 15px;
+      margin: 0 5px;
       color: @greyed;
     }
 
@@ -163,7 +163,7 @@ div.posts {
       color: @greyed;
 
       * {
-        margin: 0 10px;
+        margin: 0 5px;
       }
       user-select: none;
 
@@ -253,6 +253,24 @@ div.posts {
           animation-name: comments;
           animation-duration: 1.3s;
           animation-iteration-count: infinite;
+        }
+      }
+
+      .bookmark>i {
+        cursor: pointer;
+        transition-duration: 0.16s;
+
+        &:hover {
+          color: @bookmark-colour;
+          transform: translateY(-2.5px);
+        }
+
+        &:active {
+          transform: translateY(2.6px);
+        }
+
+        &.bookmarked {
+          color: @bookmark-colour;
         }
       }
     }
