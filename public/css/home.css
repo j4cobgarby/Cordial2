@@ -35,10 +35,9 @@ div.posts .grid-item .expand-button {
   position: absolute;
   width: 15px;
   font-size: 14px;
-  left: 50%;
   text-align: center;
-  margin-left: -7.5px;
-  bottom: 16px;
+  top: 15px;
+  right: 17px;
   cursor: pointer;
 }
 div.posts .grid-item .expand-button i {
