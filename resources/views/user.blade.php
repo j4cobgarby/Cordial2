@@ -6,7 +6,6 @@
     @component('styles')
     @endcomponent
     <link rel="stylesheet" href="{!! asset('css/home.css') !!}">
-    <link rel="stylesheet" href="{!! asset('css/user.css') !!}">
     <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
     <script
   src="https://code.jquery.com/jquery-3.2.1.min.js"

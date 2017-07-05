@@ -1,7 +1,7 @@
 <div class="grid-item greeting">
   Hello there,<br>
   <span class="username">
-    {{explode(' ', Auth::user()->name)[0]}}! {{-- Get user's first name --}}
+    {{firstName(Auth::user()->name)}}! {{-- Get user's first name --}}
   </span>
   <br>
   <span class="details">

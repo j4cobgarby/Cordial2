@@ -32,3 +32,12 @@ function userExists($username) {
   $result = DB::select('SELECT * FROM users WHERE username = ?', [$username]);
   return sizeof($result) >= 1;
 }
+
+function userPropsByUsername($username) {
+  $props = DB::select('SELECT * FROM users WHERE username = ?', [$username]);
+  return $props[0];
+}
+
+function firstName($name) {
+  return explode(' ', $name)[0];
+}
