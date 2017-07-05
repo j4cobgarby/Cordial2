@@ -80,3 +80,10 @@ Route::get('/bookmark-{id}', function($id) {
   }
   return Redirect::to('/');
 });
+
+Route::get('/bookmarked', function() {
+  if (Auth::check()) {
+    return view('bookmarks-show');
+  }
+  return Redirect::to('/');
+});
