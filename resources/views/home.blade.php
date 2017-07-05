@@ -50,69 +50,59 @@
   <body>
     @component('header')
     @endcomponent
-    @component('obscurer')
-    @endcomponent
-    <div id="posts infinite-scroll" class="posts grid">
-      @php
-
-        $posts = DB::table('posts')
-          ->join('users', 'posts.author_id', '=', 'users.id')
-          ->select('users.username AS sender',
-            'users.name AS name',
-            'users.id AS user_id',
-            'posts.content AS content',
-            'posts.score AS score',
-            'posts.id AS post_id',
-            'posts.date_posted AS date_posted')->orderBy('post_id', 'desc')->paginate(20);
-
-        $Parsedown = new Parsedown();
-      @endphp
-      @component('greeting')
-
-      @endcomponent
-      <div class="grid-item newpost" onclick='window.location.href="/write"'>
-        Want to write something? <b>Click here!</b>
-      </div>
-      <div class="grid-item writebio">
-        Writing a pinned post for your page is a great way to let people know a bit
-        about you! <b>Click here to set one up!</b>
-      </div>
-      {{--
-      <div class="grid-item discover" onclick='window.location.href="/discover"'>
-        <b>Click here</b> to discover new people and interesting posts!
-      </div>
-      --}}
-
-      @foreach ($posts as $post)
-        @component('post')
-          @slot('content')
-            {!!$Parsedown->text($post->content)!!}
-          @endslot
-          @slot('username')
-            {{$post->sender}}
-          @endslot
-          @slot('name')
-            {{$post->name}}
-          @endslot
-          @slot('date')
-            {{$post->date_posted}}
-          @endslot
-          @slot('user_id')
-            {{$post->user_id}}
-          @endslot
-          @slot('score')
-            {{$post->score}}
-          @endslot
-          @slot('id')
-            {{$post->post_id}}
-          @endslot
-          @slot('displayuser')
-            {{'yes'}}
-          @endslot
+    @component('postsview')
+      @slot('posts')
+        @php
+          $posts = DB::table('posts')
+            ->join('users', 'posts.author_id', '=', 'users.id')
+            ->select('users.username AS sender',
+              'users.name AS name',
+              'users.id AS user_id',
+              'posts.content AS content',
+              'posts.score AS score',
+              'posts.id AS post_id',
+              'posts.date_posted AS date_posted')->orderBy('post_id', 'desc')->paginate(20);
+          $Parsedown = new Parsedown();
+        @endphp
+        @component('greeting')
         @endcomponent
-      @endforeach
-    </div>
-    <button class="loadposts">Load some more</button>
+        <div class="grid-item newpost" onclick='window.location.href="/write"'>
+          Want to write something? <b>Click here!</b>
+        </div>
+        <div class="grid-item writebio">
+          Writing a pinned post for your page is a great way to let people know a bit
+          about you! <b>Click here to set one up!</b>
+        </div>
+        @foreach ($posts as $post)
+          @component('post')
+            @slot('content')
+              {!!$Parsedown->text($post->content)!!}
+            @endslot
+            @slot('username')
+              {{$post->sender}}
+            @endslot
+            @slot('name')
+              {{$post->name}}
+            @endslot
+            @slot('date')
+              {{$post->date_posted}}
+            @endslot
+            @slot('user_id')
+              {{$post->user_id}}
+            @endslot
+            @slot('score')
+              {{$post->score}}
+            @endslot
+            @slot('id')
+              {{$post->post_id}}
+            @endslot
+            @slot('displayuser')
+              {{'yes'}}
+            @endslot
+          @endcomponent
+        @endforeach
+      @endslot
+    @endcomponent
   </body>
   <script>
     var msnry;

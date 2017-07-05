@@ -50,64 +50,57 @@
   <body>
     @component('header')
     @endcomponent
-    @component('obscurer')
-    @endcomponent
-    <div id="posts infinite-scroll" class="posts grid">
-      @php
-
-        $posts = DB::table('posts')
-          ->join('users', 'posts.author_id', '=', 'users.id')
-          ->select(
-            'users.username AS sender',
-            'users.name AS name',
-            'users.id AS user_id',
-            'posts.content AS content',
-            'posts.score AS score',
-            'posts.id AS post_id',
-            'posts.date_posted AS date_posted')
-          ->where('users.username', '=', Request::route('username'))
-          ->orderBy('post_id', 'desc')->paginate(10);
-
-        //print_r($posts);
-
-        $Parsedown = new Parsedown();
-      @endphp
-      @component('user-top')
-        @slot('username')
-          {{Request::route('username')}}
-        @endslot
-      @endcomponent
-
-      @foreach ($posts as $post)
-        @component('post')
-          @slot('content')
-            {!!$Parsedown->text($post->content)!!}
-          @endslot
+    @component('postsview')
+      @slot('posts')
+        @php
+          $posts = DB::table('posts')
+            ->join('users', 'posts.author_id', '=', 'users.id')
+            ->select('users.username AS sender',
+              'users.name AS name',
+              'users.id AS user_id',
+              'posts.content AS content',
+              'posts.score AS score',
+              'posts.id AS post_id',
+              'posts.date_posted AS date_posted')
+            ->where('users.username', '=', Request::route('username'))
+            ->orderBy('post_id', 'desc')->paginate(20);
+          $Parsedown = new Parsedown();
+        @endphp
+        @component('user-top')
           @slot('username')
-            {{$post->sender}}
-          @endslot
-          @slot('name')
-            {{$post->name}}
-          @endslot
-          @slot('date')
-            {{$post->date_posted}}
-          @endslot
-          @slot('user_id')
-            {{$post->user_id}}
-          @endslot
-          @slot('score')
-            {{$post->score}}
-          @endslot
-          @slot('id')
-            {{$post->post_id}}
-          @endslot
-          @slot('displayuser')
-            {{'no'}}
+            {{Request::route('username')}}
           @endslot
         @endcomponent
-      @endforeach
-    </div>
-    <button class="loadposts">Load some more</button>
+        @foreach ($posts as $post)
+          @component('post')
+            @slot('content')
+              {!!$Parsedown->text($post->content)!!}
+            @endslot
+            @slot('username')
+              {{$post->sender}}
+            @endslot
+            @slot('name')
+              {{$post->name}}
+            @endslot
+            @slot('date')
+              {{$post->date_posted}}
+            @endslot
+            @slot('user_id')
+              {{$post->user_id}}
+            @endslot
+            @slot('score')
+              {{$post->score}}
+            @endslot
+            @slot('id')
+              {{$post->post_id}}
+            @endslot
+            @slot('displayuser')
+              {{'no'}}
+            @endslot
+          @endcomponent
+        @endforeach
+      @endslot
+    @endcomponent
   </body>
   <script>
     var msnry;

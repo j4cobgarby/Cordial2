@@ -16,7 +16,6 @@
 
     <span class="bookmark-icon">
       <i class="fa fa-bookmark" aria-hidden="true"></i>
-      {{amountBookmarked()}}
     </span>
   @else
     <span class="login" onclick="toggle()">
