@@ -13,8 +13,9 @@
     </script>
   </div>
   <span class="by"
-  onmouseout="this.innerHTML='{{$name}}'"
-  onmouseover="this.innerHTML='{{'@'.$username}}'">
+    onmouseout="this.innerHTML='{{$name}}'"
+    onmouseover="this.innerHTML='{{'@'.$username}}'"
+    onclick="window.location.href='user/{{$username}}'">
     {{$name}}
   </span>
   <span class="date">{{$date}}</span>
