@@ -38,10 +38,6 @@ Route::get('/settings', function() {
   return view('settings');
 });
 
-Route::get('/post/{post_id}', function($post_id) {
-  return view('post-page');
-});
-
 Route::get('/write', function() {
   return view('write');
 });
@@ -57,6 +53,10 @@ Route::post('/write', function() {
 Route::get('/devlogout', function() {
     Auth::logout();
     return Redirect::to('/');
+});
+
+Route::get('/user/{username}', function() {
+
 });
 
 Route::get('/like-post-{id}', 'LikePostController');
