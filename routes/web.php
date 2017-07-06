@@ -105,6 +105,7 @@ Route::get('/bookmarked', function() {
   return Redirect::to('/');
 });
 
+// Only to be called via ajax.
 Route::get('/execphp/{func}', function($func) {
   switch ($func) {
     default:
