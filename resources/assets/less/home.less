@@ -217,8 +217,36 @@ div.posts {
         }
       }
 
-      .edit {
+      .edit i {
         cursor: pointer;
+        transform: rotate(-45deg);
+
+        @keyframes write {
+          0% {
+            transform: rotate(-45deg);
+          }
+          10% {
+            transform: rotate(-45deg) translateY(-3.5px) translateX(3.5px);
+          }
+          30% {
+            transform: rotate(0deg) translateY(-3.5px) translateX(4px);
+          }
+          50% {
+            transform: rotate(0) translateY(0) translateX(0);
+          }
+          100% {
+            transform: rotate(0) translateY(0) translateX(0);
+          }
+        }
+      }
+
+      .edit:hover i {
+        cursor: pointer;
+        color: @edit-colour;
+        animation-name: write;
+        animation-duration: 0.5s;
+        animation-timing-function: linear;
+        animation-fill-mode: both;
       }
 
       .comments {
