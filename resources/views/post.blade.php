@@ -36,12 +36,12 @@
         <span id="likecount-{{$id}}" class="scorecount">{{$score}}</span>
       </span>
     @endif
-    {{--
+    
     <span class="comments">
       <i class="fa fa-comment" aria-hidden="true"></i>
       0
     </span>
-    --}}
+
     <span class="bookmark">
       <i id="{{$id}}" class="fa fa-bookmark {{echoBookmarkClass($id)}}" aria-hidden="true" onclick="
 $('span.bookmark i#{{$id}}').toggleClass('bookmarked');

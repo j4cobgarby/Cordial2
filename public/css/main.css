@@ -74,7 +74,7 @@ div.header-section .bookmark-icon i {
   transition-duration: 0.15s;
 }
 div.header-section .bookmark-icon:hover > i {
-  color: #e96048;
+  color: #fe4b4b;
 }
 div.header-section .username-disp,
 div.header-section .login {

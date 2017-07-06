@@ -178,12 +178,12 @@ div.posts .grid-item .status .likes:hover > i {
 }
 div.posts .grid-item .status .likes.liked,
 div.posts .grid-item .status .likes:hover {
-  color: #e85099;
+  color: #eb72be;
   font-weight: bold;
 }
 div.posts .grid-item .status .likes.liked *,
 div.posts .grid-item .status .likes:hover * {
-  color: #e85099;
+  color: #eb72be;
 }
 div.posts .grid-item .status .likes i {
   transition-duration: 0.2s;
@@ -216,7 +216,7 @@ div.posts .grid-item .status .comments {
   50% {
     transform: scale(0) scaleX(-1) translateX(-15px) translateY(15px);
     opacity: 0;
-    color: #5dda84;
+    color: #5dadda;
   }
   62.5% {
     transform: scale(0.7) scaleX(-1) translateX(-1);
@@ -231,7 +231,7 @@ div.posts .grid-item .status .comments {
   100% {
     transform: scale(0) scaleX(-1) translateX(15px) translateY(-15px);
     opacity: 0;
-    color: #5dda84;
+    color: #5dadda;
   }
 }
 div.posts .grid-item .status .comments * {
@@ -239,12 +239,12 @@ div.posts .grid-item .status .comments * {
 }
 div.posts .grid-item .status .comments:hover,
 div.posts .grid-item .status .comments.liked {
-  color: #5dda84;
+  color: #5dadda;
   font-weight: bold;
 }
 div.posts .grid-item .status .comments:hover > i,
 div.posts .grid-item .status .comments.liked > i {
-  color: #5dda84;
+  color: #5dadda;
   animation-name: comments;
   animation-duration: 1.3s;
   animation-iteration-count: infinite;
@@ -254,14 +254,14 @@ div.posts .grid-item .status .bookmark > i {
   transition-duration: 0.15s;
 }
 div.posts .grid-item .status .bookmark > i:hover {
-  color: #ec4a4a;
+  color: #fe4b4b;
   transform: translateY(-2.5px);
 }
 div.posts .grid-item .status .bookmark > i:active {
   transform: translateY(2.6px);
 }
 div.posts .grid-item .status .bookmark > i.bookmarked {
-  color: #ec4a4a;
+  color: #fe4b4b;
 }
 div.posts .grid-item.newpost {
   height: 210px;
