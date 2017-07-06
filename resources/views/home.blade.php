@@ -69,10 +69,6 @@
         <div class="grid-item newpost" onclick='window.location.href="/write"'>
           Want to write something? <b>Click here!</b>
         </div>
-        <div class="grid-item writebio">
-          Writing a pinned post for your page is a great way to let people know a bit
-          about you! <b>Click here to set one up!</b>
-        </div>
         @foreach ($posts as $post)
           @component('post')
             @slot('content')

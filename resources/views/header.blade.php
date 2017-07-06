@@ -14,7 +14,7 @@
       <a href="/user/{{ Auth::user()->username }}"><i class="fa fa-user-circle" aria-hidden="true"></i>You</a>
     </div>
 
-    <span class="bookmark-icon">
+    <span class="bookmark-icon" onclick="window.location.href='/bookmarked'">
       <i class="fa fa-bookmark" aria-hidden="true"></i>
     </span>
   @else
