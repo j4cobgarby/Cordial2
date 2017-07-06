@@ -5,7 +5,7 @@
   @if (Auth::check())
     <span class="username-disp" onclick="toggle()">
       <i class="fa fa-user-circle" aria-hidden="true"></i>
-      {{ explode(' ', Auth::user()->name)[0] }}
+      {{ firstName(Auth::user()->name) }}
       <div id="arrow" class="arrow-down"></div>
     </span>
     <div id="d-auth" class="dropdown-auth">
