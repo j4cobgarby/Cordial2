@@ -92,7 +92,7 @@
                 {{$post->post_id}}
               @endslot
               @slot('displayuser')
-                {{'no'}}
+                {{'yes'}}
               @endslot
             @endcomponent
           @endif
