@@ -11,16 +11,16 @@
     <script>
       function toggleSwitchview() {
         var e = document.getElementById('switchview');
-        if (e.innerHTML == '<i class="fa fa-eye" aria-hidden="true"></i>Preview') {
-          e.innerHTML = '<i class="fa fa-pencil" aria-hidden="true"></i>Write';
+        if (e.innerHTML == '<i class="fa fa-eye" aria-hidden="true"></i>') {
+          e.innerHTML = '<i class="fa fa-pencil" aria-hidden="true"></i>';
         } else {
-          e.innerHTML = '<i class="fa fa-eye" aria-hidden="true"></i>Preview';
+          e.innerHTML = '<i class="fa fa-eye" aria-hidden="true"></i>';
         }
         document.getElementById('preview').classList.toggle("hidden");
       }
       function SwitchviewInit() {
         var e = document.getElementById('switchview');
-        e.innerHTML = '<i class="fa fa-eye" aria-hidden="true"></i>Preview';
+        e.innerHTML = '<i class="fa fa-eye" aria-hidden="true"></i>';
       }
     </script>
   </head>
@@ -30,7 +30,7 @@
     <form class="write" action="" method="post">
       {{ csrf_field() }}
       <textarea maxlength="6000" placeholder="Write something interesting!" name="content" id="content" required></textarea>
-      <button type="submit" name="submit" class="button-big close-center"><i class="fa fa-paper-plane" aria-hidden="true"></i></button>
+      <button type="submit" name="submit" class="submit"><i class="fa fa-paper-plane" aria-hidden="true"></i></button>
       <button type="button" onclick="toggleSwitchview()" class="switchview" id="switchview">
       </button>
     </form>

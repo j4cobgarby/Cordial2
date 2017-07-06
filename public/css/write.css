@@ -75,28 +75,39 @@ form.write textarea {
   padding: 15px 20px;
   box-sizing: border-box;
 }
-form.write input[type="submit"] {
-  bottom: 20px;
-}
 form.write button.switchview {
+  float: right;
+}
+form.write button.switchview,
+form.write button.submit {
   bottom: 55px;
   right: 70px;
+  width: 40%;
+  box-sizing: border-box;
   border: none;
   background-color: transparent;
   font-size: 22px;
   transition-duration: 0.3s;
   cursor: pointer;
   outline: none;
-  margin-left: 60px;
+  margin-top: 30px;
 }
-form.write button.switchview i {
+form.write button.switchview i,
+form.write button.submit i {
   font-size: 25px;
   margin: 0 15px;
-  transition-duration: 0.1s;
+  transition-duration: 0.4s;
+  color: #585858;
 }
-form.write button.switchview:hover {
-  transform: scale(1.1);
+form.write button.switchview:hover,
+form.write button.submit:hover {
+  transform: scale(1.2);
 }
-form.write button.switchview:active {
+form.write button.switchview:hover i,
+form.write button.submit:hover i {
+  color: #000;
+}
+form.write button.switchview:active,
+form.write button.submit:active {
   transform: scale(0.9);
 }
