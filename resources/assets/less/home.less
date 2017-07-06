@@ -218,26 +218,19 @@ div.posts {
       }
 
       .edit i {
-        cursor: pointer;
         transform: rotate(-45deg);
 
         @keyframes write {
-          0% {
-            transform: rotate(-45deg);
-          }
-          10% {
-            transform: rotate(-45deg) translateY(-3.5px) translateX(3.5px);
-          }
-          30% {
-            transform: rotate(0deg) translateY(-3.5px) translateX(4px);
-          }
-          50% {
-            transform: rotate(0) translateY(0) translateX(0);
-          }
-          100% {
-            transform: rotate(0) translateY(0) translateX(0);
-          }
+          0% {transform: rotate(-45deg)}
+          10% {transform: rotate(-45deg) translateY(-3.5px) translateX(3.5px)}
+          30% {transform: rotate(0deg) translateY(-3.5px) translateX(4px)}
+          50% {transform: rotate(0) translateY(0) translateX(0)}
+          100% {transform: rotate(0) translateY(0) translateX(0)}
         }
+      }
+
+      .edit {
+        cursor: pointer;
       }
 
       .edit:hover i {

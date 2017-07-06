@@ -197,7 +197,6 @@ div.posts .grid-item .status .likes i {
   transition-duration: 0.2s;
 }
 div.posts .grid-item .status .edit i {
-  cursor: pointer;
   transform: rotate(-45deg);
 }
 @keyframes write {
@@ -216,6 +215,9 @@ div.posts .grid-item .status .edit i {
   100% {
     transform: rotate(0) translateY(0) translateX(0);
   }
+}
+div.posts .grid-item .status .edit {
+  cursor: pointer;
 }
 div.posts .grid-item .status .edit:hover i {
   cursor: pointer;
