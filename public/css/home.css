@@ -52,7 +52,7 @@ div.posts .grid-item .expand-button:hover > i {
   color: #757575;
 }
 div.posts .grid-item .expand-button:active > i {
-  transform: scale(0.9) rotate(405deg);
+  transform: scale(0.9) rotate(225deg);
   transition-duration: 0.15s;
 }
 div.posts .grid-item .content {
