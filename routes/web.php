@@ -86,7 +86,7 @@ Route::get('/bookmarked', function() {
     return view('bookmarks-show');
   }
   return Redirect::to('/');
-})->middleware('ajax');
+});
 
 Route::get('/execphp/{func}', function($func) {
   switch ($func) {
