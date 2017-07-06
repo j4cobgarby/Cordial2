@@ -38,7 +38,7 @@
     @endcomponent
     <form class="write" action="" method="post">
       {{ csrf_field() }}
-      <textarea maxlength="6000" placeholder="Write something interesting!" name="content" id="content" required>@php
+      <textarea maxlength="6000" placeholder="Write something interesting! You should use Markdown - it's really cool!" name="content" id="content" required>@php
 if ($editing) {
   //print_r($edited_post);
   echo $edited_post->content;
