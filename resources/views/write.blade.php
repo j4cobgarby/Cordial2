@@ -30,7 +30,7 @@
     <form class="write" action="" method="post">
       {{ csrf_field() }}
       <textarea maxlength="6000" placeholder="Write something interesting!" name="content" id="content" required></textarea>
-      <input class="button-big close-center" type="submit" name="submit" value="Post!">
+      <button type="submit" name="submit" class="button-big close-center"><i class="fa fa-paper-plane" aria-hidden="true"></i></button>
       <button type="button" onclick="toggleSwitchview()" class="switchview" id="switchview">
       </button>
     </form>
