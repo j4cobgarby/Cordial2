@@ -46,6 +46,8 @@ Route::get('/write/{id}', function($id) {
   if (userOwnsPost($id)) {
     // It's the user's post - they're not trying to edit someone else's
     return view('write');
+  } else {
+    return Redirect::to('/');
   }
 });
 

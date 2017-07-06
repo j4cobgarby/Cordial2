@@ -49,8 +49,10 @@ execphp('bookmark', '{{$id}}');
       "></i>
     </span>
 
-    <span class="edit">
-      <i class="fa fa-pencil" aria-hidden="true"></i>
-    </span>
+    @if (userOwnsPost($id))
+      <span class="edit">
+        <i class="fa fa-pencil" aria-hidden="true"></i>
+      </span>
+    @endif
   </span>
 </div>
