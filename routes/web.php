@@ -90,8 +90,23 @@ Route::get('/bookmarked', function() {
 
 Route::get('/execphp/{func}', function($func) {
   switch ($func) {
-    case 'test':
-      echo "Hello, world!";
+    default:
+      break;
+  }
+})->middleware('ajax');
+
+Route::get('/execphp/{func}/{param}', function($func, $param) {
+  switch ($func) {
+    case 'bookmark':
+      if (Auth::check()) {
+        if (hasBookmarked($param)) {
+          unBookmark($param);
+          echo 'unbookmarked';
+        } else {
+          bookmark($param);
+          echo 'bookmarked';
+        }
+      }
       break;
 
     default:

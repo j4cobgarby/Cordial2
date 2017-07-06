@@ -65,6 +65,8 @@
             ->orderBy('post_id', 'desc')->paginate(20);
           $Parsedown = new Parsedown();
         @endphp
+        @component('bookmarked-top')
+        @endcomponent
         @foreach ($posts as $post)
           @if (hasBookmarked($post->post_id))
             @component('post')
