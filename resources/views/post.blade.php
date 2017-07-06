@@ -46,7 +46,7 @@
       <i id="{{$id}}" class="fa fa-bookmark {{echoBookmarkClass($id)}}" aria-hidden="true" onclick="
 $('span.bookmark i#{{$id}}').toggleClass('bookmarked');
 $.ajax({url: '/bookmark-{{$id}}', success: function(result) {
-
+  
 }});
       "></i>
     </span>

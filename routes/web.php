@@ -64,7 +64,7 @@ Route::get('/user/{username}', function($username) {
   return Redirect::to('/');
 });
 
-Route::get('/like-post-{id}', 'LikePostController');
+Route::get('/like-post-{id}', 'LikePostController')->middleware('ajax');
 
 // The routes for bookmarks
 
@@ -79,11 +79,22 @@ Route::get('/bookmark-{id}', function($id) {
     }
   }
   return Redirect::to('/');
-});
+})->middleware('ajax');
 
 Route::get('/bookmarked', function() {
   if (Auth::check()) {
     return view('bookmarks-show');
   }
   return Redirect::to('/');
-});
+})->middleware('ajax');
+
+Route::get('/execphp/{func}', function($func) {
+  switch ($func) {
+    case 'test':
+      echo "Hello, world!";
+      break;
+
+    default:
+      break;
+  }
+})->middleware('ajax');
