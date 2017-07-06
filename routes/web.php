@@ -42,11 +42,26 @@ Route::get('/write', function() {
   return view('write');
 });
 
+Route::get('/write/{id}', function($id) {
+  if (userOwnsPost($id)) {
+    // It's the user's post - they're not trying to edit someone else's
+    return view('write');
+  }
+});
+
 Route::post('/write', function() {
   $content =  Input::get('content');
   $sql = "INSERT INTO posts (id, author_id, content, tags, date_posted, score)
   VALUES (NULL, ?, ?, ?, ?, 0)";
   DB::insert($sql, [Auth::user()->id, addslashes($content), "", date("Y-m-d H:i:s")]);
+  return Redirect::to('/');
+});
+
+Route::post('/write/{id}', function($id) {
+  $content = Input::get('content');
+  DB::table('posts')
+    ->where('id', $id)
+    ->update(['content' => $content]);
   return Redirect::to('/');
 });
 

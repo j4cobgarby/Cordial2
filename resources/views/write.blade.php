@@ -25,11 +25,25 @@
     </script>
   </head>
   <body onload="SwitchviewInit()">
+    @php
+      $editing = false;
+      if (Request::route('id') != '') {
+        $id = Request::route('id');
+        $editing = true;
+        $edited_post = DB::select('SELECT * FROM posts WHERE id = ?', [$id])[0];
+      }
+    @endphp
+
     @component('header')
     @endcomponent
     <form class="write" action="" method="post">
       {{ csrf_field() }}
-      <textarea maxlength="6000" placeholder="Write something interesting!" name="content" id="content" required></textarea>
+      <textarea maxlength="6000" placeholder="Write something interesting!" name="content" id="content" required>@php
+if ($editing) {
+  //print_r($edited_post);
+  echo $edited_post->content;
+}
+        @endphp</textarea>
       <button type="submit" name="submit" class="submit"><i class="fa fa-paper-plane" aria-hidden="true"></i></button>
       <button type="button" onclick="toggleSwitchview()" class="switchview" id="switchview">
       </button>

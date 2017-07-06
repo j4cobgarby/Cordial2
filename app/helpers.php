@@ -97,3 +97,7 @@ function bookmark($id) {
 function unBookmark($id) {
   DB::table('users_bookmarked_posts')->where('post_id', '=', $id)->delete();
 }
+
+function userOwnsPost($id) {
+  return sizeof(DB::select('SELECT * FROM posts WHERE author_id = ? AND id = ?', [Auth::user()->id, $id])) >= 1;
+}
