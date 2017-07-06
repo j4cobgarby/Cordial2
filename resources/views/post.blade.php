@@ -50,7 +50,7 @@ execphp('bookmark', '{{$id}}');
     </span>
 
     @if (userOwnsPost($id))
-      <span class="edit">
+      <span class="edit" onclick="window.location.href='/write/{{$id}}'">
         <i class="fa fa-pencil" aria-hidden="true"></i>
       </span>
     @endif
