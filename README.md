@@ -1,5 +1,6 @@
 ![cordial](https://raw.githubusercontent.com/j4cobgarby/Cordial2/master/github-assets/logo-wide.png)
 
+![cordial](https://raw.githubusercontent.com/j4cobgarby/Cordial2/master/github-assets/posts-closeup.PNG)
 ## The new and improved version of cordial.
 
 ### Added features include:
@@ -9,10 +10,6 @@
  - A better authentication system at each route
  - Authentication system includes email and full name now
  
- # Here's a screenshot
- 
  ![cordial](https://raw.githubusercontent.com/j4cobgarby/Cordial2/master/github-assets/home.png)
-
-# And, here's a screenshot of a post after it's been expanded by the user
 
 ![cordial](https://raw.githubusercontent.com/j4cobgarby/Cordial2/master/github-assets/expand.png)
