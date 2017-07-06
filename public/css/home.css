@@ -196,6 +196,9 @@ div.posts .grid-item .status .likes:hover * {
 div.posts .grid-item .status .likes i {
   transition-duration: 0.2s;
 }
+div.posts .grid-item .status .edit {
+  cursor: pointer;
+}
 div.posts .grid-item .status .comments {
   color: #ababab;
   cursor: pointer;

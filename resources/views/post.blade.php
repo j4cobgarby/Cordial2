@@ -36,7 +36,7 @@
         <span id="likecount-{{$id}}" class="scorecount">{{$score}}</span>
       </span>
     @endif
-    
+
     <span class="comments">
       <i class="fa fa-comment" aria-hidden="true"></i>
       0
@@ -47,6 +47,10 @@
 $('span.bookmark i#{{$id}}').toggleClass('bookmarked');
 execphp('bookmark', '{{$id}}');
       "></i>
+    </span>
+
+    <span class="edit">
+      <i class="fa fa-pencil" aria-hidden="true"></i>
     </span>
   </span>
 </div>
