@@ -84,6 +84,7 @@ div.posts .grid-item .content pre {
   padding-right: 0;
   border-radius: 4px;
   font-family: 'Inconsolata', monospace;
+  padding: 15px;
 }
 div.posts .grid-item .content code {
   padding: 15px;
@@ -93,6 +94,9 @@ div.posts .grid-item .content code {
 }
 div.posts .grid-item .content code * {
   font-family: 'Inconsolata', monospace;
+}
+div.posts .grid-item .content code.hljs {
+  margin: -15px;
 }
 div.posts .grid-item .content table {
   border: 1px solid #d0d0d0;

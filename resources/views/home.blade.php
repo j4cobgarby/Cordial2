@@ -145,13 +145,8 @@
       loadingText: 'Loading..',
       onInit: function() {
         this.on( 'load', function() {
-          setInterval(function() {
-            $('pre code').each(function(i, block) {
-              hljs.highlightBlock(block);
-            });
-            reload();
-          }, 500);
-
+          hljs.initHighlighting.called = false;
+          hljs.initHighlighting();
         });
       }
     });
