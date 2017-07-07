@@ -86,6 +86,17 @@ form.write {
     float: right;
   }
 
+  button.submit {
+    transition-duration: 0.15s;
+    &:hover i {
+      transform: scale(1.1) translateX(-10px) translateY(8px);
+    }
+
+    &:active i {
+      transform: scale(0.7) translateX(15px) translateY(-5px) rotate(15deg);
+    }
+  }
+
   button.switchview, button.submit {
     bottom: 55px;
     right: 70px;

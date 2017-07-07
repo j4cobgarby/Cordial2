@@ -78,6 +78,15 @@ form.write textarea {
 form.write button.switchview {
   float: right;
 }
+form.write button.submit {
+  transition-duration: 0.15s;
+}
+form.write button.submit:hover i {
+  transform: scale(1.1) translateX(-10px) translateY(8px);
+}
+form.write button.submit:active i {
+  transform: scale(0.7) translateX(15px) translateY(-5px) rotate(15deg);
+}
 form.write button.switchview,
 form.write button.submit {
   bottom: 55px;
