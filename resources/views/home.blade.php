@@ -130,13 +130,30 @@
         resetSelected();
       }
     });
+
+    function test() {
+      console.log("test");
+    }
+
     var elem = document.querySelector('.container');
     var infScroll = new InfiniteScroll( elem, {
-    // options
-    path: '[rel="next"]',
-    append: '.post',
-    history: false,
-    outlayer: msnry
+      // options
+      path: '[rel="next"]',
+      append: '.post',
+      history: false,
+      outlayer: msnry,
+      loadingText: 'Loading..',
+      onInit: function() {
+        this.on( 'load', function() {
+          setInterval(function() {
+            $('pre code').each(function(i, block) {
+              hljs.highlightBlock(block);
+            });
+            reload();
+          }, 500);
+
+        });
+      }
     });
   </script>
 </html>
