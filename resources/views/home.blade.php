@@ -141,8 +141,7 @@
       path: '[rel="next"]', // selector for laravel-generated next page button
       append: '.post',
       history: false,
-      outlayer: msnry,
-      loadingText: 'Loading..',
+      outlayer: msnry
     });
     infScroll.on('append', function(response, path, items) {
       console.log("rl");
