@@ -1,16 +1,11 @@
 <div class="post grid-item" id="post-{{$id}}">
   <div class="content">{!!stripslashes($content)!!}
-    <script>
-      var content = document.currentScript.parentElement;
-      if (true) {
-        var expandbtn = document.createElement("div");
-        expandbtn.setAttribute("class", "expand-button");
-        expandbtn.setAttribute("title", "Show all");
-        expandbtn.innerHTML = '<i class="fa fa-expand" aria-hidden="true"></i>';
-        expandbtn.setAttribute("onclick", 'resetSelected();this.parentElement.classList.add("expanded");this.parentElement.parentElement.classList.add("expanded")');
-        content.appendChild(expandbtn);
-      }
-    </script>
+    <div class="expand-button" title="Show all"
+    onclick='resetSelected();
+      this.parentElement.classList.add("expanded");
+      this.parentElement.parentElement.classList.add("expanded")'>
+      <i class="fa fa-expand" aria-hidden="true"></i>
+    </div>
   </div>
   @if ($displayuser == 'yes')
     <span class="by"
