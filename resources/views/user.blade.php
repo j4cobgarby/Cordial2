@@ -7,6 +7,7 @@
     @endcomponent
     <link rel="stylesheet" href="{!! asset('css/home.css') !!}">
     <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+    <script src="{!! asset('js/infinite-scroll.pkgd.min.js') !!}" charset="utf-8"></script>
     <script
   src="https://code.jquery.com/jquery-3.2.1.min.js"
   integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
@@ -71,6 +72,7 @@
             {{Request::route('username')}}
           @endslot
         @endcomponent
+        {!! $posts->render() !!}
         @foreach ($posts as $post)
           @component('post')
             @slot('content')
@@ -130,5 +132,20 @@
         resetSelected();
       }
     });
+
+    var elem = document.querySelector('.container');
+    var infScroll = new InfiniteScroll( elem, {
+      // options
+      path: '[rel="next"]', // selector for laravel-generated next page button
+      append: '.post',
+      history: false,
+      outlayer: msnry
+    });
+    infScroll.on('append', function(response, path, items) {
+      console.log("rl");
+      $('pre code').each(function(i, block) {
+        hljs.highlightBlock(block);
+      });
+    })
   </script>
 </html>
