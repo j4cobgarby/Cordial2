@@ -27,7 +27,8 @@ div.middle span.links a {
   text-decoration: none;
   font-size: 20px;
   border-bottom: 2px solid white;
-  transition-duration: 0.2s;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
   padding-bottom: 5px;
 }
 div.middle span.links a:hover {
@@ -50,13 +51,16 @@ span.legal {
   height: 80px;
   line-height: 20px;
   padding: 10px 0;
-  box-sizing: border-box;
-  transition-duration: 0.2s;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
   cursor: default;
 }
 span.legal b {
   color: inherit;
-  transition-duration: 0.2s;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
 }
 span.legal:hover {
   bottom: 0;

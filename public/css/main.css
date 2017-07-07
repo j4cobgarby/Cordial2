@@ -24,7 +24,8 @@ div.obscurer {
   background-color: #1d1d1d;
   z-index: 1;
   opacity: 1;
-  transition-duration: 1s;
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
   pointer-events: none;
 }
 div.obscurer.gone {
@@ -37,7 +38,8 @@ div.header-section {
   width: 100%;
   height: 70px;
   padding: 0 150px;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   line-height: 70px;
   z-index: 1;
 }
@@ -45,7 +47,6 @@ div.header-section * {
   color: white;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
-  -khtml-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
@@ -57,8 +58,10 @@ div.header-section .header-logo {
   cursor: pointer;
   float: left;
   letter-spacing: normal;
+  -webkit-transition: letter-spacing 0.3s;
   transition: letter-spacing 0.3s;
-  transition-timing-function: ease-in-out;
+  -webkit-transition-timing-function: ease-in-out;
+          transition-timing-function: ease-in-out;
 }
 div.header-section .header-logo:hover {
   letter-spacing: 6px;
@@ -71,7 +74,8 @@ div.header-section .bookmark-icon {
   margin-right: 20px;
 }
 div.header-section .bookmark-icon i {
-  transition-duration: 0.15s;
+  -webkit-transition-duration: 0.15s;
+          transition-duration: 0.15s;
 }
 div.header-section .bookmark-icon:hover > i {
   color: #fe4b4b;
@@ -94,11 +98,14 @@ div.header-section .arrow-down {
   border-left: 6px solid transparent;
   border-right: 6px solid transparent;
   border-top: 8px solid white;
-  transition-duration: 0.2s;
-  transition-timing-function: cubic-bezier(0.11, 1.21, 0.56, 1.46);
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+  -webkit-transition-timing-function: cubic-bezier(0.11, 1.21, 0.56, 1.46);
+          transition-timing-function: cubic-bezier(0.11, 1.21, 0.56, 1.46);
 }
 div.header-section .arrow-down.default {
-  transform: rotate(-90deg);
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
 }
 div.dropdown-notauth,
 div.dropdown-auth {
@@ -107,8 +114,10 @@ div.dropdown-auth {
   width: 250px;
   top: 50px;
   right: 150px;
-  transition-duration: 0.2s;
-  transition-timing-function: cubic-bezier(0.96, 0.62, 0.48, 0.91);
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+  -webkit-transition-timing-function: cubic-bezier(0.96, 0.62, 0.48, 0.91);
+          transition-timing-function: cubic-bezier(0.96, 0.62, 0.48, 0.91);
   height: 0;
   text-align: center;
   font-size: 17px;
@@ -121,8 +130,10 @@ div.dropdown-auth a {
   text-decoration: none;
   width: 100%;
   top: -400px;
-  transition-timing-function: cubic-bezier(0.96, 0.62, 0.48, 0.91);
-  transition-duration: 0.3s;
+  -webkit-transition-timing-function: cubic-bezier(0.96, 0.62, 0.48, 0.91);
+          transition-timing-function: cubic-bezier(0.96, 0.62, 0.48, 0.91);
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
   opacity: 0;
   color: #e4e4e4;
   height: 70px;
@@ -132,20 +143,36 @@ div.dropdown-notauth a:hover,
 div.dropdown-auth a:hover {
   color: white;
 }
-@keyframes spin {
+@-webkit-keyframes spin {
   0% {
-    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
   }
   100% {
-    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
   }
 }
 div.dropdown-notauth a:hover > i.fa-cog,
 div.dropdown-auth a:hover > i.fa-cog {
-  animation-name: spin;
-  animation-duration: 3s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
+  -webkit-animation-name: spin;
+          animation-name: spin;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
 }
 div.dropdown-notauth.visible,
 div.dropdown-auth.visible {
@@ -167,33 +194,44 @@ div.dropdown-auth.visible > a {
   border: 2px solid #1d1d1d;
   color: #1d1d1d;
   font-size: 20px;
+  -webkit-transition: color 0.3s, -webkit-box-shadow 0.2s;
+  transition: color 0.3s, -webkit-box-shadow 0.2s;
   transition: box-shadow 0.2s, color 0.3s;
-  transition-timing-function: linear;
+  transition: box-shadow 0.2s, color 0.3s, -webkit-box-shadow 0.2s;
+  -webkit-transition-timing-function: linear;
+          transition-timing-function: linear;
   border-radius: 4.5px;
 }
 .button-big.close-middle {
-  box-shadow: inset 0 0 0 0 #1d1d1d, inset 0 0 0 0 #1d1d1d;
+  -webkit-box-shadow: inset 0 0 0 0 #1d1d1d, inset 0 0 0 0 #1d1d1d;
+          box-shadow: inset 0 0 0 0 #1d1d1d, inset 0 0 0 0 #1d1d1d;
 }
 .button-big.close-right,
 .button-big.close-left {
-  box-shadow: inset 0 0 0 0 #1d1d1d;
+  -webkit-box-shadow: inset 0 0 0 0 #1d1d1d;
+          box-shadow: inset 0 0 0 0 #1d1d1d;
 }
 .button-big.close-center {
-  box-shadow: inset 0 0 0 0 #1d1d1d;
+  -webkit-box-shadow: inset 0 0 0 0 #1d1d1d;
+          box-shadow: inset 0 0 0 0 #1d1d1d;
 }
 .button-big:hover {
   color: white;
   cursor: pointer;
 }
 .button-big.close-middle:hover {
-  box-shadow: inset 150px 0 0 0 #1d1d1d, inset -150px 0 0 0 #1d1d1d;
+  -webkit-box-shadow: inset 150px 0 0 0 #1d1d1d, inset -150px 0 0 0 #1d1d1d;
+          box-shadow: inset 150px 0 0 0 #1d1d1d, inset -150px 0 0 0 #1d1d1d;
 }
 .button-big.close-right:hover {
-  box-shadow: inset 300px 0 0 0 #1d1d1d;
+  -webkit-box-shadow: inset 300px 0 0 0 #1d1d1d;
+          box-shadow: inset 300px 0 0 0 #1d1d1d;
 }
 .button-big.close-left:hover {
-  box-shadow: inset -300px 0 0 0 #1d1d1d;
+  -webkit-box-shadow: inset -300px 0 0 0 #1d1d1d;
+          box-shadow: inset -300px 0 0 0 #1d1d1d;
 }
 .button-big.close-center:hover {
-  box-shadow: inset 0 0 0 30px #1d1d1d;
+  -webkit-box-shadow: inset 0 0 0 30px #1d1d1d;
+          box-shadow: inset 0 0 0 30px #1d1d1d;
 }

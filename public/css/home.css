@@ -22,13 +22,15 @@ div.posts .grid-item {
   background-color: white;
   margin: 15px 0;
   padding: 15px;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   overflow: hidden;
   border-radius: 5px;
 }
 div.posts .grid-item.expanded {
   width: 930px;
-  box-shadow: 0px 0px 115px -19px rgba(0, 0, 0, 0.16);
+  -webkit-box-shadow: 0px 0px 115px -19px rgba(0, 0, 0, 0.16);
+          box-shadow: 0px 0px 115px -19px rgba(0, 0, 0, 0.16);
   border: 1px solid #d0d0d0 !important;
 }
 div.posts .grid-item.expanded .expand-button {
@@ -46,17 +48,21 @@ div.posts .grid-item .expand-button {
 div.posts .grid-item .expand-button i {
   display: inline-block;
   position: relative;
-  transition-duration: 0.2s;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
   bottom: 0;
   color: #ababab;
 }
 div.posts .grid-item .expand-button:hover > i {
-  transform: scale(1.3) rotate(225deg);
+  -webkit-transform: scale(1.3) rotate(225deg);
+          transform: scale(1.3) rotate(225deg);
   color: #757575;
 }
 div.posts .grid-item .expand-button:active > i {
-  transform: scale(0.9) rotate(225deg);
-  transition-duration: 0.15s;
+  -webkit-transform: scale(0.9) rotate(225deg);
+          transform: scale(0.9) rotate(225deg);
+  -webkit-transition-duration: 0.15s;
+          transition-duration: 0.15s;
 }
 div.posts .grid-item .content {
   font-size: 14px;
@@ -138,7 +144,10 @@ div.posts .grid-item .date {
 }
 div.posts .grid-item .status {
   color: #ababab;
-  user-select: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 div.posts .grid-item .status * {
   margin: 0 5px;
@@ -147,35 +156,84 @@ div.posts .grid-item .status .likes {
   color: #ababab;
   cursor: pointer;
 }
-@keyframes heartbeat {
+@-webkit-keyframes heartbeat {
   20% {
-    transform: scale(1);
+    -webkit-transform: scale(1);
+            transform: scale(1);
   }
   26% {
-    transform: scale(1.15);
+    -webkit-transform: scale(1.15);
+            transform: scale(1.15);
   }
   40% {
-    transform: scale(0.85);
+    -webkit-transform: scale(0.85);
+            transform: scale(0.85);
   }
   53% {
-    transform: scale(1.25);
+    -webkit-transform: scale(1.25);
+            transform: scale(1.25);
   }
   67% {
-    transform: scale(1);
+    -webkit-transform: scale(1);
+            transform: scale(1);
   }
   100% {
-    transform: scale(1);
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+@keyframes heartbeat {
+  20% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  26% {
+    -webkit-transform: scale(1.15);
+            transform: scale(1.15);
+  }
+  40% {
+    -webkit-transform: scale(0.85);
+            transform: scale(0.85);
+  }
+  53% {
+    -webkit-transform: scale(1.25);
+            transform: scale(1.25);
+  }
+  67% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+@-webkit-keyframes like {
+  60% {
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+  }
+  80% {
+    -webkit-transform: scale(2);
+            transform: scale(2);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
   }
 }
 @keyframes like {
   60% {
-    transform: scale(0.8);
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
   }
   80% {
-    transform: scale(2);
+    -webkit-transform: scale(2);
+            transform: scale(2);
   }
   100% {
-    transform: scale(1);
+    -webkit-transform: scale(1);
+            transform: scale(1);
   }
 }
 div.posts .grid-item .status .likes * {
@@ -186,10 +244,14 @@ div.posts .grid-item .status .likes span.scorecount {
   padding: 0;
 }
 div.posts .grid-item .status .likes:hover > i {
-  animation-name: heartbeat;
-  animation-duration: 1s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
+  -webkit-animation-name: heartbeat;
+          animation-name: heartbeat;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
 }
 div.posts .grid-item .status .likes.liked,
 div.posts .grid-item .status .likes:hover {
@@ -201,26 +263,55 @@ div.posts .grid-item .status .likes:hover * {
   color: #eb72be;
 }
 div.posts .grid-item .status .likes i {
-  transition-duration: 0.2s;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
 }
 div.posts .grid-item .status .edit i {
-  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+@-webkit-keyframes write {
+  0% {
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+  }
+  10% {
+    -webkit-transform: rotate(-45deg) translateY(-3.5px) translateX(3.5px);
+            transform: rotate(-45deg) translateY(-3.5px) translateX(3.5px);
+  }
+  30% {
+    -webkit-transform: rotate(0deg) translateY(-3.5px) translateX(4px);
+            transform: rotate(0deg) translateY(-3.5px) translateX(4px);
+  }
+  50% {
+    -webkit-transform: rotate(0) translateY(0) translateX(0) scale(1.2);
+            transform: rotate(0) translateY(0) translateX(0) scale(1.2);
+  }
+  100% {
+    -webkit-transform: rotate(0) translateY(0) translateX(0) scale(1.3);
+            transform: rotate(0) translateY(0) translateX(0) scale(1.3);
+  }
 }
 @keyframes write {
   0% {
-    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
   }
   10% {
-    transform: rotate(-45deg) translateY(-3.5px) translateX(3.5px);
+    -webkit-transform: rotate(-45deg) translateY(-3.5px) translateX(3.5px);
+            transform: rotate(-45deg) translateY(-3.5px) translateX(3.5px);
   }
   30% {
-    transform: rotate(0deg) translateY(-3.5px) translateX(4px);
+    -webkit-transform: rotate(0deg) translateY(-3.5px) translateX(4px);
+            transform: rotate(0deg) translateY(-3.5px) translateX(4px);
   }
   50% {
-    transform: rotate(0) translateY(0) translateX(0) scale(1.2);
+    -webkit-transform: rotate(0) translateY(0) translateX(0) scale(1.2);
+            transform: rotate(0) translateY(0) translateX(0) scale(1.2);
   }
   100% {
-    transform: rotate(0) translateY(0) translateX(0) scale(1.3);
+    -webkit-transform: rotate(0) translateY(0) translateX(0) scale(1.3);
+            transform: rotate(0) translateY(0) translateX(0) scale(1.3);
   }
 }
 div.posts .grid-item .status .edit {
@@ -229,53 +320,119 @@ div.posts .grid-item .status .edit {
 div.posts .grid-item .status .edit:hover i {
   cursor: pointer;
   color: #25be79;
-  animation-name: write;
-  animation-duration: 0.5s;
-  animation-timing-function: linear;
-  animation-fill-mode: both;
+  -webkit-animation-name: write;
+          animation-name: write;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
 }
 div.posts .grid-item .status .comments {
   color: #ababab;
   cursor: pointer;
 }
-@keyframes comments {
+@-webkit-keyframes comments {
   0% {
-    transform: scale(0) translateX(-15px) translateY(15px);
+    -webkit-transform: scale(0) translateX(-15px) translateY(15px);
+            transform: scale(0) translateX(-15px) translateY(15px);
     opacity: 0;
     color: #c2c2c2;
   }
   12.5% {
-    transform: scale(0.7) translateX(-1);
+    -webkit-transform: scale(0.7) translateX(-1);
+            transform: scale(0.7) translateX(-1);
   }
   25% {
-    transform: scale(1.5) translateX(0) translateY(0);
+    -webkit-transform: scale(1.5) translateX(0) translateY(0);
+            transform: scale(1.5) translateX(0) translateY(0);
     opacity: 1;
   }
   37.5% {
-    transform: scale(0.7) translateX(-1);
+    -webkit-transform: scale(0.7) translateX(-1);
+            transform: scale(0.7) translateX(-1);
   }
   49% {
-    transform: scale(0) translateX(15px) translateY(-15px);
+    -webkit-transform: scale(0) translateX(15px) translateY(-15px);
+            transform: scale(0) translateX(15px) translateY(-15px);
     opacity: 0;
     color: #c2c2c2;
   }
   50% {
-    transform: scale(0) scaleX(-1) translateX(-15px) translateY(15px);
+    -webkit-transform: scale(0) scaleX(-1) translateX(-15px) translateY(15px);
+            transform: scale(0) scaleX(-1) translateX(-15px) translateY(15px);
     opacity: 0;
     color: #5dadda;
   }
   62.5% {
-    transform: scale(0.7) scaleX(-1) translateX(-1);
+    -webkit-transform: scale(0.7) scaleX(-1) translateX(-1);
+            transform: scale(0.7) scaleX(-1) translateX(-1);
   }
   75% {
-    transform: scale(1.5) scaleX(-1) translateX(0) translateY(0);
+    -webkit-transform: scale(1.5) scaleX(-1) translateX(0) translateY(0);
+            transform: scale(1.5) scaleX(-1) translateX(0) translateY(0);
     opacity: 1;
   }
   88% {
-    transform: scale(0.7) scaleX(-1) translateX(11);
+    -webkit-transform: scale(0.7) scaleX(-1) translateX(11);
+            transform: scale(0.7) scaleX(-1) translateX(11);
   }
   100% {
-    transform: scale(0) scaleX(-1) translateX(15px) translateY(-15px);
+    -webkit-transform: scale(0) scaleX(-1) translateX(15px) translateY(-15px);
+            transform: scale(0) scaleX(-1) translateX(15px) translateY(-15px);
+    opacity: 0;
+    color: #5dadda;
+  }
+}
+@keyframes comments {
+  0% {
+    -webkit-transform: scale(0) translateX(-15px) translateY(15px);
+            transform: scale(0) translateX(-15px) translateY(15px);
+    opacity: 0;
+    color: #c2c2c2;
+  }
+  12.5% {
+    -webkit-transform: scale(0.7) translateX(-1);
+            transform: scale(0.7) translateX(-1);
+  }
+  25% {
+    -webkit-transform: scale(1.5) translateX(0) translateY(0);
+            transform: scale(1.5) translateX(0) translateY(0);
+    opacity: 1;
+  }
+  37.5% {
+    -webkit-transform: scale(0.7) translateX(-1);
+            transform: scale(0.7) translateX(-1);
+  }
+  49% {
+    -webkit-transform: scale(0) translateX(15px) translateY(-15px);
+            transform: scale(0) translateX(15px) translateY(-15px);
+    opacity: 0;
+    color: #c2c2c2;
+  }
+  50% {
+    -webkit-transform: scale(0) scaleX(-1) translateX(-15px) translateY(15px);
+            transform: scale(0) scaleX(-1) translateX(-15px) translateY(15px);
+    opacity: 0;
+    color: #5dadda;
+  }
+  62.5% {
+    -webkit-transform: scale(0.7) scaleX(-1) translateX(-1);
+            transform: scale(0.7) scaleX(-1) translateX(-1);
+  }
+  75% {
+    -webkit-transform: scale(1.5) scaleX(-1) translateX(0) translateY(0);
+            transform: scale(1.5) scaleX(-1) translateX(0) translateY(0);
+    opacity: 1;
+  }
+  88% {
+    -webkit-transform: scale(0.7) scaleX(-1) translateX(11);
+            transform: scale(0.7) scaleX(-1) translateX(11);
+  }
+  100% {
+    -webkit-transform: scale(0) scaleX(-1) translateX(15px) translateY(-15px);
+            transform: scale(0) scaleX(-1) translateX(15px) translateY(-15px);
     opacity: 0;
     color: #5dadda;
   }
@@ -291,20 +448,26 @@ div.posts .grid-item .status .comments.liked {
 div.posts .grid-item .status .comments:hover > i,
 div.posts .grid-item .status .comments.liked > i {
   color: #5dadda;
-  animation-name: comments;
-  animation-duration: 1.3s;
-  animation-iteration-count: infinite;
+  -webkit-animation-name: comments;
+          animation-name: comments;
+  -webkit-animation-duration: 1.3s;
+          animation-duration: 1.3s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
 }
 div.posts .grid-item .status .bookmark > i {
   cursor: pointer;
-  transition-duration: 0.15s;
+  -webkit-transition-duration: 0.15s;
+          transition-duration: 0.15s;
 }
 div.posts .grid-item .status .bookmark > i:hover {
   color: #fe4b4b;
-  transform: translateY(-2.5px);
+  -webkit-transform: translateY(-2.5px);
+          transform: translateY(-2.5px);
 }
 div.posts .grid-item .status .bookmark > i:active {
-  transform: translateY(2.6px);
+  -webkit-transform: translateY(2.6px);
+          transform: translateY(2.6px);
 }
 div.posts .grid-item .status .bookmark > i.bookmarked {
   color: #fe4b4b;
@@ -315,10 +478,15 @@ div.posts .grid-item.newpost {
   background-color: #75c88b;
   color: #ffffff;
   padding: 30px;
-  user-select: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   cursor: pointer;
+  -webkit-transition: background-color 0.3s;
   transition: background-color 0.3s;
-  box-shadow: 0 0 0 0 #75c88b;
+  -webkit-box-shadow: 0 0 0 0 #75c88b;
+          box-shadow: 0 0 0 0 #75c88b;
   border: 1px solid #51b96c;
 }
 div.posts .grid-item.newpost * {
@@ -333,10 +501,15 @@ div.posts .grid-item.discover {
   background-color: #e26b5a;
   color: #ffffff;
   padding: 30px;
-  user-select: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   cursor: pointer;
+  -webkit-transition: background-color 0.3s;
   transition: background-color 0.3s;
-  box-shadow: 0 0 0 0 #e26b5a;
+  -webkit-box-shadow: 0 0 0 0 #e26b5a;
+          box-shadow: 0 0 0 0 #e26b5a;
   border: 1px solid #da442f;
 }
 div.posts .grid-item.discover * {
@@ -351,10 +524,15 @@ div.posts .grid-item.writebio {
   background-color: #d24dd5;
   color: #fcf2fc;
   padding: 30px;
-  user-select: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   cursor: pointer;
+  -webkit-transition: background-color 0.3s;
   transition: background-color 0.3s;
-  box-shadow: 0 0 0 0 #d24dd5;
+  -webkit-box-shadow: 0 0 0 0 #d24dd5;
+          box-shadow: 0 0 0 0 #d24dd5;
   border: 1px solid #be2ec1;
 }
 div.posts .grid-item.writebio * {
@@ -370,7 +548,10 @@ div.posts .grid-item.greeting {
   height: 450px;
   width: 930px;
   padding: 30px;
-  user-select: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   cursor: default;
 }
 div.posts .grid-item.greeting * {
@@ -390,13 +571,16 @@ div.posts .grid-item.greeting span.details span.sect {
   display: inline-block;
   width: 120px;
   cursor: pointer;
-  transition-duration: 0.3s;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
 }
 div.posts .grid-item.greeting span.details span.sect > * {
-  transition-duration: 0.3s;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
 }
 div.posts .grid-item.greeting span.details span.sect:hover {
-  transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
 }
 button.loadposts {
   background-color: transparent;
@@ -406,14 +590,20 @@ button.loadposts {
   margin: 30px auto;
   font-size: 18px;
   cursor: pointer;
-  transition-duration: 0.2s;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
   outline: 0;
-  user-select: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 button.loadposts:hover {
   color: #7c7c7c;
-  transform: scale(1.15);
+  -webkit-transform: scale(1.15);
+          transform: scale(1.15);
 }
 button.loadposts:active {
-  transform: scale(0.8);
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
 }
