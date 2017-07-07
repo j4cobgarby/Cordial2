@@ -7,6 +7,7 @@
     @endcomponent
     <link rel="stylesheet" href="{!! asset('css/home.css') !!}">
     <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+    <script src="{!! asset('js/infinite-scroll.pkgd.min.js') !!}" charset="utf-8"></script>
     <script
   src="https://code.jquery.com/jquery-3.2.1.min.js"
   integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
@@ -61,7 +62,7 @@
               'posts.content AS content',
               'posts.score AS score',
               'posts.id AS post_id',
-              'posts.date_posted AS date_posted')->orderBy('post_id', 'desc')->paginate(20);
+              'posts.date_posted AS date_posted')->orderBy('post_id', 'desc')->simplePaginate(20);
           $Parsedown = new Parsedown();
         @endphp
         @component('greeting')
@@ -69,6 +70,7 @@
         <div class="grid-item newpost" onclick='window.location.href="/write"'>
           Want to write something? <b>Click here!</b>
         </div>
+        {!! $posts->render() !!}
         @foreach ($posts as $post)
           @component('post')
             @slot('content')
@@ -128,5 +130,21 @@
         resetSelected();
       }
     });
+  </script>
+  <script>
+  var elem = document.querySelector('.container');
+  var infScroll = new InfiniteScroll( elem, {
+  // options
+  path: '[rel="next"]',
+  append: '.post',
+  history: false,
+  outlayer: msnry
+  });
+
+  // element argument can be a selector string
+  //   for an individual element
+  var infScroll = new InfiniteScroll( '.container', {
+  // options
+  });
   </script>
 </html>
