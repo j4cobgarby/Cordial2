@@ -243,6 +243,28 @@ div.posts {
         animation-fill-mode: both;
       }
 
+      .delete {
+        cursor: pointer;
+        position: absolute;
+        top: 7.5px;
+        right: 30px;
+
+        i {
+          transition-duration: 0.2s;
+          font-size: 18px !important;
+        }
+
+        &:hover>i {
+          transform: scale(1.3) rotate(10deg);
+          color: @danger-colour;
+        }
+
+        &:active>i {
+          transform: scale(0.8) rotate(-5deg);
+          color: @danger-colour;
+        }
+      }
+
       .comments {
         @keyframes comments {
           0% {

@@ -328,6 +328,27 @@ div.posts .grid-item .status .edit:hover i {
   -webkit-animation-fill-mode: both;
           animation-fill-mode: both;
 }
+div.posts .grid-item .status .delete {
+  cursor: pointer;
+  position: absolute;
+  top: 7.5px;
+  right: 30px;
+}
+div.posts .grid-item .status .delete i {
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+  font-size: 18px !important;
+}
+div.posts .grid-item .status .delete:hover > i {
+  -webkit-transform: scale(1.3) rotate(10deg);
+          transform: scale(1.3) rotate(10deg);
+  color: #e25d4a;
+}
+div.posts .grid-item .status .delete:active > i {
+  -webkit-transform: scale(0.8) rotate(-5deg);
+          transform: scale(0.8) rotate(-5deg);
+  color: #e25d4a;
+}
 div.posts .grid-item .status .comments {
   color: #ababab;
   cursor: pointer;

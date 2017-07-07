@@ -48,6 +48,9 @@ execphp('bookmark', '{{$id}}');
       <span class="edit" onclick="window.location.href='/write/{{$id}}'">
         <i class="fa fa-pencil" aria-hidden="true"></i>
       </span>
+      <span class="delete">
+        <i class="fa fa-trash" aria-hidden="true"></i>
+      </span>
     @endif
   </span>
 </div>
