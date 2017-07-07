@@ -25,13 +25,12 @@ div.posts .grid-item {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   overflow: hidden;
-  border-radius: 5px;
+  border-radius: 3px;
 }
 div.posts .grid-item.expanded {
   width: 930px;
   -webkit-box-shadow: 0px 0px 115px -19px rgba(0, 0, 0, 0.16);
           box-shadow: 0px 0px 115px -19px rgba(0, 0, 0, 0.16);
-  border: 1px solid #d0d0d0 !important;
 }
 div.posts .grid-item.expanded .expand-button {
   display: none;

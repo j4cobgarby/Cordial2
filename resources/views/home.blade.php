@@ -109,6 +109,7 @@
       columnWidth: 450,
       gutter: 30,
       fitWidth: true,
+      transitionDuration: '0.4s'
     });
     function reload() {
       setTimeout(function() {

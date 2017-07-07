@@ -30,20 +30,15 @@ div.posts {
     padding: 15px;
     box-sizing: border-box;
     overflow: hidden;
-    border-radius: 5px;
+    border-radius: 3px;
 
     &.expanded {
       width: (450px * 2 + 30px); // +30 to compensate for gutter which it goes over
       box-shadow: 0px 0px 115px -19px rgba(0,0,0,0.16);
-      border: 1px solid @bordermain !important;
 
       .expand-button {
         display: none;
       }
-    }
-
-    &.post { // Specific to grid-items which are posts
-      //border-radius: 3px;
     }
 
     .expand-button {
