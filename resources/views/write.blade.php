@@ -8,6 +8,10 @@
     <link rel="stylesheet" href="{!! asset('css/write.css') !!}">
     <script src="{!! asset("js/showdown.min.js") !!}" charset="utf-8"></script>
     <script src="{!! asset("js/showdown-table.min.js") !!}" charset="utf-8"></script>
+    <script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
     <script>
       function toggleSwitchview() {
         var e = document.getElementById('switchview');
@@ -50,7 +54,7 @@ if ($editing) {
     </form>
     <div id="preview" class="preview hidden"></div>
     <script>
-    var converter = new showdown.Converter({extensions: ['table']});
+      var converter = new showdown.Converter({extensions: ['table']});
       setInterval(function() {
         if (document.getElementById('content').value != '') {
           document.getElementById('preview').innerHTML = converter.makeHtml(document.getElementById('content').value);
@@ -58,6 +62,13 @@ if ($editing) {
           document.getElementById('preview').innerHTML = 'Why haven\'t you written anything yet? <i class="fa fa-frown-o" aria-hidden="true"></i>';
         }
       }, 20);
+
+      $(document).keyup(function(e) {
+        if (e.keyCode == 27) { // Escape
+          console.log("test");
+          window.location.href = "/";
+        }
+      });
     </script>
   </body>
 </html>
