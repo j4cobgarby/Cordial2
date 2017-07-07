@@ -130,21 +130,13 @@
         resetSelected();
       }
     });
-  </script>
-  <script>
-  var elem = document.querySelector('.container');
-  var infScroll = new InfiniteScroll( elem, {
-  // options
-  path: '[rel="next"]',
-  append: '.post',
-  history: false,
-  outlayer: msnry
-  });
-
-  // element argument can be a selector string
-  //   for an individual element
-  var infScroll = new InfiniteScroll( '.container', {
-  // options
-  });
+    var elem = document.querySelector('.container');
+    var infScroll = new InfiniteScroll( elem, {
+    // options
+    path: '[rel="next"]',
+    append: '.post',
+    history: false,
+    outlayer: msnry
+    });
   </script>
 </html>
