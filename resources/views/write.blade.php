@@ -55,7 +55,7 @@ if ($editing) {
         if (document.getElementById('content').value != '') {
           document.getElementById('preview').innerHTML = converter.makeHtml(document.getElementById('content').value);
         } else {
-          document.getElementById('preview').innerHTML = '<i>Nothing yet!</i>';
+          document.getElementById('preview').innerHTML = 'Why haven\'t you written anything yet? <i class="fa fa-frown-o" aria-hidden="true"></i>';
         }
       }, 20);
     </script>
