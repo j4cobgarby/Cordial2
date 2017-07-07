@@ -147,6 +147,7 @@
         this.on( 'load', function() {
           hljs.initHighlighting.called = false;
           hljs.initHighlighting();
+          console.log("rl");
         });
       }
     });
