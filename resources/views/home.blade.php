@@ -62,7 +62,7 @@
               'posts.content AS content',
               'posts.score AS score',
               'posts.id AS post_id',
-              'posts.date_posted AS date_posted')->orderBy('post_id', 'desc')->simplePaginate(20);
+              'posts.date_posted AS date_posted')->orderBy('post_id', 'desc')->simplePaginate(50);
           $Parsedown = new Parsedown();
         @endphp
         @component('greeting')
