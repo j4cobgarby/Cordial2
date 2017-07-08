@@ -70,7 +70,7 @@
         @foreach ($posts as $post)
           @if (hasBookmarked($post->post_id))
 
-            @component('post')
+            @component('bookmarks-post')
               @slot('content')
                 {!!$Parsedown->text($post->content)!!}
               @endslot

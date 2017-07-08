@@ -41,6 +41,8 @@
       <i id="{{$id}}" class="fa fa-bookmark {{echoBookmarkClass($id)}}" aria-hidden="true" onclick="
 $('span.bookmark i#{{$id}}').toggleClass('bookmarked');
 execphp('bookmark', '{{$id}}');
+msnry.remove(document.getElementById('post-{{$id}}'));
+reload();
       "></i>
     </span>
 
