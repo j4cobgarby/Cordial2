@@ -48,7 +48,13 @@ execphp('bookmark', '{{$id}}');
       <span class="edit" onclick="window.location.href='/write/{{$id}}'">
         <i class="fa fa-pencil" aria-hidden="true"></i>
       </span>
-      <span class="delete">
+      <span class="delete" onclick="
+if (confirm('Are you sure you want to delete this post? There\'s not going back.')) {
+  execphp('delete', '{{$id}}');
+  msnry.remove(document.getElementById('post-{{$id}}'));
+  reload();
+}
+      ">
         <i class="fa fa-trash" aria-hidden="true"></i>
       </span>
     @endif

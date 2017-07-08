@@ -101,3 +101,9 @@ function unBookmark($id) {
 function userOwnsPost($id) {
   return sizeof(DB::select('SELECT * FROM posts WHERE author_id = ? AND id = ?', [Auth::user()->id, $id])) >= 1;
 }
+
+function deletePost($id) {
+  DB::table('posts')->where('id', '=', $id)->delete();
+  DB::table('users_bookmarked_posts')->where('post_id', '=', $id)->delete();
+  DB::table('users_liked_posts')->where('post_id', '=', $id)->delete();
+}

@@ -115,7 +115,7 @@ Route::get('/execphp/{func}', function($func) {
 
 Route::get('/execphp/{func}/{param}', function($func, $param) {
   switch ($func) {
-    case 'bookmark':
+    case 'bookmark': // param = post id
       if (Auth::check()) {
         if (hasBookmarked($param)) {
           unBookmark($param);
@@ -124,6 +124,12 @@ Route::get('/execphp/{func}/{param}', function($func, $param) {
           bookmark($param);
           echo 'bookmarked';
         }
+      }
+      break;
+
+    case 'delete': // param = post id
+      if (Auth::check() and userOwnsPost($param)) {
+        deletePost($param);
       }
       break;
 
