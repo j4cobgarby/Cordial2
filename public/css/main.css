@@ -80,6 +80,20 @@ div.header-section .bookmark-icon i {
 div.header-section .bookmark-icon:hover > i {
   color: #fe4b4b;
 }
+div.header-section .newpost-icon {
+  text-align: center;
+  font-size: 20px;
+  cursor: pointer;
+  float: right;
+  margin-right: 20px;
+}
+div.header-section .newpost-icon i {
+  -webkit-transition-duration: 0.15s;
+          transition-duration: 0.15s;
+}
+div.header-section .newpost-icon:hover > i {
+  color: #75c88b;
+}
 div.header-section .username-disp,
 div.header-section .login {
   font-size: 18px;
