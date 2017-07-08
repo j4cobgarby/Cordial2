@@ -67,9 +67,6 @@
         @endphp
         @component('greeting')
         @endcomponent
-        <div class="grid-item newpost" onclick='window.location.href="/write"'>
-          Want to write something? <b>Click here!</b>
-        </div>
         {!! $posts->render() !!}
         @foreach ($posts as $post)
           @component('post')
