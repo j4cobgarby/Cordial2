@@ -495,7 +495,7 @@ div.posts .grid-item .status .bookmark > i.bookmarked {
 div.posts .grid-item.newpost {
   height: 210px;
   font-size: 30px;
-  background-color: #75c88b;
+  background-color: #66e8dc;
   color: #ffffff;
   padding: 30px;
   -webkit-user-select: none;
@@ -505,15 +505,15 @@ div.posts .grid-item.newpost {
   cursor: pointer;
   -webkit-transition: background-color 0.3s;
   transition: background-color 0.3s;
-  -webkit-box-shadow: 0 0 0 0 #75c88b;
-          box-shadow: 0 0 0 0 #75c88b;
-  border: 1px solid #51b96c;
+  -webkit-box-shadow: 0 0 0 0 #66e8dc;
+          box-shadow: 0 0 0 0 #66e8dc;
+  border: 1px solid #3ae1d2;
 }
 div.posts .grid-item.newpost * {
   color: #ffffff;
 }
 div.posts .grid-item.newpost:hover {
-  background-color: #6ac482;
+  background-color: #59e6d9;
 }
 div.posts .grid-item.discover {
   height: 210px;

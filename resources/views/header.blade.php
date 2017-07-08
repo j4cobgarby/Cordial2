@@ -17,6 +17,9 @@
     <span class="bookmark-icon" onclick="window.location.href='/bookmarked'">
       <i class="fa fa-bookmark" aria-hidden="true"></i>
     </span>
+    <span class="newpost-icon" onclick="window.location.href='/write'">
+      <i class="fa fa-paper-plane" aria-hidden="true"></i>
+    </span>
   @else
     <span class="login" onclick="toggle()">
       Not signed in
