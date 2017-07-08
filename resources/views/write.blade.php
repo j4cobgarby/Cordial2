@@ -12,6 +12,8 @@
   src="https://code.jquery.com/jquery-3.2.1.min.js"
   integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
   crossorigin="anonymous"></script>
+    <script src="//rawgit.com/tovic/tags-input-beautifier/master/tags-input-beautifier.min.js" charset="utf-8"></script>
+    <link rel="stylesheet" href="{!! asset('css/tags-input-beautifier.css') !!}">
     <script>
       function toggleSwitchview() {
         var e = document.getElementById('switchview');
@@ -50,7 +52,12 @@ if ($editing) {
   echo $edited_post->content;
 }
         @endphp</textarea>
-      <input type="text" name="tags" placeholder="Type up to 5 tags, seperated by commas"><br>
+      <input type="text" name="tags" placeholder="Optionally add tags to your post"><br>
+      <script>
+        var tags = new TIB(document.querySelector('input[type="text"]'), {
+          join: ','
+        });
+      </script>
       <button type="submit" name="submit" class="submit"><i class="fa fa-paper-plane" aria-hidden="true"></i></button>
       <button type="button" onclick="toggleSwitchview()" class="switchview" id="switchview">
       </button>
