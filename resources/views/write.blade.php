@@ -21,7 +21,10 @@
           e.innerHTML = '<i class="fa fa-eye" aria-hidden="true"></i>';
         }
         document.getElementById('preview').classList.toggle("hidden");
+
+        updatePreview();
       }
+
       function SwitchviewInit() {
         var e = document.getElementById('switchview');
         e.innerHTML = '<i class="fa fa-eye" aria-hidden="true"></i>';
@@ -55,13 +58,13 @@ if ($editing) {
     <div id="preview" class="preview hidden"></div>
     <script>
       var converter = new showdown.Converter({extensions: ['table']});
-      setInterval(function() {
+      function updatePreview() {
         if (document.getElementById('content').value != '') {
           document.getElementById('preview').innerHTML = converter.makeHtml(document.getElementById('content').value);
         } else {
-          document.getElementById('preview').innerHTML = 'Why haven\'t you written anything yet? <i class="fa fa-frown-o" aria-hidden="true"></i>';
+          document.getElementById('preview').innerHTML = 'Your post can\'t be previewed yet because you haven\'t written anything!';
         }
-      }, 20);
+      }
 
       $(document).keyup(function(e) {
         if (e.keyCode == 27) { // Escape
