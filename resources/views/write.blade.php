@@ -50,6 +50,7 @@ if ($editing) {
   echo $edited_post->content;
 }
         @endphp</textarea>
+      <input type="text" name="tags" placeholder="Type up to 5 tags, seperated by commas"><br>
       <button type="submit" name="submit" class="submit"><i class="fa fa-paper-plane" aria-hidden="true"></i></button>
       <button type="button" onclick="toggleSwitchview()" class="switchview" id="switchview">
       </button>

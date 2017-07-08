@@ -80,6 +80,20 @@ form.write {
     box-sizing: border-box;
   }
 
+  input[type="text"][name="tags"] {
+    border: none;
+    outline: none;
+    height: 25px;
+    font-size: 14px;
+    width: 100%;
+    font-weight: bold;
+    transition-duration: 0.3s;
+
+    &:focus {
+      font-size: 20px;
+    }
+  }
+
   button.switchview {
     float: right;
   }

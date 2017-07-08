@@ -77,6 +77,19 @@ form.write textarea {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
+form.write input[type="text"][name="tags"] {
+  border: none;
+  outline: none;
+  height: 25px;
+  font-size: 14px;
+  width: 100%;
+  font-weight: bold;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+}
+form.write input[type="text"][name="tags"]:focus {
+  font-size: 20px;
+}
 form.write button.switchview {
   float: right;
 }
