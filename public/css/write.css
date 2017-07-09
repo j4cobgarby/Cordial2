@@ -5,7 +5,7 @@ body {
 div.preview {
   position: fixed;
   width: 580px;
-  height: 530px;
+  height: 480px;
   left: 50%;
   top: 50%;
   margin-left: -290px;
@@ -67,7 +67,7 @@ form.write {
 form.write textarea {
   resize: none;
   width: 100%;
-  height: 530px;
+  height: 480px;
   font-size: 20px;
   font-family: 'Inconsolata', monospace;
   font-weight: bold;

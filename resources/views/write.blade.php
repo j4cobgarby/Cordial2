@@ -55,7 +55,8 @@ if ($editing) {
       <input type="text" name="tags" placeholder="Optionally add tags to your post"><br>
       <script>
         var tags = new TIB(document.querySelector('input[type="text"]'), {
-          join: ','
+          join: ',',
+          max: 8
         });
       </script>
       <button type="submit" name="submit" class="submit"><i class="fa fa-paper-plane" aria-hidden="true"></i></button>
