@@ -27,6 +27,10 @@ div.posts .grid-item {
   overflow: hidden;
   border-radius: 3px;
 }
+div.posts .grid-item.post {
+  padding-left: 0px;
+  padding-right: 0px;
+}
 div.posts .grid-item.expanded {
   width: 930px;
   -webkit-box-shadow: 0px 0px 115px -19px rgba(0, 0, 0, 0.16);
@@ -92,7 +96,7 @@ div.posts .grid-item .content {
   margin-bottom: 15px;
   overflow: hidden;
   text-overflow: ellipsis;
-  padding: 2px;
+  padding: 2px 0;
   word-wrap: break-word;
   background-color: white;
 }
@@ -102,15 +106,27 @@ div.posts .grid-item .content.expanded {
 div.posts .grid-item .content img {
   max-width: 100%;
   max-height: 600px;
+  display: block;
+}
+div.posts .grid-item .content img:first-child {
+  margin-top: 15px;
+}
+div.posts .grid-item .content h1,
+div.posts .grid-item .content h2,
+div.posts .grid-item .content h3,
+div.posts .grid-item .content h4,
+div.posts .grid-item .content h5,
+div.posts .grid-item .content h6 {
+  margin: auto 15px;
 }
 div.posts .grid-item .content p {
   text-align: left;
+  padding: 15px;
 }
 div.posts .grid-item .content pre {
   overflow: hidden;
   background-color: #263238;
   padding-right: 0;
-  border-radius: 4px;
   font-family: 'Inconsolata', monospace;
   padding: 15px;
 }
@@ -127,8 +143,7 @@ div.posts .grid-item .content code.hljs {
   margin: -15px;
 }
 div.posts .grid-item .content table {
-  margin-top: 15px;
-  border: 1px solid #d0d0d0;
+  margin: 15px 10px;
   border-spacing: 0px;
 }
 div.posts .grid-item .content th {
@@ -144,6 +159,7 @@ div.posts .grid-item .content tbody tr:nth-child(even) {
 div.posts .grid-item .content hr {
   border: none;
   border-top: 2px solid #e9e9e9;
+  margin: 15px 25px;
 }
 div.posts .grid-item .by {
   cursor: pointer;
@@ -157,6 +173,7 @@ div.posts .grid-item .by {
   text-overflow: ellipsis;
   word-break: break-all;
   text-align: right;
+  margin-right: 15px;
 }
 div.posts .grid-item .date {
   display: inline-block;
@@ -167,6 +184,7 @@ div.posts .grid-item .date {
 }
 div.posts .grid-item .status {
   color: #ababab;
+  margin-left: 15px;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
