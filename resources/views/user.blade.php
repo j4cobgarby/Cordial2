@@ -62,6 +62,7 @@
               'posts.content AS content',
               'posts.score AS score',
               'posts.id AS post_id',
+              'posts.tags AS tags',
               'posts.date_posted AS date_posted')
             ->where('users.username', '=', Request::route('username'))
             ->orderBy('post_id', 'desc')->paginate(20);
@@ -98,6 +99,9 @@
             @endslot
             @slot('displayuser')
               {{'no'}}
+            @endslot
+            @slot('tags')
+              {{$post->tags}}
             @endslot
           @endcomponent
         @endforeach

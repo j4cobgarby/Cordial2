@@ -62,6 +62,7 @@
               'posts.content AS content',
               'posts.score AS score',
               'posts.id AS post_id',
+              'posts.tags AS tags',
               'posts.date_posted AS date_posted')->orderBy('post_id', 'desc')->get();
           $Parsedown = new Parsedown();
         @endphp
@@ -92,6 +93,9 @@
               @endslot
               @slot('displayuser')
                 {{'yes'}}
+              @endslot
+              @slot('tags')
+                {{$post->tags}}
               @endslot
             @endcomponent
           @endif
