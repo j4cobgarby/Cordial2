@@ -52,7 +52,11 @@ if ($editing) {
   echo $edited_post->content;
 }
         @endphp</textarea>
-      <input type="text" name="tags" placeholder="Optionally add up to 8 tags to your post"><br>
+      <input type="text" name="tags" placeholder="Optionally add up to 8 tags to your post"@php
+if ($editing) {
+  echo "value=\"".$edited_post->tags."\"";
+}
+      @endphp><br>
       <script>
         var tags = new TIB(document.querySelector('input[type="text"]'), {
           join: ',',
