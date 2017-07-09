@@ -62,6 +62,7 @@
               'posts.content AS content',
               'posts.score AS score',
               'posts.id AS post_id',
+              'posts.tags AS tags',
               'posts.date_posted AS date_posted')->orderBy('post_id', 'desc')->simplePaginate(50);
           $Parsedown = new Parsedown();
         @endphp
@@ -72,6 +73,9 @@
           @component('post')
             @slot('content')
               {!!$Parsedown->text($post->content)!!}
+            @endslot
+            @slot('tags')
+              {{$post->tags}}
             @endslot
             @slot('username')
               {{$post->sender}}
