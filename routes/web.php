@@ -62,9 +62,10 @@ Route::post('/write', function() {
 
 Route::post('/write/{id}', function($id) {
   $content = Input::get('content');
+  $tags = (Input::get('tags') != null ? Input::get('tags') : '');
   DB::table('posts')
     ->where('id', $id)
-    ->update(['content' => $content]);
+    ->update(['content' => $content, 'tags' => $tags]);
   return Redirect::to('/');
 });
 

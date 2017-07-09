@@ -67,17 +67,24 @@ div.posts .grid-item .tags-wrapper {
   position: absolute;
   height: 22px;
   width: 82%;
-  top: 2px;
-  left: 5px;
+  top: 5px;
+  left: 10px;
+  cursor: default;
 }
 div.posts .grid-item .tags-wrapper span.tag {
   display: inline-block;
   height: 100%;
   line-height: 22px;
   padding: 0 3px;
-  color: #aaa;
+  color: #ababab;
   font-size: 11px;
   cursor: pointer;
+  -webkit-transition-duration: 0.15s;
+          transition-duration: 0.15s;
+}
+div.posts .grid-item .tags-wrapper span.tag:hover {
+  color: #de8600;
+  font-weight: bold;
 }
 div.posts .grid-item .content {
   font-size: 14px;
