@@ -59,4 +59,11 @@ if (confirm('Are you sure you want to delete this post? There\'s no going back.'
       </span>
     @endif
   </span>
+  <div class="tags-wrapper">
+    @foreach (explode(',', $tags) as $tag)
+      <span class="tag">
+        {{$tag}}
+      </span>
+    @endforeach
+  </div>
 </div>

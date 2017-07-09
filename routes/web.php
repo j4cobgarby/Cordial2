@@ -52,18 +52,20 @@ Route::get('/write/{id}', function($id) {
 });
 
 Route::post('/write', function() {
-  $content =  Input::get('content');
+  $content = Input::get('content');
+  $tags = (Input::get('tags') != null ? Input::get('tags') : '');
   $sql = "INSERT INTO posts (id, author_id, content, tags, date_posted, score)
   VALUES (NULL, ?, ?, ?, ?, 0)";
-  DB::insert($sql, [Auth::user()->id, $content, "", date("Y-m-d H:i:s")]);
+  DB::insert($sql, [Auth::user()->id, $content, $tags, date("Y-m-d H:i:s")]);
   return Redirect::to('/');
 });
 
 Route::post('/write/{id}', function($id) {
   $content = Input::get('content');
+  $tags = (Input::get('tags') != null ? Input::get('tags') : '');
   DB::table('posts')
     ->where('id', $id)
-    ->update(['content' => $content]);
+    ->update(['content' => $content, 'tags' => $tags]);
   return Redirect::to('/');
 });
 
