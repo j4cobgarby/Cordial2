@@ -123,12 +123,18 @@ div.posts .grid-item .content p {
   text-align: left;
   padding: 15px;
 }
+div.posts .grid-item .content p code {
+  color: #383838;
+  font-size: 13px;
+  background-color: #e6e6e6;
+  padding: 1px 5px;
+}
 div.posts .grid-item .content pre {
   overflow: hidden;
   background-color: #263238;
   padding-right: 0;
   font-family: 'Inconsolata', monospace;
-  padding: 15px;
+  padding: 30px 15px;
 }
 div.posts .grid-item .content code {
   padding: 15px;
