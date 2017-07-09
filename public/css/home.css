@@ -127,6 +127,7 @@ div.posts .grid-item .content code.hljs {
   margin: -15px;
 }
 div.posts .grid-item .content table {
+  margin-top: 15px;
   border: 1px solid #d0d0d0;
   border-spacing: 0px;
 }
