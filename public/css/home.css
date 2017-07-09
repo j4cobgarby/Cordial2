@@ -73,10 +73,12 @@ div.posts .grid-item .tags-wrapper {
   max-height: 22px;
   width: 82%;
   max-width: 82%;
-  top: 5px;
+  top: 2px;
   left: 10px;
   cursor: default;
   overflow: hidden;
+  font-size: 11px;
+  line-height: 22px;
 }
 div.posts .grid-item .tags-wrapper span.tag {
   display: inline-block;
