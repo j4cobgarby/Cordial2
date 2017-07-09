@@ -22,6 +22,11 @@
   min-height:1.25em;
   cursor:default;
 }
+
+.tag {
+  border: 1px solid #dadada;
+  font-weight: bold;
+}
 .tags .tag:before {content:attr(data-tag)}
 .tags:after,
 .tags-view:after {
@@ -32,7 +37,6 @@
 .tags a {
   display:inline-block;
   margin:0 0 0 .5em;
-  color:#262626;
   text-decoration:none;
   cursor:pointer;
 }
