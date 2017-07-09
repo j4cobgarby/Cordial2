@@ -70,10 +70,13 @@ div.posts .grid-item .expand-button:active > i {
 div.posts .grid-item .tags-wrapper {
   position: absolute;
   height: 22px;
+  max-height: 22px;
   width: 82%;
+  max-width: 82%;
   top: 5px;
   left: 10px;
   cursor: default;
+  overflow: hidden;
 }
 div.posts .grid-item .tags-wrapper span.tag {
   display: inline-block;
