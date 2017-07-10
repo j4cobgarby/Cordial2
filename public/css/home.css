@@ -9,7 +9,6 @@ ul.pagination {
   display: none;
 }
 div.posts {
-  width: 100%;
   min-height: 30px;
   margin: auto;
   margin-top: 70px;
