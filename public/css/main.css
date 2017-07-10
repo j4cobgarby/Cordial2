@@ -94,6 +94,41 @@ div.header-section .newpost-icon i {
 div.header-section .newpost-icon:hover > i {
   color: #66e8dc;
 }
+div.header-section form.search-form {
+  float: right;
+  margin-right: 40px;
+  display: inline-block;
+  height: 38px;
+}
+div.header-section form.search-form input[type="text"] {
+  height: 100%;
+  width: 50px;
+  padding: 0 20px;
+  color: #de8600;
+  font-size: 16px;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  -webkit-transition-duration: 0.4s;
+          transition-duration: 0.4s;
+  -webkit-transition-timing-function: cubic-bezier(0.32, 1.45, 0.79, 1.15);
+          transition-timing-function: cubic-bezier(0.32, 1.45, 0.79, 1.15);
+}
+div.header-section form.search-form input[type="text"]:focus {
+  width: 250px;
+}
+div.header-section form.search-form input[type="text"]::-webkit-input-placeholder {
+  font-weight: normal;
+  color: #a6a6a6;
+}
+div.header-section form.search-form input[type="text"]:-ms-input-placeholder {
+  font-weight: normal;
+  color: #a6a6a6;
+}
+div.header-section form.search-form input[type="text"]::placeholder {
+  font-weight: normal;
+  color: #a6a6a6;
+}
 div.header-section .username-disp,
 div.header-section .login {
   font-size: 18px;

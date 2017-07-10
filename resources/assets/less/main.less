@@ -96,6 +96,35 @@ div.header-section {
     &:hover>i {color: @newpost-colour;}
   }
 
+  form.search-form {
+    float: right;
+    margin-right: 40px;
+    display: inline-block;
+    height: 38px;
+
+    input[type="text"] {
+      height: 100%;
+      width: 50px;
+      padding: 0 20px;
+      color: @accent;
+      font-size: 16px;
+      outline: none;
+      border: none;
+      border-radius: 5px;
+      transition-duration: 0.4s;
+      transition-timing-function: cubic-bezier(.32,1.45,.79,1.15);
+
+      &:focus {
+        width: 250px;
+      }
+
+      &::placeholder {
+        font-weight: normal;
+        color: #a6a6a6;
+      }
+    }
+  }
+
   .username-disp, .login {
     font-size: 18px;
     float: right;

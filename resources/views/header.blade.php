@@ -20,6 +20,9 @@
     <span class="newpost-icon" onclick="window.location.href='/write'">
       <i class="fa fa-paper-plane" aria-hidden="true"></i>
     </span>
+    <form class="search-form" action="/search" method="get">
+      <input type="text" name="q" placeholder="Search">
+    </form>
   @else
     <span class="login" onclick="toggle()">
       Not signed in
