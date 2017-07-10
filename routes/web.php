@@ -69,6 +69,25 @@ Route::post('/write/{id}', function($id) {
   return Redirect::to('/');
 });
 
+Route::get('/search', function() {
+  $q =  Input::get('q');
+  $parts = explode(':', $q);
+
+  if (sizeof($parts) > 1) { // in the form 'type:query'
+    if ($parts[0] == 'tag') { // user search for tag
+      echo 'tag -> '.$parts[1];
+    } elseif ($parts[0] == 'user') { // user search for user
+      echo 'user -> '.$parts[1];
+    } elseif ($parts[0] == 'post') { // user search for post content
+      echo 'post including -> '.$parts[1];
+    } else { // unknown search type
+      echo 'unkown';
+    }
+  } else { // just searched a query, no type
+    echo 'query -> '.$parts[0];
+  }
+});
+
 Route::get('/devlogout', function() {
     Auth::logout();
     return Redirect::to('/');
