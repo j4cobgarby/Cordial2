@@ -102,7 +102,7 @@ div.header-section form.search-form {
 }
 div.header-section form.search-form input[type="text"] {
   height: 100%;
-  width: 50px;
+  width: 90px;
   padding: 0 20px;
   color: #de8600;
   font-size: 16px;
