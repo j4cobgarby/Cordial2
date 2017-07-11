@@ -77,6 +77,7 @@ Route::get('/search', function() {
     $type = $parts[0];
     $query = $parts[1];
     if ($parts[0] == 'tag') { // user search for tag
+      return view('tag');
     } elseif ($parts[0] == 'user') { // user search for user
     } elseif ($parts[0] == 'post') { // user search for post content
     } else { // unknown search type
