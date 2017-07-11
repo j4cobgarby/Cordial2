@@ -61,7 +61,7 @@ if (confirm('Are you sure you want to delete this post? There\'s no going back.'
   </span>
   <div class="tags-wrapper">
     @foreach (explode(',', $tags) as $tag)
-      <span class="tag">
+      <span class="tag" onclick="window.location.href='/search?q=tag%3A{{$tag}}'">
         {{$tag}}
       </span>
     @endforeach
