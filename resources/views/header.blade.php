@@ -21,7 +21,11 @@
       <i class="fa fa-paper-plane" aria-hidden="true"></i>
     </span>
     <form class="search-form" action="/search" method="get">
-      <input type="text" name="q" placeholder="Search">
+      <input type="text" name="q" placeholder="Search" @php
+if (Request::get('q') !== null) {
+  echo "value=\"".Request::get('q')."\"";
+}
+      @endphp>
     </form>
   @else
     <span class="login" onclick="toggle()">

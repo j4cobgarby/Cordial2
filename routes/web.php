@@ -74,17 +74,15 @@ Route::get('/search', function() {
   $parts = explode(':', $q);
 
   if (sizeof($parts) > 1) { // in the form 'type:query'
+    $type = $parts[0];
+    $query = $parts[1];
     if ($parts[0] == 'tag') { // user search for tag
-      echo 'tag -> '.$parts[1];
+      return view('tag');
     } elseif ($parts[0] == 'user') { // user search for user
-      echo 'user -> '.$parts[1];
     } elseif ($parts[0] == 'post') { // user search for post content
-      echo 'post including -> '.$parts[1];
     } else { // unknown search type
-      echo 'unkown';
     }
   } else { // just searched a query, no type
-    echo 'query -> '.$parts[0];
   }
 });
 
