@@ -109,10 +109,10 @@ div.header-section form.search-form input[type="text"] {
   outline: none;
   border: none;
   border-radius: 5px;
-  -webkit-transition-duration: 0.4s;
-          transition-duration: 0.4s;
-  -webkit-transition-timing-function: cubic-bezier(0.32, 1.45, 0.79, 1.15);
-          transition-timing-function: cubic-bezier(0.32, 1.45, 0.79, 1.15);
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-in-out;
+          transition-timing-function: ease-in-out;
 }
 div.header-section form.search-form input[type="text"]:focus {
   width: 250px;

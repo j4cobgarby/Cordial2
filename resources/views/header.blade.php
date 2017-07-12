@@ -25,7 +25,7 @@
 if (Request::get('q') !== null) {
   echo "value=\"".Request::get('q')."\"";
 }
-      @endphp>
+      @endphp required>
     </form>
   @else
     <span class="login" onclick="toggle()">

@@ -138,20 +138,5 @@
     function test() {
       console.log("test");
     }
-
-    var elem = document.querySelector('.container');
-    var infScroll = new InfiniteScroll( elem, {
-      // options
-      path: '[rel="next"]', // selector for laravel-generated next page button
-      append: '.post',
-      history: false,
-      outlayer: msnry
-    });
-    infScroll.on('append', function(response, path, items) {
-      console.log("rl");
-      $('pre code').each(function(i, block) {
-        hljs.highlightBlock(block);
-      });
-    })
   </script>
 </html>

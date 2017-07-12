@@ -73,14 +73,20 @@ Route::get('/search', function() {
   $q =  Input::get('q');
   $parts = explode(':', $q);
 
+  if ($q == '') {
+    return Redirect::to('/');
+  }
+
   if (sizeof($parts) > 1) { // in the form 'type:query'
     $type = $parts[0];
     $query = $parts[1];
     if ($parts[0] == 'tag') { // user search for tag
       return view('tag');
     } elseif ($parts[0] == 'user') { // user search for user
+      return Redirect::to('/user/'.$query);
     } elseif ($parts[0] == 'post') { // user search for post content
     } else { // unknown search type
+      return Redirect::to('/');
     }
   } else { // just searched a query, no type
   }
