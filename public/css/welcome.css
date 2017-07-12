@@ -1,5 +1,9 @@
 * {
-  color: #1d1d1d;
+  color: white;
+}
+html,
+body {
+  background-color: #1d1d1d;
 }
 div.middle {
   position: fixed;
@@ -16,6 +20,7 @@ div.middle {
 div.middle span.links {
   margin-bottom: 40px;
   display: inline-block;
+  color: #adadad;
 }
 div.middle span.links span.plead {
   font-size: 20px;
@@ -23,13 +28,16 @@ div.middle span.links span.plead {
 }
 div.middle span.links a {
   margin: auto 20px;
-  color: #1d1d1d;
+  color: #a2a2a2;
   text-decoration: none;
   font-size: 20px;
-  border-bottom: 2px solid white;
+  border-bottom: 2px solid #1d1d1d;
   -webkit-transition-duration: 0.2s;
           transition-duration: 0.2s;
   padding-bottom: 5px;
+}
+div.middle span.links a i {
+  color: #a2a2a2;
 }
 div.middle span.links a:hover {
   border-bottom: 2px solid #de8600;
