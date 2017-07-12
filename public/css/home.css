@@ -24,7 +24,7 @@ div.posts .grid-item {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   overflow: hidden;
-  border-radius: 3px;
+  border-radius: 1px;
 }
 div.posts .grid-item.post {
   padding-left: 0px;
