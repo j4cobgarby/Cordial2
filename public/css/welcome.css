@@ -39,8 +39,8 @@ div.middle span.links a {
 div.middle span.links a i {
   color: #a2a2a2;
 }
-div.middle span.links a:hover {
-  border-bottom: 2px solid #de8600;
+div.middle span.links a:hover i {
+  color: #de8600;
 }
 span.title {
   font-family: 'Arvo';
