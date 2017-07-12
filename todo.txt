@@ -8,5 +8,6 @@ if anyone else wants to do any of these, fork cordial
 
 make some sort of system for profile pictures or something
 make the edit button animation a bit smoother
+notifications!
 
 ** this is by no means everything that has to be done, by a long way

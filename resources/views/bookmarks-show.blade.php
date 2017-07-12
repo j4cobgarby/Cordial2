@@ -126,7 +126,7 @@
       reload();
     }
 
-    $(document).keyup(function(e) {
+    $(document).keydown(function(e) {
       if (e.keyCode == 27) { // Escape
         resetSelected();
       }

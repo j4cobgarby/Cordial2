@@ -9,7 +9,11 @@
 @spacing: 30px;
 
 * {
-  color: @main-bg;
+  color: white;
+}
+
+html, body {
+  background-color: @main-bg;
 }
 
 div.middle {
@@ -27,6 +31,7 @@ div.middle {
   span.links {
     margin-bottom: 40px;
     display: inline-block;
+    color: #adadad;
 
     span.plead {
       font-size: 20px;
@@ -35,15 +40,21 @@ div.middle {
 
     a {
       margin: auto 20px;
-      color: @main-bg;
+      color: #a2a2a2;
       text-decoration: none;
       font-size: 20px;
-      border-bottom: 2px solid white;
+      border-bottom: 2px solid @main-bg;
       transition-duration: 0.2s;
       padding-bottom: 5px;
 
+      i {
+        color: #a2a2a2;
+      }
+
       &:hover {
-        border-bottom: 2px solid @accent;
+        i {
+          color: @accent;
+        }
       }
     }
   }
