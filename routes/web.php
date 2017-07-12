@@ -73,6 +73,10 @@ Route::get('/search', function() {
   $q =  Input::get('q');
   $parts = explode(':', $q);
 
+  if ($q == '') {
+    return Redirect::to('/');
+  }
+
   if (sizeof($parts) > 1) { // in the form 'type:query'
     $type = $parts[0];
     $query = $parts[1];
