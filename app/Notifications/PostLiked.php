@@ -16,9 +16,10 @@ class PostLiked extends Notification
      *
      * @return void
      */
-    public function __construct()
+    public function __construct($sent_by, $post_id)
     {
-        //
+        $this->sent_by = $sent_by;
+        $this->post_id = $post_id;
     }
 
     /**
@@ -29,7 +30,7 @@ class PostLiked extends Notification
      */
     public function via($notifiable)
     {
-        return ['mail'];
+        return ['database'];
     }
 
     /**
@@ -55,7 +56,8 @@ class PostLiked extends Notification
     public function toArray($notifiable)
     {
         return [
-            //
+            'sent_by' => $this->sent_by,
+            'post_id' => $this->post_id,
         ];
     }
 }
