@@ -39,5 +39,12 @@ if (Request::get('q') !== null) {
     </div>
   @endif
 
-  <script> init(); </script>
+  <script>
+    init();
+    $(document).keydown(function(e) {
+      if (e.keyCode == 27) { // Escape
+        document.activeElement.blur();
+      }
+    });
+  </script>
 </div>
