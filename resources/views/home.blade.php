@@ -1,4 +1,7 @@
 <!DOCTYPE html>
+@php
+  use App\Notifications\PostLiked;
+@endphp
 <html>
   <head>
     <meta charset="utf-8">
